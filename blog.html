@@ -61,10 +61,13 @@
     }
     .article-card:hover { box-shadow: 0 12px 40px rgba(61,43,31,.1); transform: translateY(-4px); }
     .article-thumb {
-      height: 200px; background: var(--cream);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--border); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase;
+      height: 200px; overflow: hidden; background: var(--cream);
     }
+    .article-thumb img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center;
+      transition: transform .5s ease; display: block;
+    }
+    .article-card:hover .article-thumb img { transform: scale(1.05); }
     .article-body { padding: 1.5rem; }
     .article-tag { font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: .6rem; display: block; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--brown); margin-bottom: .6rem; line-height: 1.3; }
@@ -162,42 +165,47 @@
   <div class="container">
     <div class="blog-grid">
 
-      <!-- MODÈLE D'ARTICLE — dupliquez ce bloc pour ajouter un article -->
       <article class="article-card">
-        <div class="article-thumb" data-i18n="blog.img">Image de l'article</div>
+        <div class="article-thumb">
+          <img src="deux-bottes-vanilles-debout.webp" alt="Deux bottes de vanille debout — région SAVA" loading="lazy" />
+        </div>
         <div class="article-body">
           <span class="article-tag" data-i18n="blog.a1.tag">Origines</span>
           <h2 data-i18n="blog.a1.h2">La région SAVA : berceau de la vanille bourbon</h2>
           <p data-i18n="blog.a1.p">Découvrez pourquoi le nord-est de Madagascar produit la vanille la plus recherchée au monde, et comment nos producteurs travaillent la terre depuis des générations.</p>
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <span class="article-meta" data-i18n="blog.a1.date">21 mai 2026</span>
-            <a href="#" class="btn-read" data-i18n="blog.read">Lire →</a>
+            <a href="article-region-sava.html" class="btn-read" data-i18n="blog.read">Lire →</a>
           </div>
         </div>
       </article>
 
       <article class="article-card">
-        <div class="article-thumb" data-i18n="blog.img">Image de l'article</div>
+        <div class="article-thumb">
+          <img src="quelques-gousses-sur-plat.webp" alt="Quelques gousses de vanille sur plat" loading="lazy" />
+        </div>
         <div class="article-body">
           <span class="article-tag" data-i18n="blog.a2.tag">Conseils</span>
           <h2 data-i18n="blog.a2.h2">Comment bien conserver vos gousses de vanille</h2>
           <p data-i18n="blog.a2.p">Température, lumière, humidité… nos conseils pour préserver l'arôme de vos gousses pendant plusieurs mois, sans réfrigérateur.</p>
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <span class="article-meta" data-i18n="blog.a2.date">21 mai 2026</span>
-            <a href="#" class="btn-read" data-i18n="blog.read">Lire →</a>
+            <a href="article-conservation.html" class="btn-read" data-i18n="blog.read">Lire →</a>
           </div>
         </div>
       </article>
 
       <article class="article-card">
-        <div class="article-thumb" data-i18n="blog.img">Image de l'article</div>
+        <div class="article-thumb">
+          <img src="botte-et-gousse-sur-plat.webp" alt="Botte et gousse de vanille sur plat" loading="lazy" />
+        </div>
         <div class="article-body">
           <span class="article-tag" data-i18n="blog.a3.tag">Marché</span>
           <h2 data-i18n="blog.a3.h2">Vanille noire vs vanille rouge : quelles différences ?</h2>
           <p data-i18n="blog.a3.p">Grade TK, maturité, profil aromatique… tout ce que vous devez savoir pour choisir la bonne gousse selon votre usage professionnel.</p>
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <span class="article-meta" data-i18n="blog.a3.date">21 mai 2026</span>
-            <a href="#" class="btn-read" data-i18n="blog.read">Lire →</a>
+            <a href="article-noire-vs-rouge.html" class="btn-read" data-i18n="blog.read">Lire →</a>
           </div>
         </div>
       </article>

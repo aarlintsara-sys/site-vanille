@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Vanille noire vs vanille rouge : quelles différences ? — Madagascar Vanilla</title>
+  <meta name="description" content="Tout ce que vous devez savoir pour choisir entre la gousse de vanille noire et rouge selon votre usage professionnel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #FDF9F4;
+      --warm-white: #FFFEFB;
+      --gold:       #C49A3C;
+      --gold-dark:  #9B7A2E;
+      --brown:      #3D2B1F;
+      --brown-mid:  #6B4C3B;
+      --brown-light:#A07850;
+      --text:       #2A1F18;
+      --text-muted: #7A6555;
+      --border:     #E0CDB5;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); line-height: 1.6; }
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 72px;
+      background: rgba(255,252,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); letter-spacing: .04em; text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 2rem; align-items: center; }
+    nav a { font-size: .82rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--gold); }
+    .btn-nav { background: var(--gold); color: #fff !important; padding: .5rem 1.25rem; border-radius: 2px; transition: background .2s !important; }
+    .btn-nav:hover { background: var(--gold-dark) !important; }
+    .lang-switch { display: flex; align-items: center; gap: .3rem; margin-left: 1.5rem; }
+    .lang-btn { background: none; border: 1px solid var(--border); cursor: pointer; font-size: .75rem; font-weight: 600; letter-spacing: .08em; color: var(--text-muted); padding: .3rem .55rem; border-radius: 2px; transition: background .2s, color .2s; font-family: 'Inter', sans-serif; }
+    .lang-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .lang-sep { width: 1px; height: 14px; background: var(--border); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--brown); border-radius: 2px; }
+    .mobile-nav { display: none; position: fixed; inset: 72px 0 0 0; background: rgba(253,249,244,.97); backdrop-filter: blur(12px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 99; }
+    .mobile-nav a { font-size: 1.1rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; }
+    .mobile-nav a:hover, .mobile-nav a.active { color: var(--gold); }
+    .mobile-nav .btn-nav { background: var(--gold); color: #fff !important; padding: .6rem 1.6rem; border-radius: 2px; }
+    .mobile-nav.open { display: flex; }
+    .article-hero { margin-top: 72px; position: relative; overflow: hidden; background: var(--cream); }
+    .hero-split { display: grid; grid-template-columns: 1fr 1fr; height: 480px; }
+    .hero-split-img { overflow: hidden; }
+    .hero-split-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, rgba(61,43,31,.65) 100%); pointer-events: none; }
+    .article-hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 5%; z-index: 2; max-width: 1100px; margin: 0 auto; }
+    .article-tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); background: rgba(255,255,255,.12); border: 1px solid rgba(196,154,60,.5); padding: .3rem .75rem; border-radius: 2px; margin-bottom: .9rem; }
+    .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem,4vw,3rem); font-weight: 300; color: #fff; line-height: 1.2; max-width: 760px; }
+    .article-wrap { max-width: 780px; margin: 0 auto; padding: 64px 5% 80px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); font-size: .82rem; color: var(--text-muted); }
+    .article-meta span { display: flex; align-items: center; gap: .4rem; }
+    .article-body { font-size: 1rem; color: var(--text); line-height: 1.85; }
+    .article-body p { margin-bottom: 1.4rem; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--brown); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--brown); margin: 2rem 0 .75rem; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-body li { margin-bottom: .45rem; color: var(--text-muted); }
+    .article-body strong { color: var(--brown); font-weight: 600; }
+    .article-body .highlight { background: var(--cream); border-left: 3px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 4px 4px 0; font-size: .95rem; color: var(--brown-mid); line-height: 1.75; }
+    .article-body .img-inline { width: 100%; border-radius: 4px; margin: 2rem 0; object-fit: cover; max-height: 420px; display: block; border: 1px solid var(--border); }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin: 2rem 0; }
+    .compare-col { padding: 1.75rem; }
+    .compare-col:first-child { border-right: 1px solid var(--border); background: var(--brown); color: #fff; }
+    .compare-col:last-child { background: var(--cream); }
+    .compare-col h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 1.25rem; }
+    .compare-col:first-child h3 { color: #fff; }
+    .compare-col:last-child h3 { color: var(--brown); }
+    .compare-row { display: flex; flex-direction: column; gap: .2rem; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid; }
+    .compare-col:first-child .compare-row { border-color: rgba(255,255,255,.1); }
+    .compare-col:last-child .compare-row { border-color: var(--border); }
+    .compare-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .compare-label { font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+    .compare-col:first-child .compare-label { color: rgba(255,255,255,.5); }
+    .compare-col:last-child .compare-label { color: var(--text-muted); }
+    .compare-value { font-size: .93rem; line-height: 1.6; }
+    .compare-col:first-child .compare-value { color: rgba(255,255,255,.85); }
+    .compare-col:last-child .compare-value { color: var(--brown-mid); }
+    .article-cta { background: var(--brown); color: #fff; padding: 3rem; text-align: center; border-radius: 4px; margin: 3rem 0; }
+    .article-cta p { color: rgba(255,255,255,.75); margin-bottom: 1.5rem; font-size: .97rem; line-height: 1.75; }
+    .btn-primary { display: inline-flex; align-items: center; gap: .6rem; background: var(--gold); color: #fff; font-size: .85rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .9rem 2rem; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-primary:hover { background: var(--gold-dark); }
+    .articles-nav { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 2.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .articles-nav a { font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color .2s; }
+    .articles-nav a:hover { color: var(--gold-dark); }
+    footer { background: var(--brown); color: rgba(255,255,255,.6); padding: 30px 5%; text-align: center; font-size: .82rem; }
+    footer a { color: rgba(255,255,255,.4); text-decoration: none; margin: 0 .75rem; }
+    footer a:hover { color: #E8D5A3; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .hero-split { grid-template-columns: 1fr; height: 320px; }
+      .hero-split-img:last-child { display: none; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .compare-col:first-child { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Madagascar <span>Vanilla</span></a>
+  <nav>
+    <a href="index.html#features" data-i18n="nav.features">Avantages</a>
+    <a href="index.html#products" data-i18n="nav.products">Produits</a>
+    <a href="index.html#origin" data-i18n="nav.origin">Origine</a>
+    <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="blog.html" class="active" data-i18n="nav.blog">Blog</a>
+    <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact">Nous contacter</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')" aria-label="Français">FR</button>
+      <div class="lang-sep" aria-hidden="true"></div>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+    </div>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html#features" data-i18n="nav.features" onclick="toggleMenu()">Avantages</a>
+  <a href="index.html#products" data-i18n="nav.products" onclick="toggleMenu()">Produits</a>
+  <a href="index.html#origin" data-i18n="nav.origin" onclick="toggleMenu()">Origine</a>
+  <a href="index.html#faq" data-i18n="nav.faq" onclick="toggleMenu()">FAQ</a>
+  <a href="blog.html" class="active" data-i18n="nav.blog" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact" onclick="toggleMenu()">Nous contacter</a>
+  <div class="lang-switch">
+    <button class="lang-btn active" id="btn-fr-m" onclick="setLang('fr')" aria-label="Français">FR</button>
+    <div class="lang-sep" aria-hidden="true"></div>
+    <button class="lang-btn" id="btn-en-m" onclick="setLang('en')" aria-label="English">EN</button>
+  </div>
+</div>
+
+<div class="article-hero">
+  <div class="hero-split">
+    <div class="hero-split-img">
+      <img src="noire.webp" alt="Gousse de vanille noire de Madagascar" fetchpriority="high" />
+    </div>
+    <div class="hero-split-img">
+      <img src="rouge.webp" alt="Gousse de vanille rouge de Madagascar" fetchpriority="high" />
+    </div>
+  </div>
+  <div class="article-hero-content">
+    <span class="article-tag" data-i18n="tag">Marché</span>
+    <h1 data-i18n="h1">Vanille noire vs vanille rouge : quelles différences ?</h1>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-meta">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span data-i18n="date">21 mai 2026</span>
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span data-i18n="readtime">5 min de lecture</span>
+    </span>
+  </div>
+
+  <div class="article-body" id="article-body"></div>
+
+  <div class="article-cta">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#fff;margin-bottom:.75rem;" data-i18n="cta.title">Les deux variétés disponibles en commande</h2>
+    <p data-i18n="cta.p">Vanille noire ou rouge, en volume à partir de 5 kg, directement depuis Madagascar. Contactez-nous pour un devis personnalisé et des échantillons professionnels.</p>
+    <a href="index.html#contact" class="btn-primary" data-i18n="cta.btn">Demander un devis</a>
+  </div>
+
+  <div class="articles-nav">
+    <a href="article-conservation.html" data-i18n="nav.prev">← Conservation des gousses</a>
+    <a href="blog.html" data-i18n="nav.back">Retour au blog →</a>
+  </div>
+</div>
+
+<footer>
+  <span data-i18n="footer.copy">© 2026 Madagascar Vanilla — Tous droits réservés</span>
+  <br style="margin:.5rem 0;">
+  <a href="index.html" data-i18n="footer.home">Accueil</a>
+  <a href="blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+</footer>
+
+<script>
+const T = {
+  fr: {
+    "meta.title": "Vanille noire vs vanille rouge : quelles différences ? — Madagascar Vanilla",
+    "nav.features": "Avantages", "nav.products": "Produits", "nav.origin": "Origine",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Nous contacter",
+    "tag": "Marché",
+    "h1": "Vanille noire vs vanille rouge : quelles différences ?",
+    "date": "21 mai 2026", "readtime": "5 min de lecture",
+    "cta.title": "Les deux variétés disponibles en commande",
+    "cta.p": "Vanille noire ou rouge, en volume à partir de 5 kg, directement depuis Madagascar. Contactez-nous pour un devis personnalisé et des échantillons professionnels.",
+    "cta.btn": "Demander un devis",
+    "nav.prev": "← Conservation des gousses",
+    "nav.back": "Retour au blog →",
+    "footer.copy": "© 2026 Madagascar Vanilla — Tous droits réservés",
+    "footer.home": "Accueil"
+  },
+  en: {
+    "meta.title": "Black Vanilla vs Red Vanilla: What Are the Differences? — Madagascar Vanilla",
+    "nav.features": "Why us", "nav.products": "Products", "nav.origin": "Origin",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Contact us",
+    "tag": "Market",
+    "h1": "Black Vanilla vs Red Vanilla: What Are the Differences?",
+    "date": "May 21, 2026", "readtime": "5 min read",
+    "cta.title": "Both varieties available to order",
+    "cta.p": "Black or red vanilla, in bulk from 5 kg, directly from Madagascar. Contact us for a personalised quote and professional samples.",
+    "cta.btn": "Request a quote",
+    "nav.prev": "← Storing vanilla pods",
+    "nav.back": "Back to blog →",
+    "footer.copy": "© 2026 Madagascar Vanilla — All rights reserved",
+    "footer.home": "Home"
+  }
+};
+
+const CONTENT = {
+  fr: `
+    <p>Chez Madagascar Vanilla, nous proposons deux types de gousses <strong>Grade TK</strong> : la vanille noire et la vanille rouge. Même origine géographique (la région SAVA), même variété botanique (<em>Vanilla planifolia</em> bourbon) — mais des caractéristiques sensiblement différentes selon le <strong>degré d'affinage</strong> et le stade de récolte.</p>
+
+    <div class="highlight">
+      Le Grade TK (Tout-Venant Kilogramme) désigne les gousses de qualité commerciale premium : longueur supérieure à 14 cm, souplesse, teneur en humidité contrôlée. C'est le standard de référence pour les professionnels de la gastronomie.
+    </div>
+
+    <h2>Comparatif côte à côte</h2>
+
+    <div class="compare-grid">
+      <div class="compare-col">
+        <h3>Vanille Noire</h3>
+        <div class="compare-row">
+          <span class="compare-label">Aspect</span>
+          <span class="compare-value">Gousses noires, brillantes, charnues et très souples</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Affinage</span>
+          <span class="compare-value">Complet : 6 à 9 mois de préparation traditionnelle</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Teneur en vanilline</span>
+          <span class="compare-value">1,6 à 2,2 % — concentration maximale</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Profil aromatique</span>
+          <span class="compare-value">Intense, chaud, crémeux, légèrement caramélisé, persistant</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Usages idéaux</span>
+          <span class="compare-value">Pâtisserie fine, crèmes brûlées, glaces, chocolat, infusions chaudes</span>
+        </div>
+      </div>
+      <div class="compare-col">
+        <h3>Vanille Rouge</h3>
+        <div class="compare-row">
+          <span class="compare-label">Aspect</span>
+          <span class="compare-value">Gousses brun-rouge, légèrement moins brillantes, souples</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Affinage</span>
+          <span class="compare-value">Partiel : processus raccourci, moins de temps en étuvage</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Teneur en vanilline</span>
+          <span class="compare-value">1,2 à 1,6 % — arôme plus léger mais plus frais</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Profil aromatique</span>
+          <span class="compare-value">Frais, floral, légèrement fruité, plus volatil en bouche</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Usages idéaux</span>
+          <span class="compare-value">Parfumerie, cocktails, infusions froides, savonnerie, cuisine créative</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>Pourquoi cette différence d'affinage ?</h2>
+    <p>La couleur noire est le résultat d'un affinage long et complet. Après la récolte, les gousses destinées à devenir noires sont soumises à un processus d'échaudage, d'étuvage et de séchage plus prolongé. Les réactions enzymatiques transforment progressivement les précurseurs aromatiques en vanilline et en centaines d'autres composés qui constituent le bouquet complexe de la vanille bourbon.</p>
+    <p>Les gousses rouges sont récoltées à un stade légèrement différent ou subissent un affinage moins poussé. Elles conservent davantage de notes fraîches et florales, caractéristiques des précurseurs aromatiques moins transformés. Ce profil est précieux pour certaines applications où l'on recherche une note de vanille plus légère et nuancée.</p>
+
+    <img class="img-inline" src="vanille-tranche-caviar.webp" alt="Gousse de vanille tranchée avec caviar visible" loading="lazy" />
+
+    <h2>Le caviar de vanille : la même richesse pour les deux</h2>
+    <p>À l'intérieur de chaque gousse, qu'elle soit noire ou rouge, se trouvent des milliers de graines minuscules noires : c'est le <strong>caviar de vanille</strong>. Ces graines concentrent une partie des arômes et sont particulièrement appréciées pour leur aspect visuel dans les crèmes et entremets.</p>
+    <p>Pour extraire le caviar, fendez la gousse dans la longueur avec la pointe d'un couteau fin et grattez délicatement les graines. Avec les gousses Grade TK, vous obtiendrez un caviar abondant et bien fourni.</p>
+
+    <h2>Laquelle choisir pour votre activité ?</h2>
+    <p>La réponse dépend de votre usage principal :</p>
+    <ul>
+      <li><strong>Pâtisserie, chocolaterie, glacerie</strong> → Vanille noire. Sa richesse aromatique résiste à la cuisson et aux mélanges intenses. Elle s'impose dans toute préparation sucrée professionnelle.</li>
+      <li><strong>Parfumerie artisanale, savonnerie</strong> → Vanille rouge. Son profil plus floral et frais s'intègre mieux dans les formulations à froid, sans chauffage qui dégraderait les notes délicates.</li>
+      <li><strong>Cocktails et boissons aromatisées</strong> → Vanille rouge. Ses notes fruitées se marient parfaitement avec les alcools blancs, le rhum ou les eaux gazeuses.</li>
+      <li><strong>Cuisine créative et gastronomie</strong> → Les deux. La noire pour les sauces et réductions, la rouge pour les marinades et vinaigrettes aromatisées.</li>
+    </ul>
+    <p>Pour les professionnels indécis, nous pouvons organiser l'envoi d'échantillons des deux variétés avant une commande en volume. Contactez-nous via le formulaire de contact.</p>
+  `,
+  en: `
+    <p>At Madagascar Vanilla, we offer two types of <strong>Grade TK</strong> pods: black vanilla and red vanilla. Same geographic origin (the SAVA region), same botanical variety (<em>Vanilla planifolia</em> bourbon) — but significantly different characteristics depending on the <strong>degree of curing</strong> and harvest stage.</p>
+
+    <div class="highlight">
+      Grade TK (Tout-Venant Kilogramme) designates premium commercial quality pods: length over 14 cm, suppleness, controlled moisture content. This is the reference standard for gastronomy professionals.
+    </div>
+
+    <h2>Side-by-side comparison</h2>
+
+    <div class="compare-grid">
+      <div class="compare-col">
+        <h3>Black Vanilla</h3>
+        <div class="compare-row">
+          <span class="compare-label">Appearance</span>
+          <span class="compare-value">Black pods, glossy, fleshy and very supple</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Curing</span>
+          <span class="compare-value">Complete: 6 to 9 months of traditional curing</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Vanillin content</span>
+          <span class="compare-value">1.6 to 2.2% — maximum concentration</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Aromatic profile</span>
+          <span class="compare-value">Intense, warm, creamy, slightly caramelised, long-lasting</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Ideal uses</span>
+          <span class="compare-value">Fine pastry, crème brûlée, ice cream, chocolate, hot infusions</span>
+        </div>
+      </div>
+      <div class="compare-col">
+        <h3>Red Vanilla</h3>
+        <div class="compare-row">
+          <span class="compare-label">Appearance</span>
+          <span class="compare-value">Reddish-brown pods, slightly less glossy, supple</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Curing</span>
+          <span class="compare-value">Partial: shortened process, less sweating time</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Vanillin content</span>
+          <span class="compare-value">1.2 to 1.6% — lighter but fresher aroma</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Aromatic profile</span>
+          <span class="compare-value">Fresh, floral, slightly fruity, more volatile on the palate</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Ideal uses</span>
+          <span class="compare-value">Perfumery, cocktails, cold infusions, soap-making, creative cuisine</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>Why the difference in curing?</h2>
+    <p>The black colour is the result of a long, complete curing process. After harvest, pods destined to become black undergo a longer blanching, sweating and drying process. Enzymatic reactions progressively transform aromatic precursors into vanillin and hundreds of other compounds that make up the complex bouquet of Bourbon vanilla.</p>
+    <p>Red pods are harvested at a slightly different stage or undergo less extensive curing. They retain more fresh, floral notes, characteristic of less-transformed aromatic precursors. This profile is valuable for applications where a lighter, more nuanced vanilla note is desired.</p>
+
+    <img class="img-inline" src="vanille-tranche-caviar.webp" alt="Vanilla pod sliced showing visible caviar" loading="lazy" />
+
+    <h2>Vanilla caviar: the same richness in both</h2>
+    <p>Inside every pod, whether black or red, are thousands of tiny black seeds: this is the <strong>vanilla caviar</strong>. These seeds concentrate part of the aromatic compounds and are particularly prized for their visual appeal in creams and desserts.</p>
+    <p>To extract the caviar, split the pod lengthways with the tip of a thin knife and gently scrape out the seeds. With Grade TK pods, you will obtain an abundant, well-filled caviar.</p>
+
+    <h2>Which to choose for your business?</h2>
+    <p>The answer depends on your main use:</p>
+    <ul>
+      <li><strong>Pastry, chocolate, ice cream</strong> → Black vanilla. Its aromatic richness withstands cooking and intense mixing. It is the go-to for any professional sweet preparation.</li>
+      <li><strong>Artisan perfumery, soap-making</strong> → Red vanilla. Its more floral, fresh profile integrates better in cold-process formulations, where heating would degrade the delicate notes.</li>
+      <li><strong>Cocktails and flavoured drinks</strong> → Red vanilla. Its fruity notes pair perfectly with white spirits, rum or sparkling water.</li>
+      <li><strong>Creative cuisine and gastronomy</strong> → Both. Black for sauces and reductions, red for marinades and aromatic vinaigrettes.</li>
+    </ul>
+    <p>For professionals who are unsure, we can arrange samples of both varieties before a bulk order. Contact us via the contact form.</p>
+  `
+};
+
+const browserLang = (navigator.language || 'fr').toLowerCase();
+let currentLang = browserLang.startsWith('fr') ? 'fr' : 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  if (T[lang]['meta.title']) document.title = T[lang]['meta.title'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[lang][key] !== undefined) el.textContent = T[lang][key];
+  });
+  document.getElementById('article-body').innerHTML = CONTENT[lang];
+  ['btn-fr','btn-fr-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='fr'); });
+  ['btn-en','btn-en-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='en'); });
+}
+
+function toggleMenu() {
+  const nav = document.getElementById('mobile-nav');
+  const btn = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+
+setLang(currentLang);
+</script>
+
+</body>
+</html>

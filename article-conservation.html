@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Comment bien conserver vos gousses de vanille — Madagascar Vanilla</title>
+  <meta name="description" content="Nos conseils pour préserver l'arôme de vos gousses de vanille pendant plusieurs mois." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #FDF9F4;
+      --warm-white: #FFFEFB;
+      --gold:       #C49A3C;
+      --gold-dark:  #9B7A2E;
+      --brown:      #3D2B1F;
+      --brown-mid:  #6B4C3B;
+      --brown-light:#A07850;
+      --text:       #2A1F18;
+      --text-muted: #7A6555;
+      --border:     #E0CDB5;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); line-height: 1.6; }
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 72px;
+      background: rgba(255,252,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); letter-spacing: .04em; text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 2rem; align-items: center; }
+    nav a { font-size: .82rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--gold); }
+    .btn-nav { background: var(--gold); color: #fff !important; padding: .5rem 1.25rem; border-radius: 2px; transition: background .2s !important; }
+    .btn-nav:hover { background: var(--gold-dark) !important; }
+    .lang-switch { display: flex; align-items: center; gap: .3rem; margin-left: 1.5rem; }
+    .lang-btn { background: none; border: 1px solid var(--border); cursor: pointer; font-size: .75rem; font-weight: 600; letter-spacing: .08em; color: var(--text-muted); padding: .3rem .55rem; border-radius: 2px; transition: background .2s, color .2s; font-family: 'Inter', sans-serif; }
+    .lang-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .lang-sep { width: 1px; height: 14px; background: var(--border); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--brown); border-radius: 2px; }
+    .mobile-nav { display: none; position: fixed; inset: 72px 0 0 0; background: rgba(253,249,244,.97); backdrop-filter: blur(12px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 99; }
+    .mobile-nav a { font-size: 1.1rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; }
+    .mobile-nav a:hover, .mobile-nav a.active { color: var(--gold); }
+    .mobile-nav .btn-nav { background: var(--gold); color: #fff !important; padding: .6rem 1.6rem; border-radius: 2px; }
+    .mobile-nav.open { display: flex; }
+    .article-hero {
+      margin-top: 72px; position: relative; height: 480px; overflow: hidden; background: var(--cream);
+    }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, rgba(61,43,31,.65) 100%); }
+    .article-hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 5%; z-index: 2; max-width: 1100px; margin: 0 auto; }
+    .article-tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); background: rgba(255,255,255,.12); border: 1px solid rgba(196,154,60,.5); padding: .3rem .75rem; border-radius: 2px; margin-bottom: .9rem; }
+    .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem,4vw,3rem); font-weight: 300; color: #fff; line-height: 1.2; max-width: 760px; }
+    .article-wrap { max-width: 780px; margin: 0 auto; padding: 64px 5% 80px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); font-size: .82rem; color: var(--text-muted); }
+    .article-meta span { display: flex; align-items: center; gap: .4rem; }
+    .article-body { font-size: 1rem; color: var(--text); line-height: 1.85; }
+    .article-body p { margin-bottom: 1.4rem; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--brown); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--brown); margin: 2rem 0 .75rem; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-body li { margin-bottom: .45rem; color: var(--text-muted); }
+    .article-body strong { color: var(--brown); font-weight: 600; }
+    .article-body .highlight { background: var(--cream); border-left: 3px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 4px 4px 0; font-size: .95rem; color: var(--brown-mid); line-height: 1.75; }
+    .article-body .img-inline { width: 100%; border-radius: 4px; margin: 2rem 0; object-fit: cover; max-height: 420px; display: block; border: 1px solid var(--border); }
+    .tip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin: 2rem 0; }
+    .tip-card { background: var(--cream); padding: 1.5rem; }
+    .tip-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--brown); margin-bottom: .6rem; }
+    .tip-card p { font-size: .88rem; color: var(--text-muted); line-height: 1.7; }
+    .tip-card.bad { border-top: 3px solid #c0392b; }
+    .tip-card.good { border-top: 3px solid #27ae60; }
+    .article-cta { background: var(--brown); color: #fff; padding: 3rem; text-align: center; border-radius: 4px; margin: 3rem 0; }
+    .article-cta p { color: rgba(255,255,255,.75); margin-bottom: 1.5rem; font-size: .97rem; line-height: 1.75; }
+    .btn-primary { display: inline-flex; align-items: center; gap: .6rem; background: var(--gold); color: #fff; font-size: .85rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .9rem 2rem; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-primary:hover { background: var(--gold-dark); }
+    .articles-nav { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 2.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .articles-nav a { font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color .2s; }
+    .articles-nav a:hover { color: var(--gold-dark); }
+    footer { background: var(--brown); color: rgba(255,255,255,.6); padding: 30px 5%; text-align: center; font-size: .82rem; }
+    footer a { color: rgba(255,255,255,.4); text-decoration: none; margin: 0 .75rem; }
+    footer a:hover { color: #E8D5A3; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .article-hero { height: 320px; }
+      .tip-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Madagascar <span>Vanilla</span></a>
+  <nav>
+    <a href="index.html#features" data-i18n="nav.features">Avantages</a>
+    <a href="index.html#products" data-i18n="nav.products">Produits</a>
+    <a href="index.html#origin" data-i18n="nav.origin">Origine</a>
+    <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="blog.html" class="active" data-i18n="nav.blog">Blog</a>
+    <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact">Nous contacter</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')" aria-label="Français">FR</button>
+      <div class="lang-sep" aria-hidden="true"></div>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+    </div>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html#features" data-i18n="nav.features" onclick="toggleMenu()">Avantages</a>
+  <a href="index.html#products" data-i18n="nav.products" onclick="toggleMenu()">Produits</a>
+  <a href="index.html#origin" data-i18n="nav.origin" onclick="toggleMenu()">Origine</a>
+  <a href="index.html#faq" data-i18n="nav.faq" onclick="toggleMenu()">FAQ</a>
+  <a href="blog.html" class="active" data-i18n="nav.blog" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact" onclick="toggleMenu()">Nous contacter</a>
+  <div class="lang-switch">
+    <button class="lang-btn active" id="btn-fr-m" onclick="setLang('fr')" aria-label="Français">FR</button>
+    <div class="lang-sep" aria-hidden="true"></div>
+    <button class="lang-btn" id="btn-en-m" onclick="setLang('en')" aria-label="English">EN</button>
+  </div>
+</div>
+
+<div class="article-hero">
+  <img src="quelques-gousses-sur-plat.webp" alt="Gousses de vanille sur un plat" fetchpriority="high" />
+  <div class="article-hero-content">
+    <span class="article-tag" data-i18n="tag">Conseils</span>
+    <h1 data-i18n="h1">Comment bien conserver vos gousses de vanille</h1>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-meta">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span data-i18n="date">21 mai 2026</span>
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span data-i18n="readtime">4 min de lecture</span>
+    </span>
+  </div>
+
+  <div class="article-body" id="article-body"></div>
+
+  <div class="article-cta">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#fff;margin-bottom:.75rem;" data-i18n="cta.title">Commander de la vanille de qualité</h2>
+    <p data-i18n="cta.p">Nos gousses Grade TK vous sont livrées en parfait état de conservation depuis Madagascar. Contactez-nous pour une commande professionnelle.</p>
+    <a href="index.html#contact" class="btn-primary" data-i18n="cta.btn">Demander un devis</a>
+  </div>
+
+  <div class="articles-nav">
+    <a href="article-region-sava.html" data-i18n="nav.prev">← La région SAVA</a>
+    <a href="article-noire-vs-rouge.html" data-i18n="nav.next">Noire vs rouge →</a>
+  </div>
+</div>
+
+<footer>
+  <span data-i18n="footer.copy">© 2026 Madagascar Vanilla — Tous droits réservés</span>
+  <br style="margin:.5rem 0;">
+  <a href="index.html" data-i18n="footer.home">Accueil</a>
+  <a href="blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+</footer>
+
+<script>
+const T = {
+  fr: {
+    "meta.title": "Comment bien conserver vos gousses de vanille — Madagascar Vanilla",
+    "nav.features": "Avantages", "nav.products": "Produits", "nav.origin": "Origine",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Nous contacter",
+    "tag": "Conseils",
+    "h1": "Comment bien conserver vos gousses de vanille",
+    "date": "21 mai 2026", "readtime": "4 min de lecture",
+    "cta.title": "Commander de la vanille de qualité",
+    "cta.p": "Nos gousses Grade TK vous sont livrées en parfait état de conservation depuis Madagascar. Contactez-nous pour une commande professionnelle.",
+    "cta.btn": "Demander un devis",
+    "nav.prev": "← La région SAVA",
+    "nav.next": "Noire vs rouge →",
+    "footer.copy": "© 2026 Madagascar Vanilla — Tous droits réservés",
+    "footer.home": "Accueil"
+  },
+  en: {
+    "meta.title": "How to Properly Store Your Vanilla Pods — Madagascar Vanilla",
+    "nav.features": "Why us", "nav.products": "Products", "nav.origin": "Origin",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Contact us",
+    "tag": "Tips",
+    "h1": "How to Properly Store Your Vanilla Pods",
+    "date": "May 21, 2026", "readtime": "4 min read",
+    "cta.title": "Order quality vanilla",
+    "cta.p": "Our Grade TK pods are delivered in perfect condition directly from Madagascar. Contact us for a professional order.",
+    "cta.btn": "Request a quote",
+    "nav.prev": "← The SAVA region",
+    "nav.next": "Black vs red →",
+    "footer.copy": "© 2026 Madagascar Vanilla — All rights reserved",
+    "footer.home": "Home"
+  }
+};
+
+const CONTENT = {
+  fr: `
+    <p>La gousse de vanille est un produit naturel vivant. Correctement conservée, elle peut garder toute sa richesse aromatique pendant <strong>6 à 18 mois</strong>. Mal conservée, elle sèche, moisit ou perd son parfum en quelques semaines. Voici tout ce que vous devez savoir pour protéger votre investissement.</p>
+
+    <div class="highlight">
+      La règle d'or : jamais au réfrigérateur. L'humidité froide du réfrigérateur favorise le développement de moisissures et détériore irrémédiablement l'arôme des gousses.
+    </div>
+
+    <h2>Ce qu'il faut éviter absolument</h2>
+
+    <div class="tip-grid">
+      <div class="tip-card bad">
+        <h3>Le réfrigérateur</h3>
+        <p>L'humidité condensée y est trop élevée. Les gousses moisissent rapidement et perdent leur souplesse. Erreur la plus fréquente.</p>
+      </div>
+      <div class="tip-card bad">
+        <h3>La lumière directe</h3>
+        <p>Les UV dégradent les composés aromatiques. Évitez les étagères exposées et les fenêtres. Préférez un placard sombre.</p>
+      </div>
+      <div class="tip-card bad">
+        <h3>Les sacs plastique fermés</h3>
+        <p>Ils emprisonnent l'humidité résiduelle des gousses et créent un microclimat favorable aux moisissures.</p>
+      </div>
+      <div class="tip-card bad">
+        <h3>Les fortes variations de température</h3>
+        <p>Près d'un four, d'un lave-vaisselle ou d'une fenêtre exposée : les variations brutales dessèchent les gousses prématurément.</p>
+      </div>
+    </div>
+
+    <h2>Les bonnes pratiques de conservation</h2>
+
+    <div class="tip-grid">
+      <div class="tip-card good">
+        <h3>Le contenant idéal</h3>
+        <p>Un tube en verre hermétique, un bocal en verre ou un tube en plastique alimentaire épais. L'objectif : maintenir une humidité stable sans condensation.</p>
+      </div>
+      <div class="tip-card good">
+        <h3>La température idéale</h3>
+        <p>Entre 15 et 25 °C. Un placard de cuisine éloigné des sources de chaleur, à température ambiante stable, est parfait.</p>
+      </div>
+      <div class="tip-card good">
+        <h3>Pour les grands volumes</h3>
+        <p>Enroulez les gousses dans du papier absorbant légèrement humidifié avant de les placer dans le contenant hermétique. Cela régule l'humidité.</p>
+      </div>
+      <div class="tip-card good">
+        <h3>Durée de conservation</h3>
+        <p>Dans de bonnes conditions : 6 à 18 mois pour les gousses noires, 4 à 12 mois pour les gousses rouges légèrement moins affinées.</p>
+      </div>
+    </div>
+
+    <img class="img-inline" src="botte-vanille.webp" alt="Botte de vanille de Madagascar correctement stockée" loading="lazy" />
+
+    <h2>La cristallisation de vanilline : un signe de qualité</h2>
+    <p>Sur certaines gousses bien conservées, de petits cristaux blancs peuvent apparaître à la surface — en particulier sur les gousses noires. Il s'agit de <strong>vanilline cristallisée</strong>, le principal composé aromatique de la vanille.</p>
+    <p>Cette cristallisation est un indicateur de haute qualité : elle signifie que la gousse a une teneur élevée en vanilline et a été correctement affinée. Ne la grattez pas : incorporez directement la gousse, cristaux compris, dans vos préparations.</p>
+
+    <h2>Récupérer des gousses qui ont séché</h2>
+    <p>Si vous découvrez des gousses trop sèches et cassantes, tout n'est pas perdu. Enroulez-les dans un linge de cuisine légèrement humide (pas mouillé) et laissez reposer <strong>24 à 48 heures</strong> à température ambiante. Elles retrouveront une souplesse partielle et libéreront leurs arômes à la cuisson.</p>
+    <p>Pour les gousses très sèches que vous n'utiliserez pas entières, il est toujours possible de les moudre en poudre de vanille ou de les infuser dans une huile ou de l'alcool pour créer un extrait maison.</p>
+
+    <h2>Conservation en grande quantité</h2>
+    <p>Pour les commandes professionnelles (5 kg et plus), nous recommandons de diviser le stock en plusieurs lots hermétiques plutôt que de tout stocker dans un seul grand contenant. Chaque ouverture du contenant introduit de l'air extérieur et accélère le vieillissement. Traitez votre stock de vanille comme un stock de matières premières précieuses : rotation FIFO (premier entré, premier sorti) et contrôle régulier de l'état des gousses.</p>
+  `,
+  en: `
+    <p>The vanilla pod is a living natural product. Properly stored, it can retain its full aromatic richness for <strong>6 to 18 months</strong>. Stored poorly, it dries out, grows mould, or loses its fragrance within a few weeks. Here is everything you need to know to protect your investment.</p>
+
+    <div class="highlight">
+      The golden rule: never refrigerate. The cold moisture of a refrigerator encourages mould development and irreversibly damages the aroma of the pods.
+    </div>
+
+    <h2>What to avoid at all costs</h2>
+
+    <div class="tip-grid">
+      <div class="tip-card bad">
+        <h3>The refrigerator</h3>
+        <p>Condensed humidity is too high. Pods mould quickly and lose their suppleness. The most common mistake.</p>
+      </div>
+      <div class="tip-card bad">
+        <h3>Direct light</h3>
+        <p>UV rays degrade aromatic compounds. Avoid exposed shelves and windows. Choose a dark cupboard.</p>
+      </div>
+      <div class="tip-card bad">
+        <h3>Sealed plastic bags</h3>
+        <p>They trap residual moisture from the pods, creating a microclimate that encourages mould.</p>
+      </div>
+      <div class="tip-card bad">
+        <h3>Extreme temperature swings</h3>
+        <p>Near an oven, dishwasher or sun-facing window: sudden changes dry pods out prematurely.</p>
+      </div>
+    </div>
+
+    <h2>Best storage practices</h2>
+
+    <div class="tip-grid">
+      <div class="tip-card good">
+        <h3>The ideal container</h3>
+        <p>A hermetically sealed glass tube, glass jar or thick food-grade plastic tube. The goal: maintain stable humidity without condensation.</p>
+      </div>
+      <div class="tip-card good">
+        <h3>The ideal temperature</h3>
+        <p>Between 15 and 25°C. A kitchen cupboard away from heat sources, at a stable room temperature, is ideal.</p>
+      </div>
+      <div class="tip-card good">
+        <h3>For large quantities</h3>
+        <p>Wrap pods in slightly dampened (not wet) absorbent paper before placing them in the airtight container. This regulates moisture.</p>
+      </div>
+      <div class="tip-card good">
+        <h3>Shelf life</h3>
+        <p>In ideal conditions: 6 to 18 months for black pods, 4 to 12 months for red pods which are slightly less cured.</p>
+      </div>
+    </div>
+
+    <img class="img-inline" src="botte-vanille.webp" alt="Madagascar vanilla bundle properly stored" loading="lazy" />
+
+    <h2>Vanillin crystallisation: a sign of quality</h2>
+    <p>On some well-stored pods, small white crystals may appear on the surface — particularly on black pods. These are <strong>crystallised vanillin</strong>, the primary aromatic compound in vanilla.</p>
+    <p>This crystallisation is an indicator of high quality: it means the pod has a high vanillin content and has been properly cured. Do not scrape it off — incorporate the pod directly, crystals and all, into your preparations.</p>
+
+    <h2>Reviving dried-out pods</h2>
+    <p>If you find pods that have become too dry and brittle, all is not lost. Wrap them in a slightly damp (not wet) kitchen cloth and leave at room temperature for <strong>24 to 48 hours</strong>. They will regain partial suppleness and release their aromas on cooking.</p>
+    <p>For very dry pods you will not use whole, you can always grind them into vanilla powder or infuse them in oil or alcohol to create a homemade extract.</p>
+
+    <h2>Storage for large quantities</h2>
+    <p>For professional orders (5 kg and over), we recommend dividing your stock into several airtight batches rather than storing everything in a single large container. Each time you open a container, external air enters and accelerates ageing. Treat your vanilla stock like a precious raw material: FIFO rotation (first in, first out) and regular condition checks.</p>
+  `
+};
+
+const browserLang = (navigator.language || 'fr').toLowerCase();
+let currentLang = browserLang.startsWith('fr') ? 'fr' : 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  if (T[lang]['meta.title']) document.title = T[lang]['meta.title'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[lang][key] !== undefined) el.textContent = T[lang][key];
+  });
+  document.getElementById('article-body').innerHTML = CONTENT[lang];
+  ['btn-fr','btn-fr-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='fr'); });
+  ['btn-en','btn-en-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='en'); });
+}
+
+function toggleMenu() {
+  const nav = document.getElementById('mobile-nav');
+  const btn = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+
+setLang(currentLang);
+</script>
+
+</body>
+</html>

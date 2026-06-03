@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">La région SAVA : berceau de la vanille bourbon — Madagascar Vanilla</title>
+  <meta name="description" content="Découvrez pourquoi le nord-est de Madagascar produit la vanille la plus recherchée au monde." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #FDF9F4;
+      --warm-white: #FFFEFB;
+      --gold:       #C49A3C;
+      --gold-dark:  #9B7A2E;
+      --brown:      #3D2B1F;
+      --brown-mid:  #6B4C3B;
+      --brown-light:#A07850;
+      --text:       #2A1F18;
+      --text-muted: #7A6555;
+      --border:     #E0CDB5;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); line-height: 1.6; }
+
+    /* HEADER */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 72px;
+      background: rgba(255,252,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); letter-spacing: .04em; text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 2rem; align-items: center; }
+    nav a { font-size: .82rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--gold); }
+    .btn-nav { background: var(--gold); color: #fff !important; padding: .5rem 1.25rem; border-radius: 2px; transition: background .2s !important; }
+    .btn-nav:hover { background: var(--gold-dark) !important; }
+    .lang-switch { display: flex; align-items: center; gap: .3rem; margin-left: 1.5rem; }
+    .lang-btn { background: none; border: 1px solid var(--border); cursor: pointer; font-size: .75rem; font-weight: 600; letter-spacing: .08em; color: var(--text-muted); padding: .3rem .55rem; border-radius: 2px; transition: background .2s, color .2s; font-family: 'Inter', sans-serif; }
+    .lang-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .lang-sep { width: 1px; height: 14px; background: var(--border); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--brown); border-radius: 2px; transition: transform .3s, opacity .3s; }
+    .mobile-nav { display: none; position: fixed; inset: 72px 0 0 0; background: rgba(253,249,244,.97); backdrop-filter: blur(12px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 99; }
+    .mobile-nav a { font-size: 1.1rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; }
+    .mobile-nav a:hover, .mobile-nav a.active { color: var(--gold); }
+    .mobile-nav .btn-nav { background: var(--gold); color: #fff !important; padding: .6rem 1.6rem; border-radius: 2px; }
+    .mobile-nav.open { display: flex; }
+
+    /* HERO ARTICLE */
+    .article-hero {
+      margin-top: 72px;
+      position: relative; height: 480px; overflow: hidden; background: var(--cream);
+    }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .article-hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 30%, rgba(61,43,31,.65) 100%);
+    }
+    .article-hero-content {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 5%;
+      z-index: 2; max-width: 1100px; margin: 0 auto;
+    }
+    .article-tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); background: rgba(255,255,255,.12); border: 1px solid rgba(196,154,60,.5); padding: .3rem .75rem; border-radius: 2px; margin-bottom: .9rem; }
+    .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem,4vw,3rem); font-weight: 300; color: #fff; line-height: 1.2; max-width: 760px; }
+
+    /* CONTENU ARTICLE */
+    .article-wrap { max-width: 780px; margin: 0 auto; padding: 64px 5% 80px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); font-size: .82rem; color: var(--text-muted); }
+    .article-meta span { display: flex; align-items: center; gap: .4rem; }
+    .article-body { font-size: 1rem; color: var(--text); line-height: 1.85; }
+    .article-body p { margin-bottom: 1.4rem; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--brown); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--brown); margin: 2rem 0 .75rem; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-body li { margin-bottom: .45rem; color: var(--text-muted); }
+    .article-body strong { color: var(--brown); font-weight: 600; }
+    .article-body .highlight {
+      background: var(--cream); border-left: 3px solid var(--gold);
+      padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 4px 4px 0;
+      font-size: .95rem; color: var(--brown-mid); line-height: 1.75;
+    }
+    .article-body .img-inline { width: 100%; border-radius: 4px; margin: 2rem 0; object-fit: cover; max-height: 420px; display: block; border: 1px solid var(--border); }
+
+    /* CTA */
+    .article-cta { background: var(--brown); color: #fff; padding: 3rem; text-align: center; border-radius: 4px; margin: 3rem 0; }
+    .article-cta p { color: rgba(255,255,255,.75); margin-bottom: 1.5rem; font-size: .97rem; line-height: 1.75; }
+    .btn-primary { display: inline-flex; align-items: center; gap: .6rem; background: var(--gold); color: #fff; font-size: .85rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .9rem 2rem; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-primary:hover { background: var(--gold-dark); }
+
+    /* NAV ARTICLES */
+    .articles-nav { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 2.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .articles-nav a { font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color .2s; }
+    .articles-nav a:hover { color: var(--gold-dark); }
+
+    /* FOOTER */
+    footer { background: var(--brown); color: rgba(255,255,255,.6); padding: 30px 5%; text-align: center; font-size: .82rem; }
+    footer a { color: rgba(255,255,255,.4); text-decoration: none; margin: 0 .75rem; }
+    footer a:hover { color: #E8D5A3; }
+
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .article-hero { height: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Madagascar <span>Vanilla</span></a>
+  <nav>
+    <a href="index.html#features" data-i18n="nav.features">Avantages</a>
+    <a href="index.html#products" data-i18n="nav.products">Produits</a>
+    <a href="index.html#origin" data-i18n="nav.origin">Origine</a>
+    <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="blog.html" class="active" data-i18n="nav.blog">Blog</a>
+    <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact">Nous contacter</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')" aria-label="Français">FR</button>
+      <div class="lang-sep" aria-hidden="true"></div>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+    </div>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html#features" data-i18n="nav.features" onclick="toggleMenu()">Avantages</a>
+  <a href="index.html#products" data-i18n="nav.products" onclick="toggleMenu()">Produits</a>
+  <a href="index.html#origin" data-i18n="nav.origin" onclick="toggleMenu()">Origine</a>
+  <a href="index.html#faq" data-i18n="nav.faq" onclick="toggleMenu()">FAQ</a>
+  <a href="blog.html" class="active" data-i18n="nav.blog" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact" onclick="toggleMenu()">Nous contacter</a>
+  <div class="lang-switch">
+    <button class="lang-btn active" id="btn-fr-m" onclick="setLang('fr')" aria-label="Français">FR</button>
+    <div class="lang-sep" aria-hidden="true"></div>
+    <button class="lang-btn" id="btn-en-m" onclick="setLang('en')" aria-label="English">EN</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="deux-bottes-vanilles-debout.webp" alt="Gousses de vanille — région SAVA, Madagascar" fetchpriority="high" />
+  <div class="article-hero-content">
+    <span class="article-tag" data-i18n="tag">Origines</span>
+    <h1 data-i18n="h1">La région SAVA : berceau de la vanille bourbon</h1>
+  </div>
+</div>
+
+<!-- CORPS DE L'ARTICLE -->
+<div class="article-wrap">
+  <div class="article-meta">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span data-i18n="date">21 mai 2026</span>
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span data-i18n="readtime">5 min de lecture</span>
+    </span>
+  </div>
+
+  <div class="article-body" id="article-body">
+    <!-- Contenu injecté par JS selon la langue -->
+  </div>
+
+  <div class="article-cta">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#fff;margin-bottom:.75rem;" data-i18n="cta.title">Intéressé par notre vanille ?</h2>
+    <p data-i18n="cta.p">Nous livrons en volume directement depuis Madagascar. Contactez-nous pour un devis personnalisé adapté à vos besoins professionnels.</p>
+    <a href="index.html#contact" class="btn-primary" data-i18n="cta.btn">Demander un devis</a>
+  </div>
+
+  <div class="articles-nav">
+    <a href="blog.html" data-i18n="nav.back">← Retour au blog</a>
+    <a href="article-conservation.html" data-i18n="nav.next">Conservation des gousses →</a>
+  </div>
+</div>
+
+<footer>
+  <span data-i18n="footer.copy">© 2026 Madagascar Vanilla — Tous droits réservés</span>
+  <br style="margin:.5rem 0;">
+  <a href="index.html" data-i18n="footer.home">Accueil</a>
+  <a href="blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+</footer>
+
+<script>
+const T = {
+  fr: {
+    "meta.title": "La région SAVA : berceau de la vanille bourbon — Madagascar Vanilla",
+    "nav.features": "Avantages", "nav.products": "Produits", "nav.origin": "Origine",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Nous contacter",
+    "tag": "Origines",
+    "h1": "La région SAVA : berceau de la vanille bourbon",
+    "date": "21 mai 2026",
+    "readtime": "5 min de lecture",
+    "cta.title": "Intéressé par notre vanille ?",
+    "cta.p": "Nous livrons en volume directement depuis Madagascar. Contactez-nous pour un devis personnalisé adapté à vos besoins professionnels.",
+    "cta.btn": "Demander un devis",
+    "nav.back": "← Retour au blog",
+    "nav.next": "Conservation des gousses →",
+    "footer.copy": "© 2026 Madagascar Vanilla — Tous droits réservés",
+    "footer.home": "Accueil"
+  },
+  en: {
+    "meta.title": "The SAVA Region: Birthplace of Bourbon Vanilla — Madagascar Vanilla",
+    "nav.features": "Why us", "nav.products": "Products", "nav.origin": "Origin",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Contact us",
+    "tag": "Origins",
+    "h1": "The SAVA Region: Birthplace of Bourbon Vanilla",
+    "date": "May 21, 2026",
+    "readtime": "5 min read",
+    "cta.title": "Interested in our vanilla?",
+    "cta.p": "We ship in bulk directly from Madagascar. Contact us for a personalised quote tailored to your professional needs.",
+    "cta.btn": "Request a quote",
+    "nav.back": "← Back to blog",
+    "nav.next": "Storing vanilla pods →",
+    "footer.copy": "© 2026 Madagascar Vanilla — All rights reserved",
+    "footer.home": "Home"
+  }
+};
+
+const CONTENT = {
+  fr: `
+    <p>La région <strong>SAVA</strong> — acronyme de ses quatre sous-préfectures : Sambava, Antalaha, Vohémar et Andapa — s'étend le long de la côte nord-est de Madagascar sur plus de 300 kilomètres. Nichée entre l'océan Indien et les forêts tropicales de l'intérieur, cette bande de terre fertile est aujourd'hui considérée comme la <strong>capitale mondiale de la vanille</strong>.</p>
+
+    <div class="highlight">
+      Madagascar produit environ 80 % de la vanille mondiale. Et la quasi-totalité provient de la région SAVA, grâce à un microClimat exceptionnel : chaleur constante, pluies abondantes et sols volcaniques profonds.
+    </div>
+
+    <h2>Une histoire liée à la colonisation française</h2>
+    <p>La vanille est native du Mexique, où elle était pollinisée naturellement par une abeille endémique, <em>Eulaema meriana</em>, ainsi que par le colibri local. Introduite à Madagascar au XIXe siècle par les colons français, elle a trouvé un terroir exceptionnel — mais sans ses pollinisateurs d'origine.</p>
+    <p>C'est en <strong>1841</strong> qu'Edmond Albius, un jeune esclave réunionnais de 12 ans, invente la technique de pollinisation manuelle : à l'aide d'un fin bâtonnet, il transfère le pollen d'une fleur à l'autre en quelques secondes. Cette découverte va transformer la production mondiale de vanille et permettre à Madagascar de s'imposer comme premier producteur.</p>
+
+    <img class="img-inline" src="botte-vanille-dans-main.webp" alt="Botte de vanille dans une main — production SAVA" loading="lazy" />
+
+    <h2>La pollinisation : un travail d'orfèvre</h2>
+    <p>Chaque fleur de vanille ne s'ouvre qu'une seule fois, pendant quelques heures seulement, au petit matin. Les agriculteurs malgaches — que l'on appelle <em>les vanilleurs</em> — doivent inspecter leurs lianes quotidiennement pendant toute la saison de floraison, de septembre à novembre.</p>
+    <p>La fleur pollinisée donne une gousse qui mettra <strong>8 à 9 mois</strong> pour arriver à maturité. On estime qu'il faut environ 400 fleurs pollinisées à la main pour produire un kilogramme de vanille sèche.</p>
+
+    <h2>La préparation artisanale : un processus de plusieurs mois</h2>
+    <p>Récoltées encore vertes à pleine maturité, les gousses fraîches n'ont pas encore l'arôme caractéristique que nous connaissons. Elles doivent passer par un long processus d'affinage traditionnel :</p>
+    <ul>
+      <li><strong>L'échaudage</strong> : les gousses sont plongées dans l'eau à 65 °C pendant 3 minutes pour stopper la végétation et activer les enzymes</li>
+      <li><strong>L'étuvage</strong> : enveloppées dans des couvertures en laine pendant 24 à 48 h pour favoriser la fermentation enzymatique à cœur</li>
+      <li><strong>Le séchage au soleil</strong> : plusieurs semaines d'exposition alternée (soleil le jour, abri la nuit) pour réduire l'humidité</li>
+      <li><strong>L'affinage en caisse</strong> : 1 à 3 mois dans des caisses en bois où la vanilline se développe pleinement</li>
+    </ul>
+    <p>Ce processus artisanal, transmis de génération en génération, est ce qui donne à la vanille bourbon son arôme <strong>intense, crémeux et complexe</strong> — si différent des vanilles industrielles produites avec des extraits synthétiques.</p>
+
+    <h2>Notre engagement direct avec les producteurs</h2>
+    <p>Chez Madagascar Vanilla, nous travaillons en relation directe avec des producteurs de la région SAVA, sans intermédiaire. Cette proximité nous permet non seulement de proposer des <strong>tarifs préférentiels</strong> sur les commandes en volume, mais aussi de garantir une traçabilité complète : vous savez exactement d'où provient chaque gousse.</p>
+    <p>Cette approche est aussi un engagement envers les communautés locales. La vanille représente une source de revenus essentielle pour des milliers de familles malgaches. En achetant directement, vous participez à une chaîne d'approvisionnement juste et transparente.</p>
+  `,
+  en: `
+    <p>The <strong>SAVA</strong> region — an acronym of its four sub-prefectures: Sambava, Antalaha, Vohémar and Andapa — stretches along the north-eastern coast of Madagascar for over 300 kilometres. Nestled between the Indian Ocean and the tropical rainforests of the interior, this fertile strip of land is today considered the <strong>world capital of vanilla</strong>.</p>
+
+    <div class="highlight">
+      Madagascar produces approximately 80% of the world's vanilla. Almost all of it comes from the SAVA region, thanks to an exceptional microclimate: constant warmth, abundant rainfall and deep volcanic soils.
+    </div>
+
+    <h2>A history tied to French colonisation</h2>
+    <p>Vanilla is native to Mexico, where it was naturally pollinated by an endemic bee, <em>Eulaema meriana</em>, and by local hummingbirds. Introduced to Madagascar in the 19th century by French colonists, it found exceptional growing conditions — but without its original pollinators.</p>
+    <p>In <strong>1841</strong>, Edmond Albius, a 12-year-old enslaved boy from Réunion, invented hand-pollination: using a thin stick, he transferred pollen from one flower to another in a matter of seconds. This discovery transformed global vanilla production and enabled Madagascar to become the world's leading producer.</p>
+
+    <img class="img-inline" src="botte-vanille-dans-main.webp" alt="Vanilla bundle in a hand — SAVA production" loading="lazy" />
+
+    <h2>Pollination: a craftsman's art</h2>
+    <p>Each vanilla flower opens only once, for just a few hours in the early morning. Malagasy farmers — known as <em>les vanilleurs</em> — must inspect their vines daily throughout the entire flowering season, from September to November.</p>
+    <p>A pollinated flower produces a pod that takes <strong>8 to 9 months</strong> to reach maturity. It is estimated that around 400 hand-pollinated flowers are needed to produce one kilogram of dried vanilla.</p>
+
+    <h2>Traditional curing: a months-long process</h2>
+    <p>Harvested while still green at full maturity, fresh pods have none of the characteristic aroma we know. They must undergo a lengthy traditional curing process:</p>
+    <ul>
+      <li><strong>Blanching</strong>: pods are immersed in 65°C water for 3 minutes to halt growth and activate enzymes</li>
+      <li><strong>Sweating</strong>: wrapped in wool blankets for 24 to 48 hours to encourage deep enzymatic fermentation</li>
+      <li><strong>Sun drying</strong>: several weeks of alternating exposure (sun by day, shelter at night) to reduce moisture</li>
+      <li><strong>Box curing</strong>: 1 to 3 months in wooden crates where vanillin fully develops</li>
+    </ul>
+    <p>This artisanal process, passed down through generations, is what gives Bourbon vanilla its <strong>intense, creamy and complex</strong> aroma — so different from industrial vanillas produced with synthetic extracts.</p>
+
+    <h2>Our direct relationship with producers</h2>
+    <p>At Madagascar Vanilla, we work in direct relationship with producers in the SAVA region, with no middlemen. This proximity allows us not only to offer <strong>preferential pricing</strong> on volume orders, but also to guarantee complete traceability: you know exactly where every pod comes from.</p>
+    <p>This approach is also a commitment to local communities. Vanilla is an essential source of income for thousands of Malagasy families. By buying direct, you participate in a fair and transparent supply chain.</p>
+  `
+};
+
+const browserLang = (navigator.language || 'fr').toLowerCase();
+let currentLang = browserLang.startsWith('fr') ? 'fr' : 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  if (T[lang]['meta.title']) document.title = T[lang]['meta.title'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[lang][key] !== undefined) el.textContent = T[lang][key];
+  });
+  document.getElementById('article-body').innerHTML = CONTENT[lang];
+  ['btn-fr','btn-fr-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='fr'); });
+  ['btn-en','btn-en-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='en'); });
+}
+
+function toggleMenu() {
+  const nav = document.getElementById('mobile-nav');
+  const btn = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+
+setLang(currentLang);
+</script>
+
+</body>
+</html>
