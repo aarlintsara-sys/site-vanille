@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Madagascar Vanilla — Vanille Premium Directe Producteur</title>
+  <meta name="description" data-i18n-attr="meta.description,content" content="Vanille premium de Madagascar en volume, directement depuis les producteurs locaux." />
+
+  <!-- Partage sur les réseaux sociaux -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Madagascar Vanilla — Vanille Premium Directe Producteur" />
+  <meta property="og:description" content="Vanille premium de Madagascar en volume, directement depuis les producteurs locaux." />
+  <meta property="og:image"       content="hero.webp" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="theme-color"        content="#C49A3C" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #FDF9F4;
+      --warm-white: #FFFEFB;
+      --vanilla:    #E8D5A3;
+      --gold:       #C49A3C;
+      --gold-dark:  #9B7A2E;
+      --brown:      #3D2B1F;
+      --brown-mid:  #6B4C3B;
+      --brown-light:#A07850;
+      --text:       #2A1F18;
+      --text-muted: #7A6555;
+      --border:     #E0CDB5;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); line-height: 1.6; }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 72px;
+      background: rgba(255,252,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border); transition: box-shadow .3s;
+    }
+    header.scrolled { box-shadow: 0 2px 24px rgba(61,43,31,.08); }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.45rem;
+      font-weight: 600; color: var(--brown); letter-spacing: .04em; text-decoration: none;
+    }
+    .logo span { color: var(--gold); }
+
+    nav { display: flex; gap: 2rem; align-items: center; }
+    nav a {
+      font-size: .82rem; font-weight: 500; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s;
+    }
+    nav a:hover { color: var(--gold); }
+
+    .btn-nav {
+      background: var(--gold); color: #fff !important;
+      padding: .5rem 1.25rem; border-radius: 2px; transition: background .2s !important;
+    }
+    .btn-nav:hover { background: var(--gold-dark) !important; }
+
+    /* Sélecteur de langue */
+    .lang-switch {
+      display: flex; align-items: center; gap: 0;
+      border: 1px solid var(--border); border-radius: 2px; overflow: hidden;
+    }
+    .lang-btn {
+      padding: .35rem .6rem; cursor: pointer; background: transparent;
+      border: none; color: var(--text-muted); font-size: .75rem;
+      font-weight: 600; letter-spacing: .1em; font-family: 'Inter', sans-serif;
+      transition: background .2s, color .2s;
+    }
+    .lang-btn.active { background: var(--gold); color: #fff; }
+    .lang-btn:not(.active):hover { background: var(--cream); color: var(--brown); }
+    .lang-sep { width: 1px; height: 20px; background: var(--border); }
+
+    /* Hamburger → animation croix (X) */
+    .hamburger {
+      display: none; cursor: pointer; flex-direction: column; gap: 5px;
+      background: none; border: none; padding: 4px;
+    }
+    .hamburger span {
+      width: 24px; height: 2px; background: var(--brown);
+      border-radius: 2px; display: block;
+      transition: transform .3s ease, opacity .3s ease;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── HERO ── */
+    #hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; background: var(--cream); }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 70% 50%, rgba(196,154,60,.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(160,120,80,.08) 0%, transparent 60%);
+    }
+    .hero-bg::before {
+      content: ''; position: absolute; top: 0; right: 0; width: 45%; height: 100%;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Cellipse cx='400' cy='400' rx='280' ry='380' fill='none' stroke='%23C49A3C' stroke-width='.8' opacity='.2'/%3E%3Cellipse cx='400' cy='400' rx='220' ry='300' fill='none' stroke='%23C49A3C' stroke-width='.5' opacity='.15'/%3E%3C/svg%3E") no-repeat center;
+      background-size: cover;
+    }
+    .hero-inner {
+      position: relative; max-width: 1200px; margin: 0 auto; padding: 140px 5% 100px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%;
+    }
+    .hero-inner > .hero { position: relative; z-index: 1; }
+    .hero-label { display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem,5vw,4.2rem); font-weight: 300; line-height: 1.12; color: var(--brown); margin-bottom: 1.5rem; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero p { font-size: 1.05rem; color: var(--text-muted); line-height: 1.75; max-width: 480px; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: .6rem;
+      background: var(--gold); color: #fff; font-size: .85rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase; padding: .9rem 2rem;
+      border-radius: 2px; text-decoration: none; border: none; cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+    .btn-primary:hover { background: var(--gold-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: .6rem; background: transparent;
+      color: var(--brown); font-size: .85rem; font-weight: 500; letter-spacing: .08em;
+      text-transform: uppercase; padding: .9rem 2rem; border: 1px solid var(--border);
+      border-radius: 2px; text-decoration: none; transition: border-color .2s, color .2s;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-stats { display: flex; gap: 2.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .stat-item { display: flex; flex-direction: column; gap: .2rem; }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 600; color: var(--gold); line-height: 1; }
+    .stat-label { font-size: .78rem; color: var(--text-muted); letter-spacing: .06em; }
+    .hero-visual {
+      position: absolute; top: 0; right: 0;
+      width: 48%; height: 100%; overflow: hidden;
+    }
+    .hero-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-visual::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--cream) 0%, transparent 30%);
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 5%; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3.5vw,2.8rem); font-weight: 300; line-height: 1.2; color: var(--brown); margin-bottom: 1.25rem; }
+    .section-sub { font-size: 1rem; color: var(--text-muted); line-height: 1.75; max-width: 560px; }
+
+    /* ── FEATURES ── */
+    #features { background: var(--cream); }
+    .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 4rem; }
+    .feature-card { background: var(--warm-white); padding: 2.5rem; transition: transform .3s; }
+    .feature-card:hover { transform: translateY(-4px); }
+    .feature-icon { width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--gold); }
+    .feature-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--brown); margin-bottom: .75rem; }
+    .feature-card p { font-size: .92rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* ── PRODUCTS ── */
+    #products { background: var(--warm-white); }
+    .products-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem; }
+    .products-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2rem; }
+    .product-card { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; transition: box-shadow .3s, transform .3s; background: var(--warm-white); }
+    .product-card:hover { box-shadow: 0 12px 40px rgba(61,43,31,.1); transform: translateY(-4px); }
+    .product-image { height: 300px; position: relative; overflow: hidden; background: var(--cream); }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .5s ease; }
+    .product-card:hover .product-image img { transform: scale(1.04); }
+    .product-badge { position: absolute; top: 1.25rem; left: 1.25rem; background: var(--gold); color: #fff; font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 2px; }
+    .product-body { padding: 2rem; }
+    .product-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--brown); margin-bottom: .5rem; }
+    .product-grade { display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--brown-light); background: var(--cream); padding: .25rem .65rem; border-radius: 2px; margin-bottom: 1rem; }
+    .product-desc { font-size: .92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .product-footer { display: flex; align-items: center; justify-content: flex-end; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+    .btn-product { background: var(--brown); color: #fff; font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .7rem 1.5rem; border-radius: 2px; text-decoration: none; border: none; cursor: pointer; transition: background .2s; }
+    .btn-product:hover { background: var(--gold); }
+
+    /* ── GALERIE DÉFILANTE ── */
+    #gallery { background: var(--cream); padding: 80px 0; overflow: hidden; }
+    .gallery-header { text-align: center; padding: 0 5% 3rem; }
+
+    .gallery-track-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    /* Dégradé fondu sur les côtés */
+    .gallery-track-wrapper::before,
+    .gallery-track-wrapper::after {
+      content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
+    }
+    .gallery-track-wrapper::before { left: 0;  background: linear-gradient(to right, var(--cream), transparent); }
+    .gallery-track-wrapper::after  { right: 0; background: linear-gradient(to left,  var(--cream), transparent); }
+
+    .gallery-track {
+      display: flex;
+      gap: 1.25rem;
+      width: max-content;
+      animation: galleryScroll 28s linear infinite;
+    }
+    .gallery-track:hover { animation-play-state: paused; }
+
+    @keyframes galleryScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .gallery-item {
+      width: 340px;
+      height: 260px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      transition: transform .5s ease;
+      display: block;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: .6rem 1rem;
+      background: linear-gradient(transparent, rgba(61,43,31,.55));
+      color: rgba(255,255,255,.85);
+      font-size: .72rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+      opacity: 0; transition: opacity .3s;
+    }
+    .gallery-item:hover .gallery-item-caption { opacity: 1; }
+
+    @media (max-width: 900px) {
+      .gallery-item { width: 260px; height: 200px; }
+      .gallery-track-wrapper::before,
+      .gallery-track-wrapper::after { width: 60px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-track { animation: none; }
+    }
+
+    /* ── ORIGIN ── */
+    #origin { background: var(--brown); color: #fff; position: relative; overflow: hidden; }
+    #origin::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(196,154,60,.15) 0%, transparent 70%); pointer-events: none; }
+    .origin-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .origin-content .section-label { color: var(--vanilla); }
+    .origin-content .section-title { color: #fff; }
+    .origin-content p { font-size: 1rem; color: rgba(255,255,255,.7); line-height: 1.8; margin-bottom: 1.25rem; }
+    .origin-content .btn-primary { margin-top: 1rem; }
+    .origin-map { display: flex; align-items: center; justify-content: center; }
+
+    /* Carte de Madagascar */
+    .map-wrapper { position: relative; width: 260px; }
+    .map-img {
+      width: 100%; height: auto; display: block;
+      filter: sepia(1) brightness(0.68) contrast(1.3) saturate(1.3);
+    }
+    .map-pin { position: absolute; top: 19%; left: 72%; }
+    .map-pin-dot {
+      width: 10px; height: 10px; background: #C49A3C; border-radius: 50%;
+      position: relative; z-index: 2; box-shadow: 0 0 0 3px rgba(196,154,60,.25);
+    }
+    .map-pin-ring {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 10px; height: 10px;
+      border: 1.5px solid #C49A3C; border-radius: 50%;
+      animation: mapPulse 2s ease-out infinite;
+    }
+    @keyframes mapPulse {
+      0%   { width:10px; height:10px; opacity:.7; }
+      100% { width:32px; height:32px; opacity:0; }
+    }
+    .map-pin-label {
+      position: absolute; left: 16px; top: -9px;
+      background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 3px; padding: 5px 9px; white-space: nowrap;
+    }
+    .map-pin-label span { display: block; }
+    .map-pin-title { font-size: 8.5px; font-weight: 600; letter-spacing: .9px; color: rgba(255,255,255,.82); }
+    .map-pin-sub { font-size: 7.5px; color: rgba(196,154,60,.95); margin-top: 2px; }
+
+    /* ── FAQ ── */
+    #faq { background: var(--cream); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 3.5rem; background: var(--border); }
+    .faq-item { background: var(--cream); padding: 2rem 2.25rem; }
+    .faq-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--brown); margin-bottom: .75rem; display: flex; gap: .75rem; align-items: flex-start; }
+    .faq-item h4::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); flex-shrink: 0; margin-top: .6rem; }
+    .faq-item p, .faq-item ul { font-size: .92rem; color: var(--text-muted); line-height: 1.75; }
+    .faq-item ul { list-style: none; margin-top: .5rem; }
+    .faq-item ul li { padding-left: 1rem; position: relative; }
+    .faq-item ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); font-size: .8rem; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--warm-white); }
+    .contact-inner { max-width: 680px; margin: 0 auto; }
+    .contact-header { text-align: center; margin-bottom: 3rem; }
+    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .form-group { display: flex; flex-direction: column; gap: .45rem; }
+    .form-group label { font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--brown-mid); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--cream); border: 1px solid var(--border); border-radius: 2px;
+      padding: .75rem 1rem; font-family: 'Inter', sans-serif; font-size: .9rem;
+      color: var(--text); outline: none; transition: border-color .2s; width: 100%;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .form-note { font-size: .8rem; color: var(--text-muted); }
+
+    /* Message de succès */
+    .form-success-msg {
+      display: none; padding: .75rem 1rem;
+      background: #f0f7f0; border: 1px solid #b0d4b0;
+      border-radius: 2px; font-size: .9rem; color: #2d6a2d; margin-top: .5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer { background: var(--brown); color: rgba(255,255,255,.6); padding: 60px 5% 30px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.1); margin-bottom: 2rem; }
+    .footer-brand .logo { color: #fff; display: block; margin-bottom: 1rem; }
+    .footer-brand p { font-size: .88rem; line-height: 1.75; max-width: 320px; }
+    .footer-brand .footer-email {
+      display: inline-flex; align-items: center; gap: .5rem;
+      color: var(--vanilla); font-size: .85rem; text-decoration: none;
+      margin-top: 1rem; transition: opacity .2s;
+    }
+    .footer-brand .footer-email:hover { opacity: .75; }
+    .footer-col h5 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 1.25rem; letter-spacing: .04em; }
+    .footer-col a { display: block; color: rgba(255,255,255,.55); text-decoration: none; font-size: .87rem; margin-bottom: .6rem; transition: color .2s; }
+    .footer-col a:hover { color: var(--vanilla); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: .8rem; }
+    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--vanilla); }
+
+    /* ── BOUTON RETOUR EN HAUT ── */
+    .scroll-top {
+      position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px;
+      background: var(--gold); color: #fff; border: none; border-radius: 2px;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity .3s, transform .3s; z-index: 50;
+    }
+    .scroll-top.visible { opacity: 1; pointer-events: all; }
+    .scroll-top:hover { transform: translateY(-2px); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      nav.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+        background: var(--warm-white); padding: 2rem 5%;
+        gap: 1.5rem; z-index: 99; overflow-y: auto;
+      }
+      nav.open a { font-size: 1.1rem; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero p { margin: 0 auto 2.5rem; }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-visual { display: none !important; }
+      .features-grid { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .origin-inner { grid-template-columns: 1fr; }
+      .origin-map { display: none; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--warm-white); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; margin-top: 3.5rem; }
+    .testimonial-card { background: var(--cream); border: 1px solid var(--border); padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .testimonial-text { font-size: .93rem; color: var(--text-muted); line-height: 1.85; font-style: italic; flex: 1; position: relative; padding-top: 2rem; }
+    .testimonial-text::before { content: '\201C'; font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; color: var(--gold); line-height: 0; position: absolute; top: 1.2rem; left: -.1rem; opacity: .45; }
+    .testimonial-author { display: flex; align-items: center; gap: .9rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .testimonial-img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .testimonial-avatar { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 700; letter-spacing: .06em; color: #fff; flex-shrink: 0; }
+    .testimonial-name { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--brown); display: block; }
+    .testimonial-role { font-size: .75rem; color: var(--text-muted); letter-spacing: .04em; text-transform: uppercase; }
+
+    /* ── ANIMATIONS ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* Respect du mode "sans animations" de l'utilisateur */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .map-pin-ring { animation: none; }
+      .btn-primary, .btn-secondary, .feature-card,
+      .product-card, .scroll-top { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <a href="#" class="logo">Madagascar <span>Vanilla</span></a>
+  <nav id="nav" role="navigation" aria-label="Navigation principale">
+    <a href="#features" data-i18n="nav.features">Avantages</a>
+    <a href="#products" data-i18n="nav.products">Produits</a>
+    <a href="#origin"   data-i18n="nav.origin">Origine</a>
+    <a href="#faq"      data-i18n="nav.faq">FAQ</a>
+    <a href="blog.html" data-i18n="nav.blog">Blog</a>
+    <a href="#contact" class="btn-nav" data-i18n="nav.contact">Nous contacter</a>
+  </nav>
+  <div style="display:flex;gap:1rem;align-items:center;">
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-fr-m" onclick="setLang('fr')" aria-label="Français">FR</button>
+      <div class="lang-sep" aria-hidden="true"></div>
+      <button class="lang-btn" id="btn-en-m" onclick="setLang('en')" aria-label="English">EN</button>
+    </div>
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+      aria-controls="nav"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero reveal">
+      <span class="hero-label" data-i18n="hero.label">Directement depuis Madagascar</span>
+      <h1 data-i18n-html="hero.h1">Gousse de vanille <em>de Madagascar</em></h1>
+      <p data-i18n="hero.p">Nous fournissons de la vanille premium de Madagascar en volume, directement depuis les producteurs locaux. Une qualité stable, adaptée aux professionnels.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span data-i18n="nav.contact">Nous contacter</span>
+        </a>
+        <a href="#products" class="btn-secondary" data-i18n="hero.seeProducts">Voir les produits</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label" data-i18n="hero.stat1">Origine Madagascar</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">TK</span>
+          <span class="stat-label" data-i18n="hero.stat2">Grade premium</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">5–10j</span>
+          <span class="stat-label" data-i18n="hero.stat3">Livraison sécurisée</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <img src="hero.webp" alt="Gousses de vanille de Madagascar" fetchpriority="high" />
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" data-i18n="features.label">Pourquoi nous choisir</span>
+      <h2 class="section-title" data-i18n-html="features.title">Une vanille d'exception,<br>directement à la source</h2>
+      <p class="section-sub" data-i18n="features.sub">De la plantation malgache à votre atelier, nous garantissons une chaîne courte, une traçabilité totale et une qualité constante.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <svg class="feature-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z"/>
+          <path d="M24 12v12l8 4" stroke-linecap="round"/>
+          <path d="M16 8C10 14 8 22 10 30" stroke-linecap="round"/>
+          <path d="M32 8c6 6 8 14 6 22" stroke-linecap="round"/>
+        </svg>
+        <h3 data-i18n="features.f1.title">Origine directe de Madagascar</h3>
+        <p data-i18n="features.f1.desc">De la plantation à votre usage, notre vanille est sélectionnée et préparée directement sur place, dans le nord-est de Madagascar — sans intermédiaire.</p>
+      </div>
+      <div class="feature-card reveal">
+        <svg class="feature-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M24 6 C14 6 8 16 8 24 C8 34 16 42 26 42 C34 42 40 36 42 28" stroke-linecap="round"/>
+          <path d="M30 10 C32 14 33 18 32 22 C31 28 26 32 22 30 C18 28 17 22 20 18 C22 15 26 14 30 10Z" fill="currentColor" opacity=".15"/>
+          <path d="M30 10 C32 14 33 18 32 22 C31 28 26 32 22 30 C18 28 17 22 20 18 C22 15 26 14 30 10Z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 data-i18n="features.f2.title">Arôme intense &amp; naturel</h3>
+        <p data-i18n="features.f2.desc">Nos gousses sont récoltées à pleine maturité pour garantir une richesse maximale en vanilline, une souplesse parfaite et un parfum puissant et authentique.</p>
+      </div>
+      <div class="feature-card reveal">
+        <svg class="feature-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="8" y="20" width="32" height="22" rx="2"/>
+          <path d="M16 20V14a8 8 0 0 1 16 0v6" stroke-linecap="round"/>
+          <circle cx="24" cy="31" r="3" fill="currentColor" opacity=".3"/>
+          <line x1="24" y1="34" x2="24" y2="37" stroke-linecap="round"/>
+        </svg>
+        <h3 data-i18n="features.f3.title">Expédition sécurisée DHL</h3>
+        <p data-i18n="features.f3.desc">Chaque commande est soigneusement conditionnée et expédiée depuis Madagascar avec numéro de suivi. Livraison en 3 à 7 jours ouvrés selon votre pays.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="container">
+    <div class="products-header reveal">
+      <div>
+        <span class="section-label" data-i18n="products.label">Notre sélection</span>
+        <h2 class="section-title" data-i18n-html="products.title">Gousses de vanille<br>Grade TK premium</h2>
+      </div>
+      <a href="#contact" class="btn-secondary" data-i18n="products.bulk">Commande en gros →</a>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <div class="product-image">
+          <span class="product-badge" data-i18n="products.badge1">Best-seller</span>
+          <img src="noire.webp" alt="Gousse de vanille noire de Madagascar" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <span class="product-grade" data-i18n="products.grade">Grade TK · Vanille bourbon</span>
+          <h3 data-i18n="products.p1.name">Gousse de Vanille Noire</h3>
+          <p class="product-desc" data-i18n="products.p1.desc">Gousses noires affinées, riches en vanilline cristallisée. Idéales pour la pâtisserie fine, la confiserie et toute préparation haut de gamme nécessitant un arôme puissant et complexe.</p>
+          <div class="product-footer">
+            <a href="#contact" class="btn-product" data-i18n="products.order">Passer commande</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-image">
+          <span class="product-badge" style="background: var(--brown-light);" data-i18n="products.badge2">Nouveauté</span>
+          <img src="rouge.webp" alt="Gousse de vanille rouge de Madagascar" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <span class="product-grade" data-i18n="products.grade">Grade TK · Vanille bourbon</span>
+          <h3 data-i18n="products.p2.name">Gousse de Vanille Rouge</h3>
+          <p class="product-desc" data-i18n="products.p2.desc">Gousses rouges légèrement moins affinées, plus fruitées et florales. Très appréciées en parfumerie, en cuisine créative et pour les infusions aromatiques raffinées.</p>
+          <div class="product-footer">
+            <a href="#contact" class="btn-product" data-i18n="products.order">Passer commande</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-header reveal">
+    <span class="section-label" data-i18n="gallery.label">Notre vanille en images</span>
+    <h2 class="section-title" data-i18n="gallery.title">Une qualité visible à chaque gousse</h2>
+    <p class="section-sub" style="margin:0 auto;" data-i18n="gallery.sub">Chaque gousse est sélectionnée à la main pour sa souplesse, sa longueur et sa richesse aromatique.</p>
+  </div>
+  <div class="gallery-track-wrapper">
+    <div class="gallery-track">
+      <!-- Série 1 -->
+      <div class="gallery-item">
+        <img src="botte-et-gousse-sur-plat.webp" alt="Botte et gousse de vanille sur plat" loading="lazy" />
+        <div class="gallery-item-caption" data-i18n="gallery.cap1">Botte &amp; gousse</div>
+      </div>
+      <div class="gallery-item">
+        <img src="botte-vanille.webp" alt="Botte de vanille de Madagascar" loading="lazy" />
+        <div class="gallery-item-caption" data-i18n="gallery.cap2">Botte de vanille</div>
+      </div>
+      <div class="gallery-item">
+        <img src="deux-bottes-vanilles-debout.webp" alt="Deux bottes de vanille debout" loading="lazy" />
+        <div class="gallery-item-caption" data-i18n="gallery.cap3">Gousses Grade TK</div>
+      </div>
+      <div class="gallery-item">
+        <img src="quelques-gousses-sur-plat.webp" alt="Quelques gousses de vanille sur plat" loading="lazy" />
+        <div class="gallery-item-caption" data-i18n="gallery.cap4">Sélection premium</div>
+      </div>
+      <div class="gallery-item">
+        <img src="vanille-tranche-caviar.webp" alt="Vanille tranchée avec caviar" loading="lazy" />
+        <div class="gallery-item-caption" data-i18n="gallery.cap5">Caviar de vanille</div>
+      </div>
+      <!-- Série 2 — copie exacte pour la boucle infinie -->
+      <div class="gallery-item">
+        <img src="botte-et-gousse-sur-plat.webp" alt="Botte et gousse de vanille sur plat" loading="lazy" />
+        <div class="gallery-item-caption" data-i18n="gallery.cap1">Botte &amp; gousse</div>
+      </div>
+      <div class="gallery-item">
+        <img src="botte-vanille.webp" alt="Botte de vanille de Madagascar" loading="lazy" />
+        <div class="gallery-item-caption" data-i18n="gallery.cap2">Botte de vanille</div>
+      </div>
+      <div class="gallery-item">
+        <img src="deux-bottes-vanilles-debout.webp" alt="Deux bottes de vanille debout" loading="lazy" />
+        <div class="gallery-item-caption" data-i18n="gallery.cap3">Gousses Grade TK</div>
+      </div>
+      <div class="gallery-item">
+        <img src="quelques-gousses-sur-plat.webp" alt="Quelques gousses de vanille sur plat" loading="lazy" />
+        <div class="gallery-item-caption" data-i18n="gallery.cap4">Sélection premium</div>
+      </div>
+      <div class="gallery-item">
+        <img src="vanille-tranche-caviar.webp" alt="Vanille tranchée avec caviar" loading="lazy" />
+        <div class="gallery-item-caption" data-i18n="gallery.cap5">Caviar de vanille</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN -->
+<section id="origin">
+  <div class="container">
+    <div class="origin-inner">
+      <div class="origin-content reveal">
+        <span class="section-label" data-i18n="origin.label">Notre origine</span>
+        <h2 class="section-title" data-i18n-html="origin.title">Le nord-est de Madagascar,<br>berceau de la vanille bourbon</h2>
+        <p data-i18n="origin.p1">Nos gousses proviennent directement des plantations du nord-est de Madagascar, la région mondialement reconnue pour produire la meilleure vanille bourbon.</p>
+        <p data-i18n="origin.p2">Récoltées à pleine maturité, nos gousses sont affinées selon les méthodes traditionnelles malgaches, sans aucun additif ni traitement chimique.</p>
+        <p data-i18n-html="origin.p3">Nous travaillons en direct avec les producteurs locaux, ce qui nous permet de proposer des <strong style="color:#fff">tarifs préférentiels</strong> pour les volumes importants, tout en garantissant une traçabilité complète.</p>
+        <a href="#contact" class="btn-primary" data-i18n="origin.cta">Obtenir des tarifs grossiste</a>
+      </div>
+      <div class="origin-map reveal">
+        <div class="map-wrapper">
+          <img src="map.png" alt="Carte de Madagascar — Région SAVA" class="map-img" loading="lazy" />
+          <div class="map-pin" aria-hidden="true">
+            <div class="map-pin-dot"></div>
+            <div class="map-pin-ring"></div>
+            <div class="map-pin-label">
+              <span class="map-pin-title">NE MADAGASCAR</span>
+              <span class="map-pin-sub">Région Vanilla</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto;">
+      <span class="section-label" data-i18n="faq.label">Questions fréquentes</span>
+      <h2 class="section-title" data-i18n="faq.title">Tout ce que vous devez savoir</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <h4 data-i18n="faq.q1.q">Quelle est l'origine de vos gousses de vanille ?</h4>
+        <p data-i18n="faq.q1.a">Nos gousses proviennent directement de plantations du nord-est de Madagascar, région réputée pour la meilleure vanille bourbon. Elles sont récoltées à maturité et affinées traditionnellement.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4 data-i18n="faq.q2.q">Comment est déterminé le prix ?</h4>
+        <p data-i18n="faq.q2.a">Le prix dépend de la qualité, de la longueur des gousses et du marché international. Les volumes importants permettent d'obtenir des tarifs plus avantageux. Contactez-nous pour un devis personnalisé.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4 data-i18n="faq.q3.q">Quand recevrai-je ma commande ?</h4>
+        <p data-i18n="faq.q3.a">Les délais de livraison varient généralement entre 3 et 7 jours ouvrés selon le pays de destination, via expédition DHL avec numéro de suivi fourni.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4 data-i18n="faq.q4.q">Puis-je acheter de la vanille en grande quantité ?</h4>
+        <p data-i18n="faq.q4.a">Oui, la vente en gros est disponible. Nous accompagnons chefs, pâtissiers, artisans et revendeurs. Contactez-nous pour les commandes importantes et nous établirons un tarif sur mesure.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4 data-i18n="faq.q5.q">Comment conserver les gousses de vanille ?</h4>
+        <ul>
+          <li data-i18n="faq.q5.a1">Dans un tube hermétique ou bocal en verre</li>
+          <li data-i18n="faq.q5.a2">À température ambiante (jamais au réfrigérateur)</li>
+          <li data-i18n="faq.q5.a3">À l'abri de la lumière directe et de l'humidité</li>
+          <li data-i18n="faq.q5.a4">Bien conservée, une gousse garde son arôme plusieurs mois</li>
+        </ul>
+      </div>
+      <div class="faq-item reveal">
+        <h4 data-i18n="faq.q6.q">Proposez-vous des échantillons ?</h4>
+        <p data-i18n="faq.q6.a">Oui, des échantillons peuvent être organisés pour les professionnels souhaitant tester la qualité avant une commande en volume. Faites-nous part de votre demande via le formulaire de contact.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label" data-i18n="testimonials.label">Ils nous font confiance</span>
+      <h2 class="section-title" data-i18n="testimonials.title">Ce que disent nos clients</h2>
+    </div>
+    <div class="testimonials-grid">
+
+      <!-- Jean-Marc Tissier — PHOTO -->
+      <div class="testimonial-card reveal">
+        <p class="testimonial-text" data-i18n="testimonials.t1.text">Une vanille d'une qualité exceptionnelle. Les gousses sont charnues, bien huilées, avec un parfum puissant qui transforme complètement mes créations. Je ne reviendrai jamais aux vanilles industrielles.</p>
+        <div class="testimonial-author">
+          <img src="Jean-Marc Tissier.webp" alt="Jean-Marc Tissier" class="testimonial-img"/>
+          <div>
+            <strong class="testimonial-name" data-i18n="testimonials.t1.name">Jean-Marc Tissier</strong>
+            <span class="testimonial-role" data-i18n="testimonials.t1.role">Pâtissier · Lyon, France</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sophie Renard — INITIALES -->
+      <div class="testimonial-card reveal">
+        <p class="testimonial-text" data-i18n="testimonials.t2.text">Commande de 10 kg reçue en parfait état, bien emballée. Le rapport qualité-prix est imbattable pour une vanille Bourbon de cette qualité. Mes desserts se sont vendus encore mieux depuis.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#7a9e7e;" aria-hidden="true">SR</div>
+          <div>
+            <strong class="testimonial-name" data-i18n="testimonials.t2.name">Sophie Renard</strong>
+            <span class="testimonial-role" data-i18n="testimonials.t2.role">Cheffe cuisinière · Bruxelles, Belgique</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arnaud Lefebvre — PHOTO -->
+      <div class="testimonial-card reveal">
+        <p class="testimonial-text" data-i18n="testimonials.t3.text">J'utilise l'extrait de vanille rouge de Madagascar dans deux de mes fragrances maison. Une matière première d'une richesse aromatique rare. Livraison sérieuse et équipe réactive.</p>
+        <div class="testimonial-author">
+          <img src="Arnaud Lefebvre.webp" alt="Arnaud Lefebvre" class="testimonial-img"/>
+          <div>
+            <strong class="testimonial-name" data-i18n="testimonials.t3.name">Arnaud Lefebvre</strong>
+            <span class="testimonial-role" data-i18n="testimonials.t3.role">Parfumerie artisanale · Paris, France</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thomas Bauer — INITIALES -->
+      <div class="testimonial-card reveal">
+        <p class="testimonial-text" data-i18n="testimonials.t4.text">Partenaire fiable depuis deux ans. La constance de la qualité d'une commande à l'autre est ce que j'apprécie le plus. Mes clients sentent la différence dans mes tablettes.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#6b8fa3;" aria-hidden="true">TB</div>
+          <div>
+            <strong class="testimonial-name" data-i18n="testimonials.t4.name">Thomas Bauer</strong>
+            <span class="testimonial-role" data-i18n="testimonials.t4.role">Chocolatier · Zurich, Suisse</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fatima El Ouali — PHOTO -->
+      <div class="testimonial-card reveal">
+        <p class="testimonial-text" data-i18n="testimonials.t5.text">Excellente collaboration. La vanille noire est d'une intensité remarquable, parfaite pour mes gâteaux de mariage. Je recommande à tous les professionnels qui cherchent la qualité.</p>
+        <div class="testimonial-author">
+          <img src="Fatima El Ouali.webp" alt="Fatima El Ouali" class="testimonial-img"/>
+          <div>
+            <strong class="testimonial-name" data-i18n="testimonials.t5.name">Fatima El Ouali</strong>
+            <span class="testimonial-role" data-i18n="testimonials.t5.role">Traiteure & pâtissière · Casablanca, Maroc</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marie-Claire Dupont — INITIALES -->
+      <div class="testimonial-card reveal">
+        <p class="testimonial-text" data-i18n="testimonials.t6.text">Nous référençons désormais la vanille Madagascar Vanilla dans notre catalogue B2B. Produit premium, traçabilité claire, et une origine directe producteur qui plaît énormément à nos clients restaurateurs.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#a07850;" aria-hidden="true">MD</div>
+          <div>
+            <strong class="testimonial-name" data-i18n="testimonials.t6.name">Marie-Claire Dupont</strong>
+            <span class="testimonial-role" data-i18n="testimonials.t6.role">Dir. achats · Distributeur alimentaire, Montréal</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <div class="contact-header">
+        <span class="section-label" data-i18n="contact.label">Nous contacter</span>
+        <h2 class="section-title" data-i18n="contact.title">Demandez votre devis</h2>
+        <p style="font-size:.97rem;color:var(--text-muted);line-height:1.75;" data-i18n="contact.desc">Professionnels de la gastronomie, artisans, distributeurs — nous sommes à votre disposition pour établir une offre sur mesure adaptée à vos volumes et besoins spécifiques.</p>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" data-i18n="form.name.label">Nom</label>
+            <input
+              type="text" id="name" name="nom"
+              data-i18n-attr="form.name.placeholder,placeholder"
+              placeholder="Votre nom"
+              autocomplete="name" required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email" id="email" name="email"
+              placeholder="votre@email.com"
+              autocomplete="email" required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone" data-i18n="form.phone.label">Téléphone</label>
+            <input
+              type="tel" id="phone" name="telephone"
+              data-i18n-attr="form.phone.placeholder,placeholder"
+              placeholder="+33 6 00 00 00 00"
+              autocomplete="tel"
+            />
+          </div>
+          <div class="form-group">
+            <label for="quantity" data-i18n="form.quantity.label">Quantité souhaitée</label>
+            <input
+              type="text" id="quantity" name="quantite"
+              data-i18n-attr="form.quantity.placeholder,placeholder"
+              placeholder="Minimum 5 kg"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message" data-i18n="form.message.label">Commentaire</label>
+          <textarea
+            id="message" name="commentaire"
+            data-i18n-attr="form.message.placeholder,placeholder"
+            placeholder="Décrivez votre besoin…"
+            style="min-height:180px;"
+          ></textarea>
+        </div>
+        <div class="form-submit">
+          <span class="form-note" data-i18n="form.note">Réponse garantie sous 24h ouvrées.</span>
+          <button type="submit" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span data-i18n="form.submit">Envoyer ma demande</span>
+          </button>
+        </div>
+        <div id="form-success" class="form-success-msg">
+          <span data-i18n="form.success">✓ Votre message a bien été envoyé. Nous vous répondrons dans les 24h.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo">Madagascar <span>Vanilla</span></a>
+      <p data-i18n="footer.brand">Vanille premium de Madagascar en direct des producteurs locaux. Qualité stable pour les professionnels de la gastronomie et de l'artisanat.</p>
+      <a href="mailto:contact@madagascar-vanille.com" class="footer-email">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        contact@madagascar-vanille.com
+      </a>
+    </div>
+    <div class="footer-col">
+      <h5 data-i18n="footer.nav.title">Navigation</h5>
+      <a href="#features" data-i18n="nav.features">Avantages</a>
+      <a href="#products" data-i18n="nav.products">Produits</a>
+      <a href="#origin"   data-i18n="footer.nav.origin">Notre origine</a>
+      <a href="#faq"      data-i18n="nav.faq">FAQ</a>
+      <a href="#contact"  data-i18n="nav.contact">Nous contacter</a>
+    </div>
+    <div class="footer-col">
+      <h5 data-i18n="footer.products.title">Produits</h5>
+      <a href="#products" data-i18n="footer.products.noire">Gousse noire (TK)</a>
+      <a href="#products" data-i18n="footer.products.rouge">Gousse rouge (TK)</a>
+      <a href="#contact"  data-i18n="footer.products.bulk">Commande en gros</a>
+      <a href="#contact"  data-i18n="footer.products.samples">Échantillons</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer.copy">© 2026 Madagascar Vanilla — Tous droits réservés</span>
+    <div style="display:flex;gap:1.5rem;">
+      <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+      <a href="#" data-i18n="footer.legal">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<button
+  class="scroll-top"
+  id="scrollTop"
+  onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  aria-label="Retour en haut de page"
+>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+// ── TRADUCTIONS ───────────────────────────────────────────────
+const T = {
+  fr: {
+    "meta.title": "Madagascar Vanilla — Vanille Premium Directe Producteur",
+    "meta.description": "Vanille premium de Madagascar en volume, directement depuis les producteurs locaux. Qualité stable pour professionnels.",
+    "nav.features": "Avantages",
+    "nav.products": "Produits",
+    "nav.origin":   "Origine",
+    "nav.faq":      "FAQ",
+    "nav.blog":     "Blog",
+    "nav.contact":  "Nous contacter",
+    "hero.label": "Directement depuis Madagascar",
+    "hero.h1": "Gousse de vanille <em>de Madagascar</em>",
+    "hero.p": "Nous fournissons de la vanille premium de Madagascar en volume, directement depuis les producteurs locaux. Une qualité stable, adaptée aux professionnels.",
+    "hero.seeProducts": "Voir les produits",
+    "hero.stat1": "Origine Madagascar",
+    "hero.stat2": "Grade premium",
+    "hero.stat3": "Livraison sécurisée",
+    "features.label": "Pourquoi nous choisir",
+    "features.title": "Une vanille d'exception,<br>directement à la source",
+    "features.sub": "De la plantation malgache à votre atelier, nous garantissons une chaîne courte, une traçabilité totale et une qualité constante.",
+    "features.f1.title": "Origine directe de Madagascar",
+    "features.f1.desc": "De la plantation à votre usage, notre vanille est sélectionnée et préparée directement sur place, dans le nord-est de Madagascar — sans intermédiaire.",
+    "features.f2.title": "Arôme intense & naturel",
+    "features.f2.desc": "Nos gousses sont récoltées à pleine maturité pour garantir une richesse maximale en vanilline, une souplesse parfaite et un parfum puissant et authentique.",
+    "features.f3.title": "Expédition sécurisée DHL",
+    "features.f3.desc": "Chaque commande est soigneusement conditionnée et expédiée depuis Madagascar avec numéro de suivi. Livraison en 3 à 7 jours ouvrés selon votre pays.",
+    "products.label": "Notre sélection",
+    "products.title": "Gousses de vanille<br>Grade TK premium",
+    "products.bulk": "Commande en gros →",
+    "products.badge1": "Best-seller",
+    "products.badge2": "Nouveauté",
+    "products.grade": "Grade TK · Vanille bourbon",
+    "products.p1.name": "Gousse de Vanille Noire",
+    "products.p1.desc": "Gousses noires affinées, riches en vanilline cristallisée. Idéales pour la pâtisserie fine, la confiserie et toute préparation haut de gamme nécessitant un arôme puissant et complexe.",
+    "products.p2.name": "Gousse de Vanille Rouge",
+    "products.p2.desc": "Gousses rouges légèrement moins affinées, plus fruitées et florales. Très appréciées en parfumerie, en cuisine créative et pour les infusions aromatiques raffinées.",
+    "products.order": "Passer commande",
+    "gallery.label": "Notre vanille en images",
+    "gallery.title": "Une qualité visible à chaque gousse",
+    "gallery.sub":   "Chaque gousse est sélectionnée à la main pour sa souplesse, sa longueur et sa richesse aromatique.",
+    "gallery.cap1":  "Botte & gousse",
+    "gallery.cap2":  "Botte de vanille",
+    "gallery.cap3":  "Gousses Grade TK",
+    "gallery.cap4":  "Sélection premium",
+    "gallery.cap5":  "Caviar de vanille",
+    "origin.label": "Notre origine",
+    "origin.title": "Le nord-est de Madagascar,<br>berceau de la vanille bourbon",
+    "origin.p1": "Nos gousses proviennent directement des plantations du nord-est de Madagascar, la région mondialement reconnue pour produire la meilleure vanille bourbon.",
+    "origin.p2": "Récoltées à pleine maturité, nos gousses sont affinées selon les méthodes traditionnelles malgaches, sans aucun additif ni traitement chimique.",
+    "origin.p3": "Nous travaillons en direct avec les producteurs locaux, ce qui nous permet de proposer des <strong style=\"color:#fff\">tarifs préférentiels</strong> pour les volumes importants, tout en garantissant une traçabilité complète.",
+    "origin.cta": "Obtenir des tarifs grossiste",
+    "faq.label": "Questions fréquentes",
+    "faq.title": "Tout ce que vous devez savoir",
+    "faq.q1.q": "Quelle est l'origine de vos gousses de vanille ?",
+    "faq.q1.a": "Nos gousses proviennent directement de plantations du nord-est de Madagascar, région réputée pour la meilleure vanille bourbon. Elles sont récoltées à maturité et affinées traditionnellement.",
+    "faq.q2.q": "Comment est déterminé le prix ?",
+    "faq.q2.a": "Le prix dépend de la qualité, de la longueur des gousses et du marché international. Les volumes importants permettent d'obtenir des tarifs plus avantageux. Contactez-nous pour un devis personnalisé.",
+    "faq.q3.q": "Quand recevrai-je ma commande ?",
+    "faq.q3.a": "Les délais de livraison varient généralement entre 3 et 7 jours ouvrés selon le pays de destination, via expédition DHL avec numéro de suivi fourni.",
+    "faq.q4.q": "Puis-je acheter de la vanille en grande quantité ?",
+    "faq.q4.a": "Oui, la vente en gros est disponible. Nous accompagnons chefs, pâtissiers, artisans et revendeurs. Contactez-nous pour les commandes importantes et nous établirons un tarif sur mesure.",
+    "faq.q5.q": "Comment conserver les gousses de vanille ?",
+    "faq.q5.a1": "Dans un tube hermétique ou bocal en verre",
+    "faq.q5.a2": "À température ambiante (jamais au réfrigérateur)",
+    "faq.q5.a3": "À l'abri de la lumière directe et de l'humidité",
+    "faq.q5.a4": "Bien conservée, une gousse garde son arôme plusieurs mois",
+    "faq.q6.q": "Proposez-vous des échantillons ?",
+    "faq.q6.a": "Oui, des échantillons peuvent être organisés pour les professionnels souhaitant tester la qualité avant une commande en volume. Faites-nous part de votre demande via le formulaire de contact.",
+    "contact.label": "Nous contacter",
+    "contact.title": "Demandez votre devis",
+    "contact.desc": "Professionnels de la gastronomie, artisans, distributeurs — nous sommes à votre disposition pour établir une offre sur mesure adaptée à vos volumes et besoins spécifiques.",
+    "form.name.label": "Nom",
+    "form.name.placeholder": "Votre nom",
+    "form.phone.label": "Téléphone",
+    "form.phone.placeholder": "+33 6 00 00 00 00",
+    "form.quantity.label": "Quantité souhaitée",
+    "form.quantity.placeholder": "Minimum 5 kg",
+    "form.message.label": "Commentaire",
+    "form.message.placeholder": "Décrivez votre besoin…",
+    "form.note": "Réponse garantie sous 24h ouvrées.",
+    "form.submit": "Envoyer ma demande",
+    "form.success": "✓ Votre message a bien été envoyé. Nous vous répondrons dans les 24h.",
+    "footer.brand": "Vanille premium de Madagascar en direct des producteurs locaux. Qualité stable pour les professionnels de la gastronomie et de l'artisanat.",
+    "footer.nav.title": "Navigation",
+    "footer.nav.origin": "Notre origine",
+    "footer.products.title": "Produits",
+    "footer.products.noire": "Gousse noire (TK)",
+    "footer.products.rouge": "Gousse rouge (TK)",
+    "footer.products.bulk": "Commande en gros",
+    "footer.products.samples": "Échantillons",
+    "footer.copy": "© 2026 Madagascar Vanilla — Tous droits réservés",
+    "footer.privacy": "Politique de confidentialité",
+    "footer.legal": "Mentions légales",
+    "testimonials.label": "Ils nous font confiance",
+    "testimonials.title": "Ce que disent nos clients",
+    "testimonials.t1.text": "Une vanille d'une qualité exceptionnelle. Les gousses sont charnues, bien huilées, avec un parfum puissant qui transforme complètement mes créations. Je ne reviendrai jamais aux vanilles industrielles.",
+    "testimonials.t1.name": "Jean-Marc Tissier",
+    "testimonials.t1.role": "Pâtissier · Lyon, France",
+    "testimonials.t2.text": "Commande de 10 kg reçue en parfait état, bien emballée. Le rapport qualité-prix est imbattable pour une vanille Bourbon de cette qualité. Mes desserts se sont vendus encore mieux depuis.",
+    "testimonials.t2.name": "Sophie Renard",
+    "testimonials.t2.role": "Cheffe cuisinière · Bruxelles, Belgique",
+    "testimonials.t3.text": "J'utilise l'extrait de vanille rouge de Madagascar dans deux de mes fragrances maison. Une matière première d'une richesse aromatique rare. Livraison sérieuse et équipe réactive.",
+    "testimonials.t3.name": "Arnaud Lefebvre",
+    "testimonials.t3.role": "Parfumerie artisanale · Paris, France",
+    "testimonials.t4.text": "Partenaire fiable depuis deux ans. La constance de la qualité d'une commande à l'autre est ce que j'apprécie le plus. Mes clients sentent la différence dans mes tablettes.",
+    "testimonials.t4.name": "Thomas Bauer",
+    "testimonials.t4.role": "Chocolatier · Zurich, Suisse",
+    "testimonials.t5.text": "Excellente collaboration. La vanille noire est d'une intensité remarquable, parfaite pour mes gâteaux de mariage. Je recommande à tous les professionnels qui cherchent la qualité.",
+    "testimonials.t5.name": "Fatima El Ouali",
+    "testimonials.t5.role": "Traiteure & pâtissière · Casablanca, Maroc",
+    "testimonials.t6.text": "Nous référençons désormais la vanille Madagascar Vanilla dans notre catalogue B2B. Produit premium, traçabilité claire, et une origine directe producteur qui plaît énormément à nos clients restaurateurs.",
+    "testimonials.t6.name": "Marie-Claire Dupont",
+    "testimonials.t6.role": "Dir. achats · Distributeur alimentaire, Montréal"
+  },
+  en: {
+    "meta.title": "Madagascar Vanilla — Premium Vanilla Direct from Producers",
+    "meta.description": "Premium Madagascar vanilla in bulk, directly from local producers. Consistent quality for professionals.",
+    "nav.features": "Why us",
+    "nav.products": "Products",
+    "nav.origin":   "Origin",
+    "nav.faq":      "FAQ",
+    "nav.blog":     "Blog",
+    "nav.contact":  "Contact us",
+    "hero.label": "Directly from Madagascar",
+    "hero.h1": "Vanilla pods <em>from Madagascar</em>",
+    "hero.p": "We supply premium Madagascar vanilla in volume, directly from local producers. Consistent quality, tailored for professionals.",
+    "hero.seeProducts": "View products",
+    "hero.stat1": "Madagascar origin",
+    "hero.stat2": "Premium grade",
+    "hero.stat3": "Secure delivery",
+    "features.label": "Why choose us",
+    "features.title": "Exceptional vanilla,<br>straight from the source",
+    "features.sub": "From Malagasy plantation to your workshop, we ensure a short supply chain, full traceability and consistent quality.",
+    "features.f1.title": "Direct origin from Madagascar",
+    "features.f1.desc": "From plantation to your use, our vanilla is selected and prepared on-site in north-eastern Madagascar — with no middlemen.",
+    "features.f2.title": "Intense & natural aroma",
+    "features.f2.desc": "Our pods are harvested at full maturity to ensure maximum vanillin content, perfect suppleness and a powerful, authentic fragrance.",
+    "features.f3.title": "Secure DHL shipping",
+    "features.f3.desc": "Every order is carefully packaged and shipped from Madagascar with a tracking number. Delivery in 3 to 7 business days depending on your country.",
+    "products.label": "Our selection",
+    "products.title": "Vanilla pods<br>Premium TK grade",
+    "products.bulk": "Bulk orders →",
+    "products.badge1": "Best-seller",
+    "products.badge2": "New",
+    "products.grade": "Grade TK · Bourbon vanilla",
+    "products.p1.name": "Black Vanilla Pod",
+    "products.p1.desc": "Cured black pods rich in crystallised vanillin. Ideal for fine pastry, confectionery and any premium preparation requiring a powerful, complex aroma.",
+    "products.p2.name": "Red Vanilla Pod",
+    "products.p2.desc": "Slightly less cured red pods, fruitier and more floral. Highly prized in perfumery, creative cuisine and refined aromatic infusions.",
+    "products.order": "Place an order",
+    "gallery.label": "Our vanilla in pictures",
+    "gallery.title": "Quality visible in every pod",
+    "gallery.sub":   "Each pod is hand-selected for its suppleness, length and aromatic richness.",
+    "gallery.cap1":  "Bundle & pod",
+    "gallery.cap2":  "Vanilla bundle",
+    "gallery.cap3":  "Grade TK pods",
+    "gallery.cap4":  "Premium selection",
+    "gallery.cap5":  "Vanilla caviar",
+    "origin.label": "Our origin",
+    "origin.title": "North-eastern Madagascar,<br>birthplace of Bourbon vanilla",
+    "origin.p1": "Our pods come directly from plantations in north-eastern Madagascar, the region globally recognised for producing the finest Bourbon vanilla.",
+    "origin.p2": "Harvested at full maturity, our pods are cured using traditional Malagasy methods, with no additives or chemical treatments.",
+    "origin.p3": "We work directly with local producers, allowing us to offer <strong style=\"color:#fff\">preferential pricing</strong> on large volumes while guaranteeing complete traceability.",
+    "origin.cta": "Get wholesale pricing",
+    "faq.label": "Frequently asked questions",
+    "faq.title": "Everything you need to know",
+    "faq.q1.q": "Where do your vanilla pods come from?",
+    "faq.q1.a": "Our pods come directly from plantations in north-eastern Madagascar, a region renowned for the finest Bourbon vanilla. They are harvested at maturity and traditionally cured.",
+    "faq.q2.q": "How is pricing determined?",
+    "faq.q2.a": "Pricing depends on quality, pod length and the international market. Larger volumes unlock more competitive per-kilo rates. Contact us for a personalised quote.",
+    "faq.q3.q": "When will I receive my order?",
+    "faq.q3.a": "Delivery times generally range from 3 to 7 business days depending on the destination country, via DHL with a tracking number provided.",
+    "faq.q4.q": "Can I buy vanilla in large quantities?",
+    "faq.q4.a": "Yes, wholesale is available. We work with chefs, pastry artisans and distributors. Contact us for large orders and we will create a custom pricing plan.",
+    "faq.q5.q": "How should vanilla pods be stored?",
+    "faq.q5.a1": "In an airtight tube or glass jar",
+    "faq.q5.a2": "At room temperature (never refrigerated)",
+    "faq.q5.a3": "Away from direct light and humidity",
+    "faq.q5.a4": "Properly stored, a pod retains its aroma for several months",
+    "faq.q6.q": "Do you offer samples?",
+    "faq.q6.a": "Yes, samples can be arranged for professionals wishing to test quality before placing a bulk order. Send us your request via the contact form.",
+    "contact.label": "Contact us",
+    "contact.title": "Request your quote",
+    "contact.desc": "Gastronomy professionals, artisans, distributors — we are available to craft a tailored offer suited to your volumes and specific needs.",
+    "form.name.label": "Name",
+    "form.name.placeholder": "Your name",
+    "form.phone.label": "Phone",
+    "form.phone.placeholder": "+1 000 000 0000",
+    "form.quantity.label": "Desired quantity",
+    "form.quantity.placeholder": "Minimum 5 kg",
+    "form.message.label": "Comment",
+    "form.message.placeholder": "Describe your needs…",
+    "form.note": "Guaranteed response within 24 business hours.",
+    "form.submit": "Send my request",
+    "form.success": "✓ Your message has been sent. We will reply within 24 hours.",
+    "footer.brand": "Premium Madagascar vanilla direct from local producers. Consistent quality for gastronomy and craft professionals.",
+    "footer.nav.title": "Navigation",
+    "footer.nav.origin": "Our origin",
+    "footer.products.title": "Products",
+    "footer.products.noire": "Black pod (TK)",
+    "footer.products.rouge": "Red pod (TK)",
+    "footer.products.bulk": "Bulk orders",
+    "footer.products.samples": "Samples",
+    "footer.copy": "© 2026 Madagascar Vanilla — All rights reserved",
+    "footer.privacy": "Privacy policy",
+    "footer.legal": "Legal notice",
+    "testimonials.label": "Trusted by professionals",
+    "testimonials.title": "What our clients say",
+    "testimonials.t1.text": "Exceptional quality vanilla. The pods are fleshy, well-oiled, with a powerful fragrance that completely transforms my creations. I will never go back to industrial vanilla.",
+    "testimonials.t1.name": "Jean-Marc Tissier",
+    "testimonials.t1.role": "Pastry chef · Lyon, France",
+    "testimonials.t2.text": "10 kg order received in perfect condition, well packaged. The value for money is unbeatable for a Bourbon vanilla of this quality. My desserts have been selling even better since.",
+    "testimonials.t2.name": "Sophie Renard",
+    "testimonials.t2.role": "Head chef · Brussels, Belgium",
+    "testimonials.t3.text": "I use Madagascar red vanilla extract in two of my artisan fragrances. A raw material of rare aromatic richness. Reliable delivery and a responsive team.",
+    "testimonials.t3.name": "Arnaud Lefebvre",
+    "testimonials.t3.role": "Artisan perfumer · Paris, France",
+    "testimonials.t4.text": "A reliable partner for two years. The consistency of quality from one order to the next is what I appreciate most. My clients can taste the difference in my chocolate bars.",
+    "testimonials.t4.name": "Thomas Bauer",
+    "testimonials.t4.role": "Chocolatier · Zurich, Switzerland",
+    "testimonials.t5.text": "Excellent partnership. The black vanilla is remarkably intense, perfect for my wedding cakes. I recommend it to all professionals seeking top quality.",
+    "testimonials.t5.name": "Fatima El Ouali",
+    "testimonials.t5.role": "Caterer & pastry chef · Casablanca, Morocco",
+    "testimonials.t6.text": "We now list Madagascar Vanilla in our B2B catalogue. Premium product, clear traceability, and a direct-from-producer origin that our restaurant clients love.",
+    "testimonials.t6.name": "Marie-Claire Dupont",
+    "testimonials.t6.role": "Purchasing director · Food distributor, Montréal"
+  }
+};
+
+// ── MOTEUR DE LANGUE ──────────────────────────────────────────
+const browserLang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
+let currentLang = browserLang.startsWith('fr') ? 'fr' : 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  const dict = T[lang];
+
+  document.documentElement.lang = lang;
+
+  if (dict['meta.title']) document.title = dict['meta.title'];
+
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && dict['meta.description']) metaDesc.setAttribute('content', dict['meta.description']);
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+
+  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    const [key, attr] = el.getAttribute('data-i18n-attr').split(',');
+    if (dict[key] !== undefined) el.setAttribute(attr, dict[key]);
+  });
+
+  ['fr', 'en'].forEach(l => {
+    const btn = document.getElementById('btn-' + l + '-m');
+    if (btn) btn.classList.toggle('active', l === lang);
+  });
+}
+
+// Applique la langue détectée au chargement
+setLang(currentLang);
+
+// ── HEADER AU SCROLL ──────────────────────────────────────────
+const header      = document.getElementById('site-header');
+const scrollTopBtn = document.getElementById('scrollTop');
+
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+  scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+
+// ── MENU HAMBURGER ────────────────────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const nav       = document.getElementById('nav');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.setAttribute('aria-label', isOpen
+    ? (currentLang === 'fr' ? 'Fermer le menu' : 'Close menu')
+    : (currentLang === 'fr' ? 'Ouvrir le menu'  : 'Open menu')
+  );
+});
+
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+}));
+
+// ── ANIMATIONS AU DÉFILEMENT ──────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── FORMULAIRE ────────────────────────────────────────────────
+function handleSubmit(e) {
+  e.preventDefault();
+  const f = e.target;
+  const nom      = f.nom.value.trim();
+  const email    = f.email.value.trim();
+  const tel      = f.telephone.value.trim();
+  const quantite = f.quantite.value;
+  const msg      = f.commentaire.value.trim();
+
+  const subject = encodeURIComponent('Demande de devis — Madagascar Vanilla');
+  const body = encodeURIComponent(
+    'Nom : '      + nom + '\n' +
+    'Email : '    + email + '\n' +
+    'Téléphone : '+ (tel      || '—') + '\n' +
+    'Quantité : ' + (quantite || '—') + '\n\n' +
+    'Message :\n' + (msg      || '—')
+  );
+
+  window.location.href = 'mailto:contact@madagascar-vanille.com?subject=' + subject + '&body=' + body;
+
+  const successEl = document.getElementById('form-success');
+  successEl.querySelector('[data-i18n="form.success"]').textContent = T[currentLang]['form.success'];
+  successEl.style.display = 'block';
+  f.reset();
+}
+</script>
+</body>
+</html>
