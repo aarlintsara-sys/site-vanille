@@ -13,6 +13,7 @@
   <meta property="og:image"       content="hero.webp" />
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name="theme-color"        content="#C49A3C" />
+  <meta name="google-site-verification" content="23255b95c809b453" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1118,11 +1119,13 @@ const T = {
 };
 
 // ── MOTEUR DE LANGUE ──────────────────────────────────────────
+const storedLang = localStorage.getItem('mvLang');
 const browserLang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
-let currentLang = browserLang.startsWith('fr') ? 'fr' : 'en';
+let currentLang = storedLang || (browserLang.startsWith('fr') ? 'fr' : 'en');
 
 function setLang(lang) {
   currentLang = lang;
+  localStorage.setItem('mvLang', lang);
   const dict = T[lang];
 
   document.documentElement.lang = lang;
