@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Comment utiliser une gousse de vanille : toutes les techniques — Madagascar Vanilla</title>
+  <meta name="description" content="Comment fendre, gratter, infuser ou réutiliser une gousse de vanille de Madagascar. Techniques professionnelles pour en tirer le maximum d'arôme." />
+  <!-- Favicons -->
+  <link rel="icon"             type="image/x-icon" href="favicon.ico" />
+  <link rel="icon"             type="image/png"    sizes="48x48"  href="favicon-48x48.png" />
+  <link rel="icon"             type="image/png"    sizes="96x96"  href="favicon-96x96.png" />
+  <link rel="apple-touch-icon"                     sizes="100x100" href="apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #FDF9F4;
+      --warm-white: #FFFEFB;
+      --gold:       #C49A3C;
+      --gold-dark:  #9B7A2E;
+      --brown:      #3D2B1F;
+      --brown-mid:  #6B4C3B;
+      --brown-light:#A07850;
+      --text:       #2A1F18;
+      --text-muted: #7A6555;
+      --border:     #E0CDB5;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); line-height: 1.6; }
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 72px;
+      background: rgba(255,252,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); letter-spacing: .04em; text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 2rem; align-items: center; }
+    nav a { font-size: .82rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--gold); }
+    .btn-nav { background: var(--gold); color: #fff !important; padding: .5rem 1.25rem; border-radius: 2px; transition: background .2s !important; }
+    .btn-nav:hover { background: var(--gold-dark) !important; }
+    .lang-switch { display: flex; align-items: center; gap: .3rem; margin-left: 1.5rem; }
+    .lang-btn { background: none; border: 1px solid var(--border); cursor: pointer; font-size: .75rem; font-weight: 600; letter-spacing: .08em; color: var(--text-muted); padding: .3rem .55rem; border-radius: 2px; transition: background .2s, color .2s; font-family: 'Inter', sans-serif; }
+    .lang-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .lang-sep { width: 1px; height: 14px; background: var(--border); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--brown); border-radius: 2px; }
+    .mobile-nav { display: none; position: fixed; inset: 72px 0 0 0; background: rgba(253,249,244,.97); backdrop-filter: blur(12px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 99; }
+    .mobile-nav a { font-size: 1.1rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; }
+    .mobile-nav a:hover, .mobile-nav a.active { color: var(--gold); }
+    .mobile-nav .btn-nav { background: var(--gold); color: #fff !important; padding: .6rem 1.6rem; border-radius: 2px; }
+    .mobile-nav.open { display: flex; }
+    .article-hero {
+      margin-top: 72px; position: relative; height: 480px; overflow: hidden; background: var(--cream);
+    }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, rgba(61,43,31,.65) 100%); }
+    .article-hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 5%; z-index: 2; max-width: 1100px; margin: 0 auto; }
+    .article-tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); background: rgba(255,255,255,.12); border: 1px solid rgba(196,154,60,.5); padding: .3rem .75rem; border-radius: 2px; margin-bottom: .9rem; }
+    .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem,4vw,3rem); font-weight: 300; color: #fff; line-height: 1.2; max-width: 760px; }
+    .article-wrap { max-width: 780px; margin: 0 auto; padding: 64px 5% 80px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); font-size: .82rem; color: var(--text-muted); }
+    .article-meta span { display: flex; align-items: center; gap: .4rem; }
+    .article-body { font-size: 1rem; color: var(--text); line-height: 1.85; }
+    .article-body p { margin-bottom: 1.4rem; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--brown); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--brown); margin: 2rem 0 .75rem; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-body li { margin-bottom: .45rem; color: var(--text-muted); }
+    .article-body strong { color: var(--brown); font-weight: 600; }
+    .article-body .highlight { background: var(--cream); border-left: 3px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 4px 4px 0; font-size: .95rem; color: var(--brown-mid); line-height: 1.75; }
+    .article-body .img-inline { width: 100%; border-radius: 4px; margin: 2rem 0; object-fit: cover; max-height: 420px; display: block; border: 1px solid var(--border); }
+    .step-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; counter-reset: steps; }
+    .step-list li { counter-increment: steps; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; }
+    .step-list li::before { content: counter(steps); display: flex; align-items: center; justify-content: center; min-width: 28px; height: 28px; background: var(--gold); color: #fff; border-radius: 50%; font-size: .78rem; font-weight: 600; flex-shrink: 0; margin-top: .15rem; }
+    .step-list li span { color: var(--text-muted); font-size: .95rem; line-height: 1.7; }
+    .tip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin: 2rem 0; }
+    .tip-card { background: var(--cream); padding: 1.5rem; }
+    .tip-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--brown); margin-bottom: .6rem; }
+    .tip-card p { font-size: .88rem; color: var(--text-muted); line-height: 1.7; }
+    .article-cta { background: var(--brown); color: #fff; padding: 3rem; text-align: center; border-radius: 4px; margin: 3rem 0; }
+    .article-cta p { color: rgba(255,255,255,.75); margin-bottom: 1.5rem; font-size: .97rem; line-height: 1.75; }
+    .btn-primary { display: inline-flex; align-items: center; gap: .6rem; background: var(--gold); color: #fff; font-size: .85rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .9rem 2rem; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-primary:hover { background: var(--gold-dark); }
+    .articles-nav { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 2.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .articles-nav a { font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color .2s; }
+    .articles-nav a:hover { color: var(--gold-dark); }
+    footer { background: var(--brown); color: rgba(255,255,255,.6); padding: 30px 5%; text-align: center; font-size: .82rem; }
+    footer a { color: rgba(255,255,255,.4); text-decoration: none; margin: 0 .75rem; }
+    footer a:hover { color: #E8D5A3; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .article-hero { height: 320px; }
+      .tip-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Madagascar <span>Vanilla</span></a>
+  <nav>
+    <a href="index.html#features" data-i18n="nav.features">Avantages</a>
+    <a href="index.html#products" data-i18n="nav.products">Produits</a>
+    <a href="index.html#origin" data-i18n="nav.origin">Origine</a>
+    <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="blog.html" class="active" data-i18n="nav.blog">Blog</a>
+    <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact">Nous contacter</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')" aria-label="Français">FR</button>
+      <div class="lang-sep" aria-hidden="true"></div>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+    </div>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html#features" data-i18n="nav.features" onclick="toggleMenu()">Avantages</a>
+  <a href="index.html#products" data-i18n="nav.products" onclick="toggleMenu()">Produits</a>
+  <a href="index.html#origin" data-i18n="nav.origin" onclick="toggleMenu()">Origine</a>
+  <a href="index.html#faq" data-i18n="nav.faq" onclick="toggleMenu()">FAQ</a>
+  <a href="blog.html" class="active" data-i18n="nav.blog" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact" onclick="toggleMenu()">Nous contacter</a>
+  <div class="lang-switch">
+    <button class="lang-btn active" id="btn-fr-m" onclick="setLang('fr')" aria-label="Français">FR</button>
+    <div class="lang-sep" aria-hidden="true"></div>
+    <button class="lang-btn" id="btn-en-m" onclick="setLang('en')" aria-label="English">EN</button>
+  </div>
+</div>
+
+<div class="article-hero">
+  <img src="vanille-tranche-caviar.webp" alt="Gousse de vanille de Madagascar tranchée avec caviar visible" fetchpriority="high" />
+  <div class="article-hero-content">
+    <span class="article-tag" data-i18n="tag">Conseils</span>
+    <h1 data-i18n="h1">Comment utiliser une gousse de vanille : toutes les techniques</h1>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-meta">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span data-i18n="date">11 juin 2026</span>
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span data-i18n="readtime">6 min de lecture</span>
+    </span>
+  </div>
+
+  <div class="article-body" id="article-body"></div>
+
+  <div class="article-cta">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#fff;margin-bottom:.75rem;" data-i18n="cta.title">Commandez de la vanille Grade TK</h2>
+    <p data-i18n="cta.p">Nos gousses de vanille de Madagascar Grade TK offrent la teneur en vanilline la plus élevée : 1,6 à 2,2 %. Commande professionnelle à partir de 5 kg, directement depuis la région SAVA.</p>
+    <a href="index.html#contact" class="btn-primary" data-i18n="cta.btn">Demander un devis</a>
+  </div>
+
+  <div class="articles-nav">
+    <a href="article-noire-vs-rouge.html" data-i18n="nav.prev">← Noire vs rouge</a>
+    <a href="article-prix-vanille.html" data-i18n="nav.next">Prix des gousses →</a>
+  </div>
+</div>
+
+<footer>
+  <span data-i18n="footer.copy">© 2026 Madagascar Vanilla — Tous droits réservés</span>
+  <br style="margin:.5rem 0;">
+  <a href="index.html" data-i18n="footer.home">Accueil</a>
+  <a href="blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+</footer>
+
+<script>
+const T = {
+  fr: {
+    "meta.title": "Comment utiliser une gousse de vanille : toutes les techniques — Madagascar Vanilla",
+    "nav.features": "Avantages", "nav.products": "Produits", "nav.origin": "Origine",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Nous contacter",
+    "tag": "Conseils",
+    "h1": "Comment utiliser une gousse de vanille : toutes les techniques",
+    "date": "11 juin 2026", "readtime": "6 min de lecture",
+    "cta.title": "Commandez de la vanille Grade TK",
+    "cta.p": "Nos gousses de vanille de Madagascar Grade TK offrent la teneur en vanilline la plus élevée : 1,6 à 2,2 %. Commande professionnelle à partir de 5 kg, directement depuis la région SAVA.",
+    "cta.btn": "Demander un devis",
+    "nav.prev": "← Noire vs rouge",
+    "nav.next": "Prix des gousses →",
+    "footer.copy": "© 2026 Madagascar Vanilla — Tous droits réservés",
+    "footer.home": "Accueil"
+  },
+  en: {
+    "meta.title": "How to Use a Vanilla Pod: All the Techniques — Madagascar Vanilla",
+    "nav.features": "Why us", "nav.products": "Products", "nav.origin": "Origin",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Contact us",
+    "tag": "Tips",
+    "h1": "How to Use a Vanilla Pod: All the Techniques",
+    "date": "June 11, 2026", "readtime": "6 min read",
+    "cta.title": "Order Grade TK vanilla",
+    "cta.p": "Our Madagascar Grade TK vanilla pods offer the highest vanillin content: 1.6 to 2.2%. Professional orders from 5 kg, directly from the SAVA region.",
+    "cta.btn": "Request a quote",
+    "nav.prev": "← Black vs red",
+    "nav.next": "Pod prices →",
+    "footer.copy": "© 2026 Madagascar Vanilla — All rights reserved",
+    "footer.home": "Home"
+  }
+};
+
+const CONTENT = {
+  fr: `
+    <p>Une gousse de vanille de Madagascar recèle des centaines de composés aromatiques. Mais encore faut-il savoir comment l'utiliser pour en extraire le maximum. Du simple grattage au caviar en passant par la pâte de vanille bourbon ou la poudre maison, voici toutes les techniques du plus simple au plus élaboré.</p>
+
+    <h2>Comment fendre et gratter une gousse de vanille</h2>
+    <p>C'est la technique de base pour accéder au <strong>caviar de vanille</strong> — les petites graines noires qui concentrent une partie des arômes.</p>
+
+    <ol class="step-list">
+      <li><span>Posez la gousse à plat sur une planche à découper propre et sèche.</span></li>
+      <li><span>Maintenez une extrémité entre le pouce et l'index d'une main.</span></li>
+      <li><span>Avec la pointe d'un couteau fin et bien aiguisé, fendez la gousse dans toute sa longueur en un seul passage — sans scier.</span></li>
+      <li><span>Ouvrez la gousse en deux en l'écartant doucement.</span></li>
+      <li><span>Posez le plat du couteau à plat contre l'intérieur de chaque demi-gousse et grattez de bas en haut pour récupérer toutes les graines.</span></li>
+    </ol>
+
+    <div class="highlight">
+      Ne jetez jamais la cosse après avoir gratté les graines. Elle contient encore des composés aromatiques précieux : plongez-la dans un liquide chaud, faites-en du sucre vanillé ou séchez-la pour en faire de la poudre.
+    </div>
+
+    <h2>Infuser une gousse de vanille dans un liquide chaud</h2>
+    <p>L'infusion est la méthode qui permet d'extraire le plus d'arômes sur l'ensemble de la gousse, cosse comprise. Idéale pour les crèmes, les laits, les syrops ou les sauces.</p>
+    <ul>
+      <li>Fendez la gousse et grattez le caviar. Ajoutez les graines <em>et</em> la cosse dans le liquide</li>
+      <li>Portez à 70-80 °C (sans faire bouillir, pour préserver les arômes volatils)</li>
+      <li>Retirez du feu et laissez infuser à couvert <strong>20 à 30 minutes</strong> minimum</li>
+      <li>Retirez la cosse, égouttez-la et conservez-la pour une deuxième utilisation</li>
+      <li>Pour les glaces et crèmes brûlées : infusez la veille et laissez reposer au frais toute la nuit pour un résultat encore plus intense</li>
+    </ul>
+
+    <img class="img-inline" src="quelques-gousses-sur-plat.webp" alt="Gousses de vanille de Madagascar prêtes à être utilisées" loading="lazy" />
+
+    <h2>Combien de fois peut-on utiliser une gousse de vanille ?</h2>
+    <p>Avec des gousses Grade TK de Madagascar — dont la teneur en vanilline atteint 1,6 à 2,2 % — il est possible d'effectuer <strong>3 à 4 utilisations successives</strong> tout en conservant des arômes significatifs à chaque étape.</p>
+
+    <div class="tip-grid">
+      <div class="tip-card">
+        <h3>1re utilisation — Le caviar</h3>
+        <p>Fendez et grattez les graines. Usage direct à sec dans une pâte, une crème ou une préparation froide. C'est là que les arômes sont les plus concentrés.</p>
+      </div>
+      <div class="tip-card">
+        <h3>2e utilisation — L'infusion</h3>
+        <p>Infusez la cosse (sans les graines) dans un lait, une crème ou un sirop. La cosse libère encore une quantité importante de vanilline en milieu liquide chaud.</p>
+      </div>
+      <div class="tip-card">
+        <h3>3e utilisation — Le sucre vanillé</h3>
+        <p>Rincez et séchez la cosse à l'air libre 24 h. Enfouissez-la dans un bocal hermétique rempli de sucre blanc. Après 1 à 2 semaines, le sucre est parfumé.</p>
+      </div>
+      <div class="tip-card">
+        <h3>4e utilisation — La poudre</h3>
+        <p>Séchez complètement la cosse au four à 60 °C pendant 1 h. Mixez dans un moulin à épices. Tamisez. Vous obtenez une poudre de vanille artisanale à utiliser comme la poudre du commerce.</p>
+      </div>
+    </div>
+
+    <h2>Faire sa poudre de vanille bourbon maison</h2>
+    <p>La poudre de vanille bourbon maison est bien plus intense que les sachets industriels, qui contiennent souvent de l'amidon de maïs ou de la vanilline de synthèse. Pour la réaliser :</p>
+    <ul>
+      <li>Utilisez des cosses sèches (après infusion ou directement des gousses séchées entières)</li>
+      <li>Coupez-les en petits tronçons de 2-3 cm</li>
+      <li>Séchez au four à 60 °C pendant 1 heure, porte entrouverte, jusqu'à ce qu'elles soient cassantes</li>
+      <li>Mixez dans un moulin à café ou un blender puissant, par petites impulsions</li>
+      <li>Tamisez au travers d'un tamis fin pour obtenir une poudre homogène</li>
+      <li>Conservez dans un pot hermétique à l'abri de la lumière — durée de conservation : 12 mois</li>
+    </ul>
+    <p><strong>Dosage :</strong> 1/2 cuillère à café de poudre de vanille bourbon ≈ 1 gousse entière en termes d'intensité aromatique.</p>
+
+    <h2>Faire sa pâte de vanille bourbon</h2>
+    <p>La <strong>pâte de vanille bourbon</strong> est le format préféré des pâtissiers professionnels : elle combine la facilité de dosage de la vanille liquide et la présence visuelle du caviar. Sa réalisation maison est simple.</p>
+    <ul>
+      <li>Fendez et grattez <strong>5 gousses de vanille</strong> de Madagascar</li>
+      <li>Mixez les graines avec 2 cuillères à soupe de miel neutre (acacia) ou de sirop de canne</li>
+      <li>Continuez à mixer jusqu'à obtenir une pâte lisse et homogène</li>
+      <li>Ajoutez les cosses hachées finement si vous souhaitez une pâte encore plus intense</li>
+      <li>Conservez dans un petit pot hermétique au réfrigérateur — durée : 3 à 6 mois</li>
+    </ul>
+    <p><strong>Dosage :</strong> 1 cuillère à café de pâte de vanille bourbon ≈ 1 gousse en termes d'intensité. Idéal pour les crèmes mousseline, les ganaches et les glaces.</p>
+
+    <h2>Le sucre vanillé maison</h2>
+    <p>C'est la valorisation la plus simple des cosses usagées. Le résultat est incomparablement plus parfumé que les sachets du commerce :</p>
+    <ul>
+      <li>Rincez les cosses déjà utilisées et laissez-les sécher à l'air libre pendant 24 à 48 heures</li>
+      <li>Enfouissez-les dans un bocal hermétique rempli de sucre blanc ou de sucre roux</li>
+      <li>Fermez hermétiquement et attendez <strong>au minimum 1 semaine</strong> (2 à 3 semaines pour un résultat optimal)</li>
+      <li>Renouvelez le sucre toutes les 2-3 semaines, en laissant les cosses en place</li>
+      <li>Les cosses peuvent rester dans le bocal pendant 6 mois</li>
+    </ul>
+
+    <h2>Utiliser la vanille dans une infusion froide</h2>
+    <p>La technique d'<strong>infusion à froid</strong> (cold brew vanille) est particulièrement adaptée aux cocktails, aux eaux aromatisées et à la parfumerie artisanale. Elle préserve les notes florales et fruitées que la chaleur dénature partiellement.</p>
+    <ul>
+      <li>Fendez une gousse et plongez-la dans 500 ml d'eau froide ou d'alcool neutre (vodka, rhum blanc)</li>
+      <li>Laissez infuser au réfrigérateur pendant <strong>12 à 24 heures</strong> pour l'eau, <strong>1 à 4 semaines</strong> pour l'alcool (extrait de vanille)</li>
+      <li>Filtrez avant utilisation</li>
+    </ul>
+    <p>L'extrait de vanille bourbon obtenu avec du rhum est particulièrement intéressant pour les cocktails et les préparations de pâtisserie sans cuisson.</p>
+  `,
+  en: `
+    <p>A Madagascar vanilla pod contains hundreds of aromatic compounds. But you need to know how to use it to extract the maximum. From simple scraping and caviar extraction to bourbon vanilla paste and homemade powder, here are all the techniques from the simplest to the most elaborate.</p>
+
+    <h2>How to split and scrape a vanilla pod</h2>
+    <p>This is the basic technique for accessing <strong>vanilla caviar</strong> — the small black seeds that concentrate part of the aromatic compounds.</p>
+
+    <ol class="step-list">
+      <li><span>Lay the pod flat on a clean, dry chopping board.</span></li>
+      <li><span>Hold one end between the thumb and index finger of one hand.</span></li>
+      <li><span>With the tip of a thin, sharp knife, split the pod along its full length in a single pass — do not saw.</span></li>
+      <li><span>Open the pod in two by gently pulling apart.</span></li>
+      <li><span>Lay the flat of the knife against the inside of each half-pod and scrape upward to collect all the seeds.</span></li>
+    </ol>
+
+    <div class="highlight">
+      Never discard the pod after scraping the seeds. It still contains precious aromatic compounds: plunge it into a hot liquid, use it to make vanilla sugar, or dry it to make powder.
+    </div>
+
+    <h2>Infusing a vanilla pod in a hot liquid</h2>
+    <p>Infusion is the method that extracts the most aroma from the entire pod, shell included. Ideal for creams, milks, syrups and sauces.</p>
+    <ul>
+      <li>Split the pod and scrape the caviar. Add both the seeds <em>and</em> the shell to the liquid</li>
+      <li>Heat to 70–80°C (without boiling, to preserve volatile aromas)</li>
+      <li>Remove from heat and leave to infuse covered for at least <strong>20 to 30 minutes</strong></li>
+      <li>Remove the pod, drain it and keep it for a second use</li>
+      <li>For ice creams and crème brûlée: infuse the day before and leave to rest in the fridge overnight for an even more intense result</li>
+    </ul>
+
+    <img class="img-inline" src="quelques-gousses-sur-plat.webp" alt="Madagascar vanilla pods ready for use" loading="lazy" />
+
+    <h2>How many times can you use a vanilla pod?</h2>
+    <p>With Grade TK Madagascar pods — with a vanillin content of 1.6 to 2.2% — it is possible to carry out <strong>3 to 4 successive uses</strong> while retaining significant aromas at each stage.</p>
+
+    <div class="tip-grid">
+      <div class="tip-card">
+        <h3>1st use — The caviar</h3>
+        <p>Split and scrape the seeds. Direct dry use in a batter, cream or cold preparation. This is where the aromas are most concentrated.</p>
+      </div>
+      <div class="tip-card">
+        <h3>2nd use — Infusion</h3>
+        <p>Infuse the shell (without seeds) in a milk, cream or syrup. The shell still releases a significant amount of vanillin in a hot liquid.</p>
+      </div>
+      <div class="tip-card">
+        <h3>3rd use — Vanilla sugar</h3>
+        <p>Rinse and air-dry the shell for 24 hours. Bury it in an airtight jar filled with white sugar. After 1 to 2 weeks, the sugar is beautifully scented.</p>
+      </div>
+      <div class="tip-card">
+        <h3>4th use — Powder</h3>
+        <p>Dry the shell completely in the oven at 60°C for 1 hour. Blend in a spice grinder. Sieve. You have an artisan vanilla powder to use like commercial powder.</p>
+      </div>
+    </div>
+
+    <h2>Making your own bourbon vanilla powder</h2>
+    <p>Homemade bourbon vanilla powder is far more intense than commercial sachets, which often contain cornstarch or synthetic vanillin. To make it:</p>
+    <ul>
+      <li>Use dry shells (after infusion or from whole dried pods)</li>
+      <li>Cut into 2–3 cm pieces</li>
+      <li>Dry in the oven at 60°C for 1 hour, door ajar, until brittle</li>
+      <li>Blend in a coffee grinder or powerful blender in short bursts</li>
+      <li>Sieve through a fine sieve for a smooth powder</li>
+      <li>Store in an airtight container away from light — shelf life: 12 months</li>
+    </ul>
+    <p><strong>Dosage:</strong> ½ teaspoon of bourbon vanilla powder ≈ 1 whole pod in terms of aromatic intensity.</p>
+
+    <h2>Making your own bourbon vanilla paste</h2>
+    <p><strong>Bourbon vanilla paste</strong> is the format preferred by professional pastry chefs: it combines the ease of dosing of liquid vanilla with the visual presence of caviar. It is simple to make at home.</p>
+    <ul>
+      <li>Split and scrape <strong>5 Madagascar vanilla pods</strong></li>
+      <li>Blend the seeds with 2 tablespoons of neutral honey (acacia) or cane syrup</li>
+      <li>Continue blending until you get a smooth, homogeneous paste</li>
+      <li>Add finely chopped shells if you want an even more intense paste</li>
+      <li>Store in a small airtight jar in the fridge — shelf life: 3 to 6 months</li>
+    </ul>
+    <p><strong>Dosage:</strong> 1 teaspoon of bourbon vanilla paste ≈ 1 pod in terms of intensity. Ideal for mousseline creams, ganaches and ice creams.</p>
+
+    <h2>Homemade vanilla sugar</h2>
+    <p>This is the simplest way to use spent pods. The result is incomparably more fragrant than commercial sachets:</p>
+    <ul>
+      <li>Rinse used pods and air-dry for 24 to 48 hours</li>
+      <li>Bury them in an airtight jar filled with white or brown sugar</li>
+      <li>Seal tightly and wait at least <strong>1 week</strong> (2 to 3 weeks for best results)</li>
+      <li>Replenish the sugar every 2–3 weeks, leaving the pods in place</li>
+      <li>The pods can stay in the jar for 6 months</li>
+    </ul>
+
+    <h2>Using vanilla in a cold infusion</h2>
+    <p>The <strong>cold infusion</strong> technique (vanilla cold brew) is particularly suited to cocktails, flavoured waters and artisan perfumery. It preserves the floral and fruity notes that heat partially destroys.</p>
+    <ul>
+      <li>Split a pod and plunge it into 500 ml of cold water or neutral alcohol (vodka, white rum)</li>
+      <li>Leave to infuse in the fridge for <strong>12 to 24 hours</strong> for water, <strong>1 to 4 weeks</strong> for alcohol (vanilla extract)</li>
+      <li>Filter before use</li>
+    </ul>
+    <p>Bourbon vanilla extract made with rum is particularly interesting for cocktails and non-baked pastry preparations.</p>
+  `
+};
+
+const storedLang = localStorage.getItem('mvLang');
+const browserLang = (navigator.language || 'fr').toLowerCase();
+let currentLang = storedLang || (browserLang.startsWith('fr') ? 'fr' : 'en');
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('mvLang', lang);
+  document.documentElement.lang = lang;
+  if (T[lang]['meta.title']) document.title = T[lang]['meta.title'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[lang][key] !== undefined) el.textContent = T[lang][key];
+  });
+  document.getElementById('article-body').innerHTML = CONTENT[lang];
+  ['btn-fr','btn-fr-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='fr'); });
+  ['btn-en','btn-en-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='en'); });
+}
+
+function toggleMenu() {
+  const nav = document.getElementById('mobile-nav');
+  const btn = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+
+setLang(currentLang);
+</script>
+
+</body>
+</html>
