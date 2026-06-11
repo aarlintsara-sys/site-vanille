@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Prix des gousses de vanille de Madagascar : combien ça coûte ? — Madagascar Vanilla</title>
+  <meta name="description" content="Découvrez le prix d'une gousse de vanille de Madagascar selon la qualité et le volume. Guide complet pour professionnels avec tarifs et explications." />
+  <!-- Favicons -->
+  <link rel="icon"             type="image/x-icon" href="favicon.ico" />
+  <link rel="icon"             type="image/png"    sizes="48x48"  href="favicon-48x48.png" />
+  <link rel="icon"             type="image/png"    sizes="96x96"  href="favicon-96x96.png" />
+  <link rel="apple-touch-icon"                     sizes="100x100" href="apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #FDF9F4;
+      --warm-white: #FFFEFB;
+      --gold:       #C49A3C;
+      --gold-dark:  #9B7A2E;
+      --brown:      #3D2B1F;
+      --brown-mid:  #6B4C3B;
+      --brown-light:#A07850;
+      --text:       #2A1F18;
+      --text-muted: #7A6555;
+      --border:     #E0CDB5;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); line-height: 1.6; }
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 72px;
+      background: rgba(255,252,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); letter-spacing: .04em; text-decoration: none; }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 2rem; align-items: center; }
+    nav a { font-size: .82rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--gold); }
+    .btn-nav { background: var(--gold); color: #fff !important; padding: .5rem 1.25rem; border-radius: 2px; transition: background .2s !important; }
+    .btn-nav:hover { background: var(--gold-dark) !important; }
+    .lang-switch { display: flex; align-items: center; gap: .3rem; margin-left: 1.5rem; }
+    .lang-btn { background: none; border: 1px solid var(--border); cursor: pointer; font-size: .75rem; font-weight: 600; letter-spacing: .08em; color: var(--text-muted); padding: .3rem .55rem; border-radius: 2px; transition: background .2s, color .2s; font-family: 'Inter', sans-serif; }
+    .lang-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .lang-sep { width: 1px; height: 14px; background: var(--border); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--brown); border-radius: 2px; }
+    .mobile-nav { display: none; position: fixed; inset: 72px 0 0 0; background: rgba(253,249,244,.97); backdrop-filter: blur(12px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 99; }
+    .mobile-nav a { font-size: 1.1rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; }
+    .mobile-nav a:hover, .mobile-nav a.active { color: var(--gold); }
+    .mobile-nav .btn-nav { background: var(--gold); color: #fff !important; padding: .6rem 1.6rem; border-radius: 2px; }
+    .mobile-nav.open { display: flex; }
+    .article-hero {
+      margin-top: 72px; position: relative; height: 480px; overflow: hidden; background: var(--cream);
+    }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, rgba(61,43,31,.65) 100%); }
+    .article-hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 5%; z-index: 2; max-width: 1100px; margin: 0 auto; }
+    .article-tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); background: rgba(255,255,255,.12); border: 1px solid rgba(196,154,60,.5); padding: .3rem .75rem; border-radius: 2px; margin-bottom: .9rem; }
+    .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem,4vw,3rem); font-weight: 300; color: #fff; line-height: 1.2; max-width: 760px; }
+    .article-wrap { max-width: 780px; margin: 0 auto; padding: 64px 5% 80px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); font-size: .82rem; color: var(--text-muted); }
+    .article-meta span { display: flex; align-items: center; gap: .4rem; }
+    .article-body { font-size: 1rem; color: var(--text); line-height: 1.85; }
+    .article-body p { margin-bottom: 1.4rem; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--brown); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--brown); margin: 2rem 0 .75rem; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-body li { margin-bottom: .45rem; color: var(--text-muted); }
+    .article-body strong { color: var(--brown); font-weight: 600; }
+    .article-body .highlight { background: var(--cream); border-left: 3px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 4px 4px 0; font-size: .95rem; color: var(--brown-mid); line-height: 1.75; }
+    .article-body .img-inline { width: 100%; border-radius: 4px; margin: 2rem 0; object-fit: cover; max-height: 420px; display: block; border: 1px solid var(--border); }
+    .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin: 2rem 0; }
+    .price-card { background: var(--cream); padding: 1.5rem; }
+    .price-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--brown); margin-bottom: .4rem; }
+    .price-card .price-val { font-size: 1.4rem; font-weight: 600; color: var(--gold); font-family: 'Cormorant Garamond', serif; margin-bottom: .4rem; }
+    .price-card p { font-size: .85rem; color: var(--text-muted); line-height: 1.65; }
+    .article-cta { background: var(--brown); color: #fff; padding: 3rem; text-align: center; border-radius: 4px; margin: 3rem 0; }
+    .article-cta p { color: rgba(255,255,255,.75); margin-bottom: 1.5rem; font-size: .97rem; line-height: 1.75; }
+    .btn-primary { display: inline-flex; align-items: center; gap: .6rem; background: var(--gold); color: #fff; font-size: .85rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .9rem 2rem; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-primary:hover { background: var(--gold-dark); }
+    .articles-nav { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 2.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .articles-nav a { font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color .2s; }
+    .articles-nav a:hover { color: var(--gold-dark); }
+    footer { background: var(--brown); color: rgba(255,255,255,.6); padding: 30px 5%; text-align: center; font-size: .82rem; }
+    footer a { color: rgba(255,255,255,.4); text-decoration: none; margin: 0 .75rem; }
+    footer a:hover { color: #E8D5A3; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .article-hero { height: 320px; }
+      .price-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Madagascar <span>Vanilla</span></a>
+  <nav>
+    <a href="index.html#features" data-i18n="nav.features">Avantages</a>
+    <a href="index.html#products" data-i18n="nav.products">Produits</a>
+    <a href="index.html#origin" data-i18n="nav.origin">Origine</a>
+    <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="blog.html" class="active" data-i18n="nav.blog">Blog</a>
+    <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact">Nous contacter</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')" aria-label="Français">FR</button>
+      <div class="lang-sep" aria-hidden="true"></div>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+    </div>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html#features" data-i18n="nav.features" onclick="toggleMenu()">Avantages</a>
+  <a href="index.html#products" data-i18n="nav.products" onclick="toggleMenu()">Produits</a>
+  <a href="index.html#origin" data-i18n="nav.origin" onclick="toggleMenu()">Origine</a>
+  <a href="index.html#faq" data-i18n="nav.faq" onclick="toggleMenu()">FAQ</a>
+  <a href="blog.html" class="active" data-i18n="nav.blog" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact" onclick="toggleMenu()">Nous contacter</a>
+  <div class="lang-switch">
+    <button class="lang-btn active" id="btn-fr-m" onclick="setLang('fr')" aria-label="Français">FR</button>
+    <div class="lang-sep" aria-hidden="true"></div>
+    <button class="lang-btn" id="btn-en-m" onclick="setLang('en')" aria-label="English">EN</button>
+  </div>
+</div>
+
+<div class="article-hero">
+  <img src="botte-et-gousse-sur-plat.webp" alt="Botte et gousse de vanille de Madagascar sur plat" fetchpriority="high" />
+  <div class="article-hero-content">
+    <span class="article-tag" data-i18n="tag">Prix & Marché</span>
+    <h1 data-i18n="h1">Prix des gousses de vanille de Madagascar : combien ça coûte ?</h1>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-meta">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span data-i18n="date">11 juin 2026</span>
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span data-i18n="readtime">5 min de lecture</span>
+    </span>
+  </div>
+
+  <div class="article-body" id="article-body"></div>
+
+  <div class="article-cta">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#fff;margin-bottom:.75rem;" data-i18n="cta.title">Obtenez un tarif professionnel</h2>
+    <p data-i18n="cta.p">Commande à partir de 5 kg, livraison directe depuis la région SAVA. Nous vous envoyons un devis personnalisé et des échantillons avant engagement.</p>
+    <a href="index.html#contact" class="btn-primary" data-i18n="cta.btn">Demander un devis</a>
+  </div>
+
+  <div class="articles-nav">
+    <a href="article-utiliser-vanille.html" data-i18n="nav.prev">← Comment utiliser la vanille</a>
+    <a href="blog.html" data-i18n="nav.back">Retour au blog →</a>
+  </div>
+</div>
+
+<footer>
+  <span data-i18n="footer.copy">© 2026 Madagascar Vanilla — Tous droits réservés</span>
+  <br style="margin:.5rem 0;">
+  <a href="index.html" data-i18n="footer.home">Accueil</a>
+  <a href="blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+</footer>
+
+<script>
+const T = {
+  fr: {
+    "meta.title": "Prix des gousses de vanille de Madagascar : combien ça coûte ? — Madagascar Vanilla",
+    "nav.features": "Avantages", "nav.products": "Produits", "nav.origin": "Origine",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Nous contacter",
+    "tag": "Prix & Marché",
+    "h1": "Prix des gousses de vanille de Madagascar : combien ça coûte ?",
+    "date": "11 juin 2026", "readtime": "5 min de lecture",
+    "cta.title": "Obtenez un tarif professionnel",
+    "cta.p": "Commande à partir de 5 kg, livraison directe depuis la région SAVA. Nous vous envoyons un devis personnalisé et des échantillons avant engagement.",
+    "cta.btn": "Demander un devis",
+    "nav.prev": "← Comment utiliser la vanille",
+    "nav.back": "Retour au blog →",
+    "footer.copy": "© 2026 Madagascar Vanilla — Tous droits réservés",
+    "footer.home": "Accueil"
+  },
+  en: {
+    "meta.title": "Price of Madagascar Vanilla Pods: How Much Does It Cost? — Madagascar Vanilla",
+    "nav.features": "Why us", "nav.products": "Products", "nav.origin": "Origin",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Contact us",
+    "tag": "Price & Market",
+    "h1": "Price of Madagascar Vanilla Pods: How Much Does It Cost?",
+    "date": "June 11, 2026", "readtime": "5 min read",
+    "cta.title": "Get a professional quote",
+    "cta.p": "Orders from 5 kg, direct delivery from the SAVA region. We send you a personalised quote and samples before any commitment.",
+    "cta.btn": "Request a quote",
+    "nav.prev": "← How to use vanilla",
+    "nav.back": "Back to blog →",
+    "footer.copy": "© 2026 Madagascar Vanilla — All rights reserved",
+    "footer.home": "Home"
+  }
+};
+
+const CONTENT = {
+  fr: `
+    <p>La gousse de vanille de Madagascar est l'une des épices les plus prisées au monde. Pourtant, le prix d'une gousse de vanille varie considérablement selon le circuit d'achat, la qualité et le volume. Ce guide vous donne toutes les clés pour comprendre la structure des prix et acheter au meilleur rapport qualité-prix.</p>
+
+    <div class="highlight">
+      Le prix d'une gousse de vanille en grande surface est <strong>3 à 5 fois plus élevé</strong> qu'en achat professionnel direct. La différence ? Les intermédiaires, le packaging et les marges de distribution — pas la qualité.
+    </div>
+
+    <h2>Prix d'une gousse de vanille : les grandes fourchettes</h2>
+    <p>Voici les fourchettes de prix observées sur le marché français selon le circuit d'achat :</p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Grande surface</h3>
+        <div class="price-val">3 – 5 € / gousse</div>
+        <p>1 à 3 gousses en tube plastique. Qualité variable, souvent séchées et peu aromatiques. Le packaging représente une part importante du prix.</p>
+      </div>
+      <div class="price-card">
+        <h3>Épicerie fine / boutique</h3>
+        <div class="price-val">2,50 – 4 € / gousse</div>
+        <p>Meilleure qualité en général, mais les marges intermédiaires restent élevées. Adapté aux achats occasionnels.</p>
+      </div>
+      <div class="price-card">
+        <h3>Achat pro en volume (1 kg+)</h3>
+        <div class="price-val">0,90 – 1,60 € / gousse</div>
+        <p>Tarif grossiste classique. Qualité TK garantie. Prix au kilo selon teneur en humidité et grade exact.</p>
+      </div>
+      <div class="price-card">
+        <h3>Direct producteur (Madagascar Vanilla)</h3>
+        <div class="price-val">Tarif sur devis</div>
+        <p>Sans intermédiaire, directement depuis la région SAVA. Traçabilité complète, Grade TK, commandes à partir de 5 kg.</p>
+      </div>
+    </div>
+
+    <h2>Ce qui détermine le prix des gousses de vanille de Madagascar</h2>
+    <p>Le prix des gousses de vanille de Madagascar ne dépend pas d'un seul facteur. Voici les critères qui font varier le prix au kilo :</p>
+    <ul>
+      <li><strong>Le grade qualité</strong> : le Grade TK (Tout-Venant Kilogramme) est le standard professionnel — gousses de plus de 14 cm, souples, à teneur en humidité contrôlée (18 à 38 %)</li>
+      <li><strong>La teneur en vanilline</strong> : pour la vanille noire Grade TK, elle oscille entre 1,6 et 2,2 %. C'est l'indicateur clé de l'intensité aromatique</li>
+      <li><strong>La longueur des gousses</strong> : les gousses de 16 cm et plus commandent une prime par rapport aux gousses de 14-15 cm</li>
+      <li><strong>Le volume commandé</strong> : à partir de 5 kg, les tarifs professionnels s'appliquent. Au-delà de 50 kg, des remises supplémentaires sont négociables</li>
+      <li><strong>La saisonnalité</strong> : la récolte a lieu d'août à octobre. Les prix sont généralement plus stables en début de saison post-récolte (novembre-janvier)</li>
+    </ul>
+
+    <h2>Prix au kilo vs prix à la gousse : ce que ça change vraiment</h2>
+    <p>Une <strong>gousse de vanille Grade TK</strong> pèse en moyenne 5 à 8 grammes. Cela signifie qu'un kilogramme contient environ 130 à 200 gousses selon la taille. L'achat au kilo permet d'avoir une vue claire du coût réel par unité.</p>
+    <p>Pour un professionnel qui utilise 2 à 3 gousses par jour (pâtisserie artisanale, restauration), un stock de 5 kg représente 3 à 4 mois d'approvisionnement — avec un coût par gousse 3 fois inférieur au prix de détail.</p>
+
+    <img class="img-inline" src="botte-vanille2.webp" alt="Bottes de gousses de vanille noire de Madagascar Grade TK" loading="lazy" />
+
+    <h2>Vanille noire vs vanille rouge : une différence de prix ?</h2>
+    <p>Les deux variétés proviennent de la même région SAVA et de la même plante (<em>Vanilla planifolia</em> bourbon). La différence de prix reflète le coût du processus d'affinage :</p>
+    <ul>
+      <li><strong>Vanille noire</strong> : affinage complet de 6 à 9 mois, teneur en vanilline maximale → prix légèrement supérieur</li>
+      <li><strong>Vanille rouge</strong> : processus raccourci, profil aromatique plus frais → 10 à 20 % moins cher selon les années</li>
+    </ul>
+    <p>Pour un usage en pâtisserie professionnelle, la vanille noire reste le meilleur investissement en termes de rendement aromatique. La vanille rouge est préférable pour les applications à froid (parfumerie, cocktails) où son profil floral est un avantage.</p>
+
+    <h2>Pourquoi les prix de la vanille fluctuent-ils autant ?</h2>
+    <p>La vanille est la deuxième épice la plus chère au monde après le safran. Plusieurs facteurs expliquent ses fortes variations de prix :</p>
+    <ul>
+      <li><strong>Les aléas climatiques</strong> : Madagascar est régulièrement frappée par des cyclones tropicaux. Le cyclone Enawo en 2017 a détruit une part importante des cultures et provoqué un pic historique dépassant <strong>600 €/kg</strong></li>
+      <li><strong>La spéculation</strong> : les acheteurs internationaux et les courtiers amplifient les variations en anticipant pénuries ou surplus</li>
+      <li><strong>La lenteur du cycle de production</strong> : 9 mois de pousse + 6 mois d'affinage minimum. Il est impossible de compenser rapidement un déficit de récolte</li>
+      <li><strong>La concentration de la production</strong> : Madagascar représente environ 80 % de l'offre mondiale. Toute perturbation sur l'île se répercute immédiatement sur les prix globaux</li>
+    </ul>
+    <p>En 2024-2026, les prix se sont stabilisés dans une fourchette de <strong>80 à 150 €/kg</strong> pour la qualité Grade TK, après les pics spéculatifs des années précédentes. C'est une fenêtre favorable pour les acheteurs professionnels qui souhaitent sécuriser leur approvisionnement.</p>
+
+    <h2>Acheter en direct : pourquoi c'est moins cher et plus sûr</h2>
+    <p>Chez Madagascar Vanilla, nous travaillons sans intermédiaire avec des producteurs de la région SAVA. Cette approche directe présente plusieurs avantages concrets :</p>
+    <ul>
+      <li><strong>Prix nets de commission</strong> : sans courtier ni importateur, vous payez au plus proche du prix producteur</li>
+      <li><strong>Traçabilité complète</strong> : chaque commande est accompagnée de l'origine précise (sous-préfecture, collecteur), de la teneur en vanilline et du taux d'humidité</li>
+      <li><strong>Flexibilité</strong> : commandes à partir de 5 kg, échantillons disponibles avant engagement en volume</li>
+      <li><strong>Qualité garantie Grade TK</strong> : tri manuel et contrôle qualité avant expédition</li>
+    </ul>
+  `,
+  en: `
+    <p>Madagascar vanilla pods are among the most prized spices in the world. Yet the price of a vanilla pod varies considerably depending on the purchasing channel, quality and volume. This guide gives you all the keys to understand pricing structures and buy at the best value.</p>
+
+    <div class="highlight">
+      The price of a vanilla pod in a supermarket is <strong>3 to 5 times higher</strong> than in direct professional purchasing. The difference? Middlemen, packaging and distribution margins — not quality.
+    </div>
+
+    <h2>Vanilla pod prices: the main ranges</h2>
+    <p>Here are the price ranges observed on the market depending on the purchasing channel:</p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Supermarket</h3>
+        <div class="price-val">€3 – €5 / pod</div>
+        <p>1 to 3 pods in a plastic tube. Variable quality, often dry and low in aroma. Packaging represents a significant share of the price.</p>
+      </div>
+      <div class="price-card">
+        <h3>Delicatessen / specialist shop</h3>
+        <div class="price-val">€2.50 – €4 / pod</div>
+        <p>Generally better quality, but intermediary margins remain high. Suitable for occasional purchases.</p>
+      </div>
+      <div class="price-card">
+        <h3>Professional bulk purchase (1 kg+)</h3>
+        <div class="price-val">€0.90 – €1.60 / pod</div>
+        <p>Standard wholesale pricing. TK grade guaranteed. Price per kilo depends on moisture content and exact grade.</p>
+      </div>
+      <div class="price-card">
+        <h3>Direct from producer (Madagascar Vanilla)</h3>
+        <div class="price-val">Quote on request</div>
+        <p>No middlemen, directly from the SAVA region. Full traceability, Grade TK, orders from 5 kg.</p>
+      </div>
+    </div>
+
+    <h2>What determines the price of Madagascar vanilla pods</h2>
+    <p>The price of Madagascar vanilla pods does not depend on a single factor. Here are the criteria that affect the price per kilo:</p>
+    <ul>
+      <li><strong>Quality grade</strong>: Grade TK (Tout-Venant Kilogramme) is the professional standard — pods over 14 cm, supple, with controlled moisture content (18 to 38%)</li>
+      <li><strong>Vanillin content</strong>: for black Grade TK vanilla, it ranges from 1.6 to 2.2%. This is the key indicator of aromatic intensity</li>
+      <li><strong>Pod length</strong>: pods of 16 cm and over command a premium over 14-15 cm pods</li>
+      <li><strong>Order volume</strong>: professional pricing applies from 5 kg. Above 50 kg, additional discounts are negotiable</li>
+      <li><strong>Seasonality</strong>: harvest takes place from August to October. Prices are generally more stable early in the post-harvest season (November–January)</li>
+    </ul>
+
+    <h2>Price per kilo vs price per pod: the real difference</h2>
+    <p>A <strong>Grade TK vanilla pod</strong> weighs an average of 5 to 8 grams. This means one kilogram contains roughly 130 to 200 pods depending on size. Buying by the kilo gives a clear picture of the real unit cost.</p>
+    <p>For a professional using 2 to 3 pods per day (artisan pastry, catering), a 5 kg stock represents 3 to 4 months of supply — at a cost per pod three times lower than retail.</p>
+
+    <img class="img-inline" src="botte-vanille2.webp" alt="Bundles of black Madagascar Grade TK vanilla pods" loading="lazy" />
+
+    <h2>Black vs red vanilla: a price difference?</h2>
+    <p>Both varieties come from the same SAVA region and the same plant (<em>Vanilla planifolia</em> bourbon). The price difference reflects the cost of the curing process:</p>
+    <ul>
+      <li><strong>Black vanilla</strong>: complete 6 to 9-month curing, maximum vanillin content → slightly higher price</li>
+      <li><strong>Red vanilla</strong>: shortened process, fresher aromatic profile → 10 to 20% cheaper depending on the year</li>
+    </ul>
+    <p>For professional pastry use, black vanilla remains the best investment in terms of aromatic yield. Red vanilla is preferable for cold applications (perfumery, cocktails) where its floral profile is an advantage.</p>
+
+    <h2>Why do vanilla prices fluctuate so much?</h2>
+    <p>Vanilla is the second most expensive spice in the world after saffron. Several factors explain its wide price swings:</p>
+    <ul>
+      <li><strong>Weather events</strong>: Madagascar is regularly hit by tropical cyclones. Cyclone Enawo in 2017 destroyed a significant portion of crops and caused a historic peak exceeding <strong>€600/kg</strong></li>
+      <li><strong>Speculation</strong>: international buyers and brokers amplify fluctuations by anticipating shortages or surpluses</li>
+      <li><strong>The slow production cycle</strong>: 9 months of growth + at least 6 months of curing. It is impossible to quickly compensate for a harvest shortfall</li>
+      <li><strong>Concentration of production</strong>: Madagascar accounts for roughly 80% of global supply. Any disruption on the island is immediately reflected in global prices</li>
+    </ul>
+    <p>In 2024–2026, prices stabilised in the range of <strong>€80 to €150/kg</strong> for Grade TK quality, following the speculative peaks of previous years. This is a favourable window for professional buyers looking to secure their supply.</p>
+
+    <h2>Buying direct: why it is cheaper and safer</h2>
+    <p>At Madagascar Vanilla, we work without intermediaries with producers in the SAVA region. This direct approach offers several concrete advantages:</p>
+    <ul>
+      <li><strong>Commission-free pricing</strong>: no broker or importer means you pay as close to producer price as possible</li>
+      <li><strong>Full traceability</strong>: each order comes with the precise origin (sub-prefecture, collector), vanillin content and moisture level</li>
+      <li><strong>Flexibility</strong>: orders from 5 kg, samples available before volume commitment</li>
+      <li><strong>Grade TK quality guaranteed</strong>: manual sorting and quality control before dispatch</li>
+    </ul>
+  `
+};
+
+const storedLang = localStorage.getItem('mvLang');
+const browserLang = (navigator.language || 'fr').toLowerCase();
+let currentLang = storedLang || (browserLang.startsWith('fr') ? 'fr' : 'en');
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('mvLang', lang);
+  document.documentElement.lang = lang;
+  if (T[lang]['meta.title']) document.title = T[lang]['meta.title'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[lang][key] !== undefined) el.textContent = T[lang][key];
+  });
+  document.getElementById('article-body').innerHTML = CONTENT[lang];
+  ['btn-fr','btn-fr-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='fr'); });
+  ['btn-en','btn-en-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='en'); });
+}
+
+function toggleMenu() {
+  const nav = document.getElementById('mobile-nav');
+  const btn = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+
+setLang(currentLang);
+</script>
+
+</body>
+</html>
