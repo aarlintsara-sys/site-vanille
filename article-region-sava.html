@@ -39,7 +39,7 @@
       background: rgba(255,252,247,0.92); backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
-    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); letter-spacing: .04em; text-decoration: none; }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); letter-spacing: .04em; text-decoration: none; display:inline-flex; align-items:center; gap:.4rem; }
     .logo span { color: var(--gold); }
     nav { display: flex; gap: 2rem; align-items: center; }
     nav a { font-size: .82rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s; }
@@ -103,6 +103,10 @@
     .articles-nav { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 2.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
     .articles-nav a { font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color .2s; }
     .articles-nav a:hover { color: var(--gold-dark); }
+    .related-posts { margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border); }
+    .related-posts p { font-size:.75rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1rem; }
+    .related-posts a { display:block; color:var(--gold); text-decoration:none; font-size:.9rem; margin-bottom:.5rem; font-weight:500; }
+    .related-posts a:hover { color:var(--gold-dark); }
 
     /* FOOTER */
     footer { background: var(--brown); color: rgba(255,255,255,.6); padding: 30px 5%; text-align: center; font-size: .82rem; }
@@ -119,7 +123,7 @@
 <body>
 
 <header>
-  <a href="index.html" class="logo">Madagascar <span>Vanilla</span></a>
+  <a href="index.html" class="logo"><img src="favicon-96x96.png" alt="" width="28" height="28" />Madagascar <span>Vanilla</span></a>
   <nav>
     <a href="index.html#features" data-i18n="nav.features">Avantages</a>
     <a href="index.html#products" data-i18n="nav.products">Produits</a>
@@ -181,7 +185,7 @@
     </div>
     <h2>Une histoire liée à la colonisation française</h2>
     <p>La vanille est native du Mexique, où elle était pollinisée naturellement par une abeille endémique, <em>Eulaema meriana</em>, ainsi que par le colibri local. Introduite à Madagascar au XIXe siècle par les colons français, elle a trouvé un terroir exceptionnel — mais sans ses pollinisateurs d'origine.</p>
-    <p>C'est en <strong>1841</strong> qu'Edmond Albius, un jeune esclave réunionnais de 12 ans, invente la technique de pollinisation manuelle : à l'aide d'un fin bâtonnet, il transfère le pollen d'une fleur à l'autre en quelques secondes. Cette découverte va transformer la production mondiale de vanille et permettre à Madagascar de s'imposer comme premier producteur.</p>
+    <p>C'est en <strong>1841</strong> qu'<a href="https://fr.wikipedia.org/wiki/Edmond_Albius" target="_blank" rel="noopener noreferrer">Edmond Albius</a>, un jeune esclave réunionnais de 12 ans, invente la technique de pollinisation manuelle : à l'aide d'un fin bâtonnet, il transfère le pollen d'une fleur à l'autre en quelques secondes. Cette découverte va transformer la production mondiale de vanille et permettre à Madagascar de s'imposer comme premier producteur.</p>
     <img class="img-inline" src="botte-vanille-dans-main.webp" alt="Botte de vanille dans une main — production SAVA" loading="lazy" />
     <h2>La pollinisation : un travail d'orfèvre</h2>
     <p>Chaque fleur de vanille ne s'ouvre qu'une seule fois, pendant quelques heures seulement, au petit matin. Les agriculteurs malgaches — que l'on appelle <em>les vanilleurs</em> — doivent inspecter leurs lianes quotidiennement pendant toute la saison de floraison, de septembre à novembre.</p>
@@ -208,6 +212,13 @@
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#fff;margin-bottom:.75rem;" data-i18n="cta.title">Intéressé par notre vanille ?</h2>
     <p data-i18n="cta.p">Nous livrons en volume directement depuis Madagascar. Contactez-nous pour un devis personnalisé adapté à vos besoins professionnels.</p>
     <a href="index.html#contact" class="btn-primary" data-i18n="cta.btn">Demander un devis</a>
+  </div>
+
+  <div class="related-posts">
+    <p>À lire aussi</p>
+    <a href="article-conservation.html">→ Comment bien conserver vos gousses de vanille</a>
+    <a href="article-noire-vs-rouge.html">→ Vanille noire vs vanille rouge : quelles différences ?</a>
+    <a href="article-prix-vanille.html">→ Prix des gousses de vanille : guide tarifaire</a>
   </div>
 
   <div class="articles-nav">
@@ -270,7 +281,7 @@ const CONTENT = {
 
     <h2>Une histoire liée à la colonisation française</h2>
     <p>La vanille est native du Mexique, où elle était pollinisée naturellement par une abeille endémique, <em>Eulaema meriana</em>, ainsi que par le colibri local. Introduite à Madagascar au XIXe siècle par les colons français, elle a trouvé un terroir exceptionnel — mais sans ses pollinisateurs d'origine.</p>
-    <p>C'est en <strong>1841</strong> qu'Edmond Albius, un jeune esclave réunionnais de 12 ans, invente la technique de pollinisation manuelle : à l'aide d'un fin bâtonnet, il transfère le pollen d'une fleur à l'autre en quelques secondes. Cette découverte va transformer la production mondiale de vanille et permettre à Madagascar de s'imposer comme premier producteur.</p>
+    <p>C'est en <strong>1841</strong> qu'<a href="https://fr.wikipedia.org/wiki/Edmond_Albius" target="_blank" rel="noopener noreferrer">Edmond Albius</a>, un jeune esclave réunionnais de 12 ans, invente la technique de pollinisation manuelle : à l'aide d'un fin bâtonnet, il transfère le pollen d'une fleur à l'autre en quelques secondes. Cette découverte va transformer la production mondiale de vanille et permettre à Madagascar de s'imposer comme premier producteur.</p>
 
     <img class="img-inline" src="botte-vanille-dans-main.webp" alt="Botte de vanille dans une main — production SAVA" loading="lazy" />
 
