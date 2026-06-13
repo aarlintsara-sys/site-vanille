@@ -39,6 +39,15 @@
   </url>
 
   <url>
+    <loc>https://madagascar-vanille.com/article-utiliser-vanille.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://madagascar-vanille.com/article-utiliser-vanille.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://madagascar-vanille.com/article-utiliser-vanille.html"/>
+  </url>
+
+  <url>
     <loc>https://madagascar-vanille.com/blog.html</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>
