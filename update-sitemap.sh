@@ -35,8 +35,7 @@ lastmod_for() {
 
 {
   echo '<?xml version="1.0" encoding="UTF-8"?>'
-  echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
-  echo '        xmlns:xhtml="http://www.w3.org/1999/xhtml">'
+  echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
 
   for f in "$REPO_ROOT"/*.html; do
     name=$(basename "$f")
@@ -57,8 +56,6 @@ lastmod_for() {
     printf '    <lastmod>%s</lastmod>\n'  "$lastmod"
     printf '    <changefreq>%s</changefreq>\n' "$freq"
     printf '    <priority>%s</priority>\n' "$priority"
-    printf '    <xhtml:link rel="alternate" hreflang="fr" href="%s"/>\n' "$loc"
-    printf '    <xhtml:link rel="alternate" hreflang="en" href="%s"/>\n' "$loc"
     printf '  </url>\n'
   done
 
