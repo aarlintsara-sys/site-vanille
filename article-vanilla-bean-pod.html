@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Qu'est-ce qu'une gousse de vanille ? Anatomie, origine et utilisations — Madagascar Vanilla</title>
+  <meta name="description" content="Découvrez ce qu'est une gousse de vanille : anatomie, caviar, variétés noire et rouge. Tout sur la vanilla bean pod de Madagascar." />
+  <!-- Favicons -->
+  <link rel="icon"             type="image/x-icon" href="favicon.ico" />
+  <link rel="icon"             type="image/png"    sizes="48x48"  href="favicon-48x48.png" />
+  <link rel="icon"             type="image/png"    sizes="96x96"  href="favicon-96x96.png" />
+  <link rel="apple-touch-icon"                     sizes="100x100" href="apple-touch-icon.png" />
+  <link rel="canonical" href="https://madagascar-vanille.com/article-vanilla-bean-pod.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #FDF9F4;
+      --warm-white: #FFFEFB;
+      --gold:       #C49A3C;
+      --gold-dark:  #9B7A2E;
+      --brown:      #3D2B1F;
+      --brown-mid:  #6B4C3B;
+      --brown-light:#A07850;
+      --text:       #2A1F18;
+      --text-muted: #7A6555;
+      --border:     #E0CDB5;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); line-height: 1.6; }
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 72px;
+      background: rgba(255,252,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); letter-spacing: .04em; text-decoration: none; display:inline-flex; align-items:center; gap:.4rem; }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 2rem; align-items: center; }
+    nav a { font-size: .82rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--gold); }
+    .btn-nav { background: var(--gold); color: #fff !important; padding: .5rem 1.25rem; border-radius: 2px; transition: background .2s !important; }
+    .btn-nav:hover { background: var(--gold-dark) !important; }
+    .lang-switch { display: flex; align-items: center; gap: .3rem; margin-left: 1.5rem; }
+    .lang-btn { background: none; border: 1px solid var(--border); cursor: pointer; font-size: .75rem; font-weight: 600; letter-spacing: .08em; color: var(--text-muted); padding: .3rem .55rem; border-radius: 2px; transition: background .2s, color .2s; font-family: 'Inter', sans-serif; }
+    .lang-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .lang-sep { width: 1px; height: 14px; background: var(--border); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--brown); border-radius: 2px; }
+    .mobile-nav { display: none; position: fixed; inset: 72px 0 0 0; background: rgba(253,249,244,.97); backdrop-filter: blur(12px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 99; }
+    .mobile-nav a { font-size: 1.1rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; }
+    .mobile-nav a:hover, .mobile-nav a.active { color: var(--gold); }
+    .mobile-nav .btn-nav { background: var(--gold); color: #fff !important; padding: .6rem 1.6rem; border-radius: 2px; }
+    .mobile-nav.open { display: flex; }
+    .article-hero {
+      margin-top: 72px; position: relative; height: 480px; overflow: hidden; background: var(--cream);
+    }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, rgba(61,43,31,.65) 100%); }
+    .article-hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 5%; z-index: 2; max-width: 1100px; margin: 0 auto; }
+    .article-tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); background: rgba(255,255,255,.12); border: 1px solid rgba(196,154,60,.5); padding: .3rem .75rem; border-radius: 2px; margin-bottom: .9rem; }
+    .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem,4vw,3rem); font-weight: 300; color: #fff; line-height: 1.2; max-width: 760px; }
+    .article-wrap { max-width: 780px; margin: 0 auto; padding: 64px 5% 80px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); font-size: .82rem; color: var(--text-muted); }
+    .article-meta span { display: flex; align-items: center; gap: .4rem; }
+    .article-body { font-size: 1rem; color: var(--text); line-height: 1.85; }
+    .article-body p { margin-bottom: 1.4rem; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--brown); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--brown); margin: 2rem 0 .75rem; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-body li { margin-bottom: .45rem; color: var(--text-muted); }
+    .article-body strong { color: var(--brown); font-weight: 600; }
+    .article-body a { color: var(--gold); text-decoration: none; }
+    .article-body a:hover { color: var(--gold-dark); text-decoration: underline; }
+    .article-body .highlight { background: var(--cream); border-left: 3px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 4px 4px 0; font-size: .95rem; color: var(--brown-mid); line-height: 1.75; }
+    .article-body .img-inline { width: 100%; border-radius: 4px; margin: 2rem 0; object-fit: cover; max-height: 420px; display: block; border: 1px solid var(--border); }
+    .anatomy-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--border); margin: 2rem 0; }
+    .anatomy-card { background: var(--cream); padding: 1.5rem; }
+    .anatomy-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--brown); margin-bottom: .5rem; }
+    .anatomy-card p { font-size: .85rem; color: var(--text-muted); line-height: 1.65; }
+    .article-cta { background: var(--brown); color: #fff; padding: 3rem; text-align: center; border-radius: 4px; margin: 3rem 0; }
+    .article-cta p { color: rgba(255,255,255,.75); margin-bottom: 1.5rem; font-size: .97rem; line-height: 1.75; }
+    .btn-primary { display: inline-flex; align-items: center; gap: .6rem; background: var(--gold); color: #fff; font-size: .85rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .9rem 2rem; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-primary:hover { background: var(--gold-dark); }
+    .articles-nav { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 2.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .articles-nav a { font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color .2s; }
+    .articles-nav a:hover { color: var(--gold-dark); }
+    .related-posts { margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border); }
+    .related-posts p { font-size:.75rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1rem; }
+    .related-posts a { display:block; color:var(--gold); text-decoration:none; font-size:.9rem; margin-bottom:.5rem; font-weight:500; }
+    .related-posts a:hover { color:var(--gold-dark); }
+    footer { background: var(--brown); color: rgba(255,255,255,.6); padding: 30px 5%; text-align: center; font-size: .82rem; }
+    footer a { color: rgba(255,255,255,.4); text-decoration: none; margin: 0 .75rem; }
+    footer a:hover { color: #E8D5A3; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .article-hero { height: 320px; }
+      .anatomy-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo"><img src="favicon-96x96.png" alt="" width="28" height="28" />Madagascar <span>Vanilla</span></a>
+  <nav>
+    <a href="index.html#features" data-i18n="nav.features">Avantages</a>
+    <a href="index.html#products" data-i18n="nav.products">Produits</a>
+    <a href="index.html#origin" data-i18n="nav.origin">Origine</a>
+    <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="blog.html" class="active" data-i18n="nav.blog">Blog</a>
+    <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact">Nous contacter</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')" aria-label="Français">FR</button>
+      <div class="lang-sep" aria-hidden="true"></div>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+    </div>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html#features" data-i18n="nav.features" onclick="toggleMenu()">Avantages</a>
+  <a href="index.html#products" data-i18n="nav.products" onclick="toggleMenu()">Produits</a>
+  <a href="index.html#origin" data-i18n="nav.origin" onclick="toggleMenu()">Origine</a>
+  <a href="index.html#faq" data-i18n="nav.faq" onclick="toggleMenu()">FAQ</a>
+  <a href="blog.html" class="active" data-i18n="nav.blog" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact" onclick="toggleMenu()">Nous contacter</a>
+  <div class="lang-switch">
+    <button class="lang-btn active" id="btn-fr-m" onclick="setLang('fr')" aria-label="Français">FR</button>
+    <div class="lang-sep" aria-hidden="true"></div>
+    <button class="lang-btn" id="btn-en-m" onclick="setLang('en')" aria-label="English">EN</button>
+  </div>
+</div>
+
+<div class="article-hero">
+  <img src="botte-vanille.webp" alt="Gousses de vanille de Madagascar — vanilla bean pods" fetchpriority="high" />
+  <div class="article-hero-content">
+    <span class="article-tag" data-i18n="tag">Guide & Découverte</span>
+    <h1 data-i18n="h1">Qu'est-ce qu'une gousse de vanille ? Anatomie, origine et utilisations</h1>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-meta">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span data-i18n="date">24 juin 2026</span>
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span data-i18n="readtime">5 min de lecture</span>
+    </span>
+  </div>
+
+  <div class="article-body" id="article-body">
+    <!-- contenu injecté par JS -->
+  </div>
+
+  <div class="article-cta">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#fff;margin-bottom:.75rem;" data-i18n="cta.title">Commander des vanilla bean pods Grade TK</h2>
+    <p data-i18n="cta.p">Gousses de vanille noire et rouge directement depuis la région SAVA, Madagascar. Commandes à partir de 5 kg, échantillons disponibles.</p>
+    <a href="index.html#contact" class="btn-primary" data-i18n="cta.btn">Demander un devis</a>
+  </div>
+
+  <div class="related-posts">
+    <p data-i18n="related.label">À lire aussi</p>
+    <a href="article-noire-vs-rouge.html" data-i18n="related.1">→ Vanille noire vs vanille rouge : quelles différences ?</a>
+    <a href="article-utiliser-vanille.html" data-i18n="related.2">→ Comment utiliser une gousse de vanille</a>
+    <a href="article-vanilla-bean-pods-wholesale.html" data-i18n="related.3">→ Acheter des vanilla bean pods en gros : guide professionnel</a>
+  </div>
+
+  <div class="articles-nav">
+    <a href="blog.html" data-i18n="nav.back">← Retour au blog</a>
+    <a href="article-vanilla-bean-pods-wholesale.html" data-i18n="nav.next">Guide d'achat en gros →</a>
+  </div>
+</div>
+
+<footer>
+  <span data-i18n="footer.copy">© 2026 Madagascar Vanilla — Tous droits réservés</span>
+  <br style="margin:.5rem 0;">
+  <a href="index.html" data-i18n="footer.home">Accueil</a>
+  <a href="blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+</footer>
+
+<script>
+const T = {
+  fr: {
+    "meta.title": "Qu'est-ce qu'une gousse de vanille ? Anatomie, origine et utilisations — Madagascar Vanilla",
+    "nav.features": "Avantages", "nav.products": "Produits", "nav.origin": "Origine",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Nous contacter",
+    "tag": "Guide & Découverte",
+    "h1": "Qu'est-ce qu'une gousse de vanille ? Anatomie, origine et utilisations",
+    "date": "24 juin 2026", "readtime": "5 min de lecture",
+    "cta.title": "Commander des vanilla bean pods Grade TK",
+    "cta.p": "Gousses de vanille noire et rouge directement depuis la région SAVA, Madagascar. Commandes à partir de 5 kg, échantillons disponibles.",
+    "cta.btn": "Demander un devis",
+    "related.label": "À lire aussi",
+    "related.1": "→ Vanille noire vs vanille rouge : quelles différences ?",
+    "related.2": "→ Comment utiliser une gousse de vanille",
+    "related.3": "→ Acheter des vanilla bean pods en gros : guide professionnel",
+    "nav.back": "← Retour au blog",
+    "nav.next": "Guide d'achat en gros →",
+    "footer.copy": "© 2026 Madagascar Vanilla — Tous droits réservés",
+    "footer.home": "Accueil"
+  },
+  en: {
+    "meta.title": "What Is a Vanilla Bean Pod? Anatomy, Origin and Uses — Madagascar Vanilla",
+    "nav.features": "Why us", "nav.products": "Products", "nav.origin": "Origin",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Contact us",
+    "tag": "Guide & Discovery",
+    "h1": "What Is a Vanilla Bean Pod? Anatomy, Origin and Uses",
+    "date": "June 24, 2026", "readtime": "5 min read",
+    "cta.title": "Order Grade TK Vanilla Bean Pods",
+    "cta.p": "Black and red vanilla pods direct from the SAVA region, Madagascar. Orders from 5 kg, samples available.",
+    "cta.btn": "Request a quote",
+    "related.label": "Read also",
+    "related.1": "→ Black vanilla vs red vanilla: what are the differences?",
+    "related.2": "→ How to use a vanilla bean pod",
+    "related.3": "→ Buying vanilla bean pods wholesale: a professional guide",
+    "nav.back": "← Back to blog",
+    "nav.next": "Wholesale buying guide →",
+    "footer.copy": "© 2026 Madagascar Vanilla — All rights reserved",
+    "footer.home": "Home"
+  }
+};
+
+const CONTENT = {
+  fr: `
+    <p>La gousse de vanille — ou <em>vanilla bean pod</em> en anglais — est le fruit de l'orchidée <em>Vanilla planifolia</em>, une liane tropicale originaire du Mexique aujourd'hui cultivée principalement à Madagascar. C'est l'une des épices les plus complexes et les plus recherchées au monde, utilisée aussi bien en pâtisserie qu'en parfumerie haute gamme.</p>
+
+    <p>Pourtant, derrière cette simple gousse brune et souple se cache une mécanique aromatique d'une grande richesse. Voici tout ce qu'il faut savoir sur ce fruit d'exception.</p>
+
+    <div class="highlight">
+      La gousse de vanille contient plus de <strong>250 composés aromatiques</strong> identifiés, dont la vanilline est le principal. La vanilline naturelle des gousses développe une complexité que la vanilline de synthèse ne peut pas reproduire.
+    </div>
+
+    <h2>Anatomie d'une vanilla bean pod</h2>
+    <p>Une gousse de vanille de qualité Grade TK se compose de trois parties distinctes, chacune ayant un rôle aromatique spécifique :</p>
+
+    <div class="anatomy-grid">
+      <div class="anatomy-card">
+        <h3>La cosse (pod)</h3>
+        <p>La paroi extérieure, souple et huileuse sur une bonne gousse. Elle contient la majorité de la vanilline et constitue 80 % du poids total. C'est elle qui parfume les infusions longues et les sucres vanillés.</p>
+      </div>
+      <div class="anatomy-card">
+        <h3>Le caviar (seeds)</h3>
+        <p>Les minuscules graines noires à l'intérieur de la gousse. Très concentrées en arôme, elles sont idéales pour les crèmes et ganaches où leur présence visuelle est un gage de qualité.</p>
+      </div>
+      <div class="anatomy-card">
+        <h3>La pulpe</h3>
+        <p>Le tissu qui entoure les graines, riche en précurseurs aromatiques. Lors de l'affinage, des réactions enzymatiques transforment ces précurseurs en vanilline — c'est le cœur du processus de cure.</p>
+      </div>
+    </div>
+
+    <p>Une gousse Grade TK mesure au minimum 14 cm, présente une couleur brun foncé à noire, une texture souple et non cassante, et une surface légèrement brillante due à la teneur en huiles essentielles naturelles.</p>
+
+    <h2>De la fleur à la vanilla bean pod : un cycle de 12 à 18 mois</h2>
+    <p>Contrairement à la plupart des épices, la vanille ne devient pas aromatique directement à la récolte. Son profil aromatique est entièrement le résultat d'un processus en plusieurs étapes :</p>
+
+    <ol>
+      <li><strong>La pollinisation manuelle</strong> — L'orchidée <em>Vanilla planifolia</em> ne se pollinise pas naturellement hors du Mexique. Chaque fleur doit être pollinisée à la main, le matin du jour où elle s'ouvre. C'est un travail précis qui explique en partie le coût de la vanille.</li>
+      <li><strong>La croissance du fruit</strong> — La gousse met 9 mois pour atteindre sa taille définitive. Elle est verte et inodore à ce stade.</li>
+      <li><strong>La récolte</strong> — Les gousses sont récoltées à pleine maturité entre août et octobre dans la <a href="article-region-sava.html">région SAVA de Madagascar</a>.</li>
+      <li><strong>L'échaudage</strong> — Les gousses fraîches sont plongées dans de l'eau chaude (65 °C) pendant 3 minutes pour stopper la maturation végétale et déclencher les réactions enzymatiques.</li>
+      <li><strong>L'étuvage et le séchage</strong> — Plusieurs semaines d'étuvage à l'ombre, suivi d'un séchage progressif. C'est durant cette phase que la vanilline se développe.</li>
+      <li><strong>L'affinage</strong> — Les gousses reposent en caisse ou en botte pendant 3 à 6 mois supplémentaires. La vanille noire est affinée plus longtemps que la vanille rouge, ce qui explique leur différence de profil aromatique.</li>
+    </ol>
+
+    <img class="img-inline" src="botte-et-gousse-sur-plat.webp" alt="Botte et gousse de vanille de Madagascar sur plat" loading="lazy" />
+
+    <h2>Vanille noire vs vanille rouge : deux vanilla bean pods, deux profils</h2>
+    <p>À Madagascar, deux types de vanilla bean pods sont commercialisés sous le grade TK :</p>
+
+    <ul>
+      <li><strong>La vanille noire</strong> — Affinée complètement (6 à 9 mois), elle présente une couleur brun-noir intense, une teneur en vanilline entre 1,6 et 2,2 %, et un arôme profond, boisé et crémeux. C'est le choix de référence pour la pâtisserie professionnelle.</li>
+      <li><strong>La vanille rouge</strong> — Processus d'affinage raccourci, couleur brun-rouge, arôme plus frais, floral et légèrement fruité. Très prisée en parfumerie artisanale, en cocktails et en infusions froides.</li>
+    </ul>
+
+    <p>Ces deux variétés proviennent de la même plante et de la même région. C'est uniquement la durée et le processus d'affinage qui les différencient. Pour une comparaison détaillée, consultez notre article <a href="article-noire-vs-rouge.html">Vanille noire vs vanille rouge</a>.</p>
+
+    <h2>Vanilla bean pods de Madagascar vs autres origines</h2>
+    <p>La vanille est cultivée dans plusieurs pays tropicaux, mais les gousses de Madagascar dominent le marché mondial (environ 80 % de la production). Voici comment elles se distinguent :</p>
+
+    <ul>
+      <li><strong>Madagascar (Bourbon)</strong> — Arôme crémeux, riche en vanilline, profil équilibré. Standard de référence mondial pour la pâtisserie.</li>
+      <li><strong>Tahiti (<em>Vanilla tahitensis</em>)</strong> — Espèce différente, arôme floral et anisé, teneur en vanilline plus faible. Utilisée en haute cuisine et en parfumerie.</li>
+      <li><strong>Indonésie</strong> — Profil plus boisé et fumé, qualité variable selon les producteurs. Moins chère, mais moins constante.</li>
+      <li><strong>Ouganda / Papouasie</strong> — Productions émergentes, profil proche de Madagascar mais moins établies commercialement.</li>
+    </ul>
+
+    <p>Pour les professionnels qui cherchent la régularité et la puissance aromatique, la vanilla bean pod de Madagascar Grade TK reste la référence incontournable.</p>
+
+    <h2>Comment évaluer la qualité d'une vanilla bean pod</h2>
+    <p>Que vous commandiez pour la première fois ou que vous souhaitiez comparer des fournisseurs, voici les critères qui définissent une bonne gousse :</p>
+
+    <ul>
+      <li><strong>La longueur</strong> : minimum 14 cm pour le Grade TK, idéalement 16 cm et plus pour les usages en pâtisserie fine</li>
+      <li><strong>La souplesse</strong> : une gousse de qualité se plie sans craquer. Une gousse cassante a perdu trop d'humidité pendant le stockage</li>
+      <li><strong>La brillance</strong> : un léger lustré sur la surface indique la présence naturelle d'huiles essentielles et de vanilline cristallisée</li>
+      <li><strong>L'humidité</strong> : entre 18 et 38 % pour une conservation optimale. En dessous, la gousse est sèche ; au-dessus, elle risque de moisir</li>
+      <li><strong>La teneur en vanilline</strong> : mesurable par analyse chimique, elle devrait dépasser 1,5 % pour une gousse Grade TK standard</li>
+    </ul>
+
+    <p>Chez Madagascar Vanilla, chaque lot est contrôlé sur ces cinq critères avant expédition. Des échantillons sont disponibles pour les professionnels souhaitant évaluer la qualité avant de passer commande en volume.</p>
+  `,
+  en: `
+    <p>A vanilla bean pod — or <em>gousse de vanille</em> in French — is the fruit of the <em>Vanilla planifolia</em> orchid, a tropical vine native to Mexico now cultivated primarily in Madagascar. It is one of the most complex and sought-after spices in the world, used in everything from fine pastry to high-end perfumery.</p>
+
+    <p>Yet behind this simple brown, supple pod lies a rich aromatic engine. Here is everything you need to know about this exceptional fruit.</p>
+
+    <div class="highlight">
+      A vanilla bean pod contains more than <strong>250 identified aromatic compounds</strong>, of which vanillin is the primary one. The natural vanillin in vanilla bean pods develops a complexity that synthetic vanillin cannot replicate.
+    </div>
+
+    <h2>Anatomy of a vanilla bean pod</h2>
+    <p>A Grade TK quality vanilla bean pod consists of three distinct parts, each playing a specific aromatic role:</p>
+
+    <div class="anatomy-grid">
+      <div class="anatomy-card">
+        <h3>The pod (shell)</h3>
+        <p>The outer wall, supple and oily in a good pod. It contains the majority of the vanillin and makes up 80% of the total weight. It is ideal for long infusions and vanilla sugars.</p>
+      </div>
+      <div class="anatomy-card">
+        <h3>The caviar (seeds)</h3>
+        <p>The tiny black seeds inside the pod. Highly concentrated in aroma, they are ideal for creams and ganaches where their visual presence signals premium quality.</p>
+      </div>
+      <div class="anatomy-card">
+        <h3>The pulp</h3>
+        <p>The tissue surrounding the seeds, rich in aromatic precursors. During curing, enzymatic reactions transform these precursors into vanillin — this is the heart of the curing process.</p>
+      </div>
+    </div>
+
+    <p>A Grade TK pod measures at least 14 cm, shows a dark brown to black colour, a supple and non-brittle texture, and a slightly glossy surface due to its natural essential oil content.</p>
+
+    <h2>From flower to vanilla bean pod: a 12 to 18-month cycle</h2>
+    <p>Unlike most spices, vanilla does not become aromatic directly at harvest. Its aromatic profile is entirely the result of a multi-step process:</p>
+
+    <ol>
+      <li><strong>Hand pollination</strong> — The <em>Vanilla planifolia</em> orchid does not pollinate naturally outside Mexico. Each flower must be pollinated by hand, on the morning it opens. This precise work partly explains the cost of vanilla.</li>
+      <li><strong>Fruit growth</strong> — The pod takes 9 months to reach its final size. It is green and odourless at this stage.</li>
+      <li><strong>Harvest</strong> — Pods are harvested at full maturity between August and October in the <a href="article-region-sava.html">SAVA region of Madagascar</a>.</li>
+      <li><strong>Blanching</strong> — Fresh pods are immersed in hot water (65°C) for 3 minutes to stop vegetative maturation and trigger enzymatic reactions.</li>
+      <li><strong>Sweating and drying</strong> — Several weeks of shade-drying, followed by progressive drying. This is the phase where vanillin develops.</li>
+      <li><strong>Curing</strong> — Pods rest in crates or bundles for an additional 3 to 6 months. Black vanilla is cured longer than red vanilla, which explains their different aromatic profiles.</li>
+    </ol>
+
+    <img class="img-inline" src="botte-et-gousse-sur-plat.webp" alt="Bundle and vanilla bean pod from Madagascar on a plate" loading="lazy" />
+
+    <h2>Black vs red: two vanilla bean pods, two profiles</h2>
+    <p>In Madagascar, two types of vanilla bean pods are sold under Grade TK:</p>
+
+    <ul>
+      <li><strong>Black vanilla</strong> — Fully cured (6 to 9 months), it shows an intense dark brown-black colour, vanillin content between 1.6 and 2.2%, and a deep, woody, creamy aroma. The reference choice for professional pastry.</li>
+      <li><strong>Red vanilla</strong> — Shortened curing process, brown-red colour, fresher, floral and slightly fruity aroma. Highly prized in artisan perfumery, cocktails and cold infusions.</li>
+    </ul>
+
+    <p>Both varieties come from the same plant and the same region. Only the duration and process of curing differentiate them. For a detailed comparison, see our article <a href="article-noire-vs-rouge.html">Black vanilla vs red vanilla</a>.</p>
+
+    <h2>Madagascar vanilla bean pods vs other origins</h2>
+    <p>Vanilla is grown in several tropical countries, but Madagascar pods dominate the global market (roughly 80% of production). Here is how they compare:</p>
+
+    <ul>
+      <li><strong>Madagascar (Bourbon)</strong> — Creamy aroma, high vanillin content, balanced profile. The global reference standard for pastry.</li>
+      <li><strong>Tahiti (<em>Vanilla tahitensis</em>)</strong> — Different species, floral and anise-like aroma, lower vanillin content. Used in haute cuisine and perfumery.</li>
+      <li><strong>Indonesia</strong> — Woodier, smokier profile, variable quality depending on producers. Less expensive but less consistent.</li>
+      <li><strong>Uganda / Papua New Guinea</strong> — Emerging productions, profile close to Madagascar but less commercially established.</li>
+    </ul>
+
+    <p>For professionals seeking aromatic consistency and power, Madagascar Grade TK vanilla bean pods remain the undisputed reference.</p>
+
+    <h2>How to assess the quality of a vanilla bean pod</h2>
+    <p>Whether ordering for the first time or comparing suppliers, here are the criteria that define a quality pod:</p>
+
+    <ul>
+      <li><strong>Length</strong>: minimum 14 cm for Grade TK, ideally 16 cm and over for fine pastry applications</li>
+      <li><strong>Suppleness</strong>: a quality pod bends without cracking. A brittle pod has lost too much moisture during storage</li>
+      <li><strong>Glossiness</strong>: a slight sheen on the surface indicates the natural presence of essential oils and crystallised vanillin</li>
+      <li><strong>Moisture content</strong>: between 18% and 38% for optimal storage. Below that, the pod is dry; above it, it risks moulding</li>
+      <li><strong>Vanillin content</strong>: measurable by chemical analysis, it should exceed 1.5% for a standard Grade TK pod</li>
+    </ul>
+
+    <p>At Madagascar Vanilla, every batch is checked against these five criteria before dispatch. Samples are available for professionals wishing to assess quality before placing a bulk order.</p>
+  `
+};
+
+const storedLang = localStorage.getItem('mvLang');
+const browserLang = (navigator.language || 'fr').toLowerCase();
+let currentLang = storedLang || (browserLang.startsWith('fr') ? 'fr' : 'en');
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('mvLang', lang);
+  document.documentElement.lang = lang;
+  if (T[lang]['meta.title']) document.title = T[lang]['meta.title'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[lang][key] !== undefined) el.textContent = T[lang][key];
+  });
+  document.getElementById('article-body').innerHTML = CONTENT[lang];
+  ['btn-fr','btn-fr-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='fr'); });
+  ['btn-en','btn-en-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='en'); });
+}
+
+function toggleMenu() {
+  const nav = document.getElementById('mobile-nav');
+  const btn = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+
+setLang(currentLang);
+</script>
+
+</body>
+</html>
