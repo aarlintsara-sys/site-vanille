@@ -1270,7 +1270,20 @@ function handleSubmit(e) {
   const btn = f.querySelector('[type="submit"]');
   btn.disabled = true;
 
-  fetch('contact.php', { method: 'POST', body: new FormData(f) })
+  const payload = {
+    access_key: '7e8d77ad-2bcf-450e-bfd2-b589faabb162',
+    name:    f.nom.value.trim(),
+    email:   f.email.value.trim(),
+    phone:   f.telephone.value.trim(),
+    subject: 'Demande de devis — Madagascar Vanilla',
+    message: 'Quantité : ' + (f.quantite.value || '—') + '\n\n' + (f.commentaire.value.trim() || '—')
+  };
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
     .then(r => r.json())
     .then(data => {
       if (data.success) {
