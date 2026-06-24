@@ -1266,28 +1266,26 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // ── FORMULAIRE ────────────────────────────────────────────────
 function handleSubmit(e) {
   e.preventDefault();
-  const f = e.target;
-  const nom      = f.nom.value.trim();
-  const email    = f.email.value.trim();
-  const tel      = f.telephone.value.trim();
-  const quantite = f.quantite.value;
-  const msg      = f.commentaire.value.trim();
+  const f   = e.target;
+  const btn = f.querySelector('[type="submit"]');
+  btn.disabled = true;
 
-  const subject = encodeURIComponent('Demande de devis — Madagascar Vanilla');
-  const body = encodeURIComponent(
-    'Nom : '      + nom + '\n' +
-    'Email : '    + email + '\n' +
-    'Téléphone : '+ (tel      || '—') + '\n' +
-    'Quantité : ' + (quantite || '—') + '\n\n' +
-    'Message :\n' + (msg      || '—')
-  );
-
-  window.location.href = 'mailto:contact@madagascar-vanille.com?subject=' + subject + '&body=' + body;
-
-  const successEl = document.getElementById('form-success');
-  successEl.querySelector('[data-i18n="form.success"]').textContent = T[currentLang]['form.success'];
-  successEl.style.display = 'block';
-  f.reset();
+  fetch('contact.php', { method: 'POST', body: new FormData(f) })
+    .then(r => r.json())
+    .then(data => {
+      if (data.success) {
+        const successEl = document.getElementById('form-success');
+        successEl.querySelector('[data-i18n="form.success"]').textContent = T[currentLang]['form.success'];
+        successEl.style.display = 'block';
+        f.reset();
+      } else {
+        alert('Erreur lors de l\'envoi. Veuillez nous écrire directement à contact@madagascar-vanille.com');
+      }
+    })
+    .catch(() => {
+      alert('Erreur de connexion. Veuillez nous écrire directement à contact@madagascar-vanille.com');
+    })
+    .finally(() => { btn.disabled = false; });
 }
 </script>
 </body>
