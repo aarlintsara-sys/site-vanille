@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Livraison de gousses de vanille : emballage, délais et suivi — Madagascar Vanilla</title>
+  <meta name="description" content="Comment Madagascar Vanilla emballe et expédie vos gousses de vanille : protection qualité, délais de livraison, suivi de colis et conseils à réception." />
+  <!-- Favicons -->
+  <link rel="icon"             type="image/x-icon" href="favicon.ico" />
+  <link rel="icon"             type="image/png"    sizes="48x48"  href="favicon-48x48.png" />
+  <link rel="icon"             type="image/png"    sizes="96x96"  href="favicon-96x96.png" />
+  <link rel="apple-touch-icon"                     sizes="100x100" href="apple-touch-icon.png" />
+  <link rel="canonical" href="https://madagascar-vanille.com/article-livraison-colis.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #FDF9F4;
+      --warm-white: #FFFEFB;
+      --gold:       #C49A3C;
+      --gold-dark:  #9B7A2E;
+      --brown:      #3D2B1F;
+      --brown-mid:  #6B4C3B;
+      --brown-light:#A07850;
+      --text:       #2A1F18;
+      --text-muted: #7A6555;
+      --border:     #E0CDB5;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); line-height: 1.6; }
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 72px;
+      background: rgba(255,252,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); letter-spacing: .04em; text-decoration: none; display:inline-flex; align-items:center; gap:.4rem; }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 2rem; align-items: center; }
+    nav a { font-size: .82rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--gold); }
+    .btn-nav { background: var(--gold); color: #fff !important; padding: .5rem 1.25rem; border-radius: 2px; transition: background .2s !important; }
+    .btn-nav:hover { background: var(--gold-dark) !important; }
+    .lang-switch { display: flex; align-items: center; gap: .3rem; margin-left: 1.5rem; }
+    .lang-btn { background: none; border: 1px solid var(--border); cursor: pointer; font-size: .75rem; font-weight: 600; letter-spacing: .08em; color: var(--text-muted); padding: .3rem .55rem; border-radius: 2px; transition: background .2s, color .2s; font-family: 'Inter', sans-serif; }
+    .lang-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .lang-sep { width: 1px; height: 14px; background: var(--border); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--brown); border-radius: 2px; }
+    .mobile-nav { display: none; position: fixed; inset: 72px 0 0 0; background: rgba(253,249,244,.97); backdrop-filter: blur(12px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 99; }
+    .mobile-nav a { font-size: 1.1rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; }
+    .mobile-nav a:hover, .mobile-nav a.active { color: var(--gold); }
+    .mobile-nav .btn-nav { background: var(--gold); color: #fff !important; padding: .6rem 1.6rem; border-radius: 2px; }
+    .mobile-nav.open { display: flex; }
+    .article-hero {
+      margin-top: 72px; position: relative; height: 480px; overflow: hidden; background: var(--cream);
+    }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, rgba(61,43,31,.65) 100%); }
+    .article-hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 5%; z-index: 2; max-width: 1100px; margin: 0 auto; }
+    .article-tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); background: rgba(255,255,255,.12); border: 1px solid rgba(196,154,60,.5); padding: .3rem .75rem; border-radius: 2px; margin-bottom: .9rem; }
+    .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem,4vw,3rem); font-weight: 300; color: #fff; line-height: 1.2; max-width: 760px; }
+    .article-wrap { max-width: 780px; margin: 0 auto; padding: 64px 5% 80px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); font-size: .82rem; color: var(--text-muted); }
+    .article-meta span { display: flex; align-items: center; gap: .4rem; }
+    .article-body { font-size: 1rem; color: var(--text); line-height: 1.85; }
+    .article-body p { margin-bottom: 1.4rem; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--brown); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--brown); margin: 2rem 0 .75rem; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-body li { margin-bottom: .45rem; color: var(--text-muted); }
+    .article-body strong { color: var(--brown); font-weight: 600; }
+    .article-body a { color: var(--gold); text-decoration: none; }
+    .article-body a:hover { color: var(--gold-dark); text-decoration: underline; }
+    .article-body .highlight { background: var(--cream); border-left: 3px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 4px 4px 0; font-size: .95rem; color: var(--brown-mid); line-height: 1.75; }
+    .article-body .img-inline { width: 100%; border-radius: 4px; margin: 2rem 0; object-fit: cover; max-height: 420px; display: block; border: 1px solid var(--border); }
+    .steps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin: 2rem 0; }
+    .step-card { background: var(--cream); padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; }
+    .step-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 600; color: var(--gold); line-height: 1; min-width: 2rem; }
+    .step-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--brown); margin-bottom: .4rem; }
+    .step-card p { font-size: .85rem; color: var(--text-muted); line-height: 1.65; margin: 0; }
+    .article-cta { background: var(--brown); color: #fff; padding: 3rem; text-align: center; border-radius: 4px; margin: 3rem 0; }
+    .article-cta p { color: rgba(255,255,255,.75); margin-bottom: 1.5rem; font-size: .97rem; line-height: 1.75; }
+    .btn-primary { display: inline-flex; align-items: center; gap: .6rem; background: var(--gold); color: #fff; font-size: .85rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .9rem 2rem; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-primary:hover { background: var(--gold-dark); }
+    .articles-nav { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 2.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .articles-nav a { font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color .2s; }
+    .articles-nav a:hover { color: var(--gold-dark); }
+    .related-posts { margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border); }
+    .related-posts p { font-size:.75rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1rem; }
+    .related-posts a { display:block; color:var(--gold); text-decoration:none; font-size:.9rem; margin-bottom:.5rem; font-weight:500; }
+    .related-posts a:hover { color:var(--gold-dark); }
+    footer { background: var(--brown); color: rgba(255,255,255,.6); padding: 30px 5%; text-align: center; font-size: .82rem; }
+    footer a { color: rgba(255,255,255,.4); text-decoration: none; margin: 0 .75rem; }
+    footer a:hover { color: #E8D5A3; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .article-hero { height: 320px; }
+      .steps-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo"><img src="favicon-96x96.png" alt="" width="28" height="28" />Madagascar <span>Vanilla</span></a>
+  <nav>
+    <a href="index.html#features" data-i18n="nav.features">Avantages</a>
+    <a href="index.html#products" data-i18n="nav.products">Produits</a>
+    <a href="index.html#origin" data-i18n="nav.origin">Origine</a>
+    <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="blog.html" class="active" data-i18n="nav.blog">Blog</a>
+    <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact">Nous contacter</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')" aria-label="Français">FR</button>
+      <div class="lang-sep" aria-hidden="true"></div>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+    </div>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html#features" data-i18n="nav.features" onclick="toggleMenu()">Avantages</a>
+  <a href="index.html#products" data-i18n="nav.products" onclick="toggleMenu()">Produits</a>
+  <a href="index.html#origin" data-i18n="nav.origin" onclick="toggleMenu()">Origine</a>
+  <a href="index.html#faq" data-i18n="nav.faq" onclick="toggleMenu()">FAQ</a>
+  <a href="blog.html" class="active" data-i18n="nav.blog" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#contact" class="btn-nav" data-i18n="nav.contact" onclick="toggleMenu()">Nous contacter</a>
+  <div class="lang-switch">
+    <button class="lang-btn active" id="btn-fr-m" onclick="setLang('fr')" aria-label="Français">FR</button>
+    <div class="lang-sep" aria-hidden="true"></div>
+    <button class="lang-btn" id="btn-en-m" onclick="setLang('en')" aria-label="English">EN</button>
+  </div>
+</div>
+
+<div class="article-hero">
+  <img src="livraison-colis-delivery.webp" alt="Livraison de colis de gousses de vanille de Madagascar" fetchpriority="high" />
+  <div class="article-hero-content">
+    <span class="article-tag" data-i18n="tag">Logistique & Commande</span>
+    <h1 data-i18n="h1">Livraison de gousses de vanille : emballage, délais et suivi de votre colis</h1>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-meta">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span data-i18n="date">3 septembre 2026</span>
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span data-i18n="readtime">5 min de lecture</span>
+    </span>
+  </div>
+
+  <div class="article-body" id="article-body">
+    <!-- contenu injecté par JS -->
+  </div>
+
+  <div class="article-cta">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#fff;margin-bottom:.75rem;" data-i18n="cta.title">Prêt à passer commande ?</h2>
+    <p data-i18n="cta.p">Gousses de vanille noire et rouge directement depuis la région SAVA, Madagascar. Commandes à partir de 5 kg, échantillons disponibles. Expédition internationale sécurisée.</p>
+    <a href="index.html#contact" class="btn-primary" data-i18n="cta.btn">Demander un devis</a>
+  </div>
+
+  <div class="related-posts">
+    <p data-i18n="related.label">À lire aussi</p>
+    <a href="article-vanilla-bean-pods-wholesale.html" data-i18n="related.1">→ Acheter des gousses de vanille en gros : guide professionnel</a>
+    <a href="article-conservation.html" data-i18n="related.2">→ Comment bien conserver vos gousses de vanille</a>
+    <a href="article-prix-vanille.html" data-i18n="related.3">→ Prix des gousses de vanille de Madagascar : combien ça coûte ?</a>
+  </div>
+
+  <div class="articles-nav">
+    <a href="blog.html" data-i18n="nav.back">← Retour au blog</a>
+    <a href="article-vanilla-bean-pods-wholesale.html" data-i18n="nav.next">Guide d'achat en gros →</a>
+  </div>
+</div>
+
+<footer>
+  <span data-i18n="footer.copy">© 2026 Madagascar Vanilla — Tous droits réservés</span>
+  <br style="margin:.5rem 0;">
+  <a href="index.html" data-i18n="footer.home">Accueil</a>
+  <a href="blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+</footer>
+
+<script>
+const T = {
+  fr: {
+    "meta.title": "Livraison de gousses de vanille : emballage, délais et suivi — Madagascar Vanilla",
+    "nav.features": "Avantages", "nav.products": "Produits", "nav.origin": "Origine",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Nous contacter",
+    "tag": "Logistique & Commande",
+    "h1": "Livraison de gousses de vanille : emballage, délais et suivi de votre colis",
+    "date": "3 septembre 2026", "readtime": "5 min de lecture",
+    "cta.title": "Prêt à passer commande ?",
+    "cta.p": "Gousses de vanille noire et rouge directement depuis la région SAVA, Madagascar. Commandes à partir de 5 kg, échantillons disponibles. Expédition internationale sécurisée.",
+    "cta.btn": "Demander un devis",
+    "related.label": "À lire aussi",
+    "related.1": "→ Acheter des gousses de vanille en gros : guide professionnel",
+    "related.2": "→ Comment bien conserver vos gousses de vanille",
+    "related.3": "→ Prix des gousses de vanille de Madagascar : combien ça coûte ?",
+    "nav.back": "← Retour au blog",
+    "nav.next": "Guide d'achat en gros →",
+    "footer.copy": "© 2026 Madagascar Vanilla — Tous droits réservés",
+    "footer.home": "Accueil"
+  },
+  en: {
+    "meta.title": "Vanilla Pod Delivery: Packaging, Timelines and Order Tracking — Madagascar Vanilla",
+    "nav.features": "Why us", "nav.products": "Products", "nav.origin": "Origin",
+    "nav.faq": "FAQ", "nav.blog": "Blog", "nav.contact": "Contact us",
+    "tag": "Logistics & Orders",
+    "h1": "Vanilla Pod Delivery: Packaging, Timelines and Order Tracking",
+    "date": "September 3, 2026", "readtime": "5 min read",
+    "cta.title": "Ready to place an order?",
+    "cta.p": "Black and red vanilla pods direct from the SAVA region, Madagascar. Orders from 5 kg, samples available. Secure international shipping.",
+    "cta.btn": "Request a quote",
+    "related.label": "Read also",
+    "related.1": "→ Buying Vanilla Bean Pods Wholesale: A Professional Guide",
+    "related.2": "→ How to Properly Store Your Vanilla Pods",
+    "related.3": "→ Price of Madagascar Vanilla Pods: How Much Does It Cost?",
+    "nav.back": "← Back to blog",
+    "nav.next": "Wholesale buying guide →",
+    "footer.copy": "© 2026 Madagascar Vanilla — All rights reserved",
+    "footer.home": "Home"
+  }
+};
+
+const CONTENT = {
+  fr: `
+    <p>Vous avez passé commande de gousses de vanille de Madagascar — ou vous envisagez de le faire — et vous vous interrogez sur la manière dont votre colis va voyager depuis la région SAVA jusqu'à votre entrepôt ou votre laboratoire ? C'est une question légitime : les gousses de vanille sont des produits vivants, sensibles à l'humidité, aux chocs et aux variations de température. Leur conditionnement pour l'expédition est aussi soigné que leur processus d'affinage.</p>
+
+    <p>Voici tout ce que vous devez savoir sur la logistique de votre commande, de l'emballage à la livraison, en passant par le suivi et les formalités douanières.</p>
+
+    <div class="highlight">
+      Chaque colis Madagascar Vanilla est préparé pour préserver le taux d'humidité des gousses entre <strong>18 et 38 %</strong> pendant le transport — la plage optimale pour qu'elles arrivent dans le même état qu'à l'expédition.
+    </div>
+
+    <h2>L'emballage : protéger la qualité pendant le transit</h2>
+    <p>Les gousses de vanille sont des produits agricoles qui continuent à évoluer après la récolte. Un emballage inadapté peut entraîner un dessèchement, une prise d'humidité excessive ou une détérioration aromatique en quelques jours. C'est pourquoi chaque commande fait l'objet d'un conditionnement en plusieurs couches :</p>
+
+    <ul>
+      <li><strong>Mise en bottes</strong> — Les gousses sont regroupées en bottes liées, ce qui limite les frottements et maintient leur forme allongée sans les plier.</li>
+      <li><strong>Emballage sous atmosphère contrôlée</strong> — Les bottes sont placées dans des sachets alimentaires hermétiques permettant de maintenir un taux d'humidité stable, sans favoriser le développement de moisissures.</li>
+      <li><strong>Protection mécanique</strong> — Le tout est inséré dans une boîte en carton rigide doublée de mousse ou de papier kraft, adaptée au poids et au volume de votre commande, pour absorber les chocs du transport.</li>
+      <li><strong>Étanchéité extérieure</strong> — Un film plastique thermorétractable ou un ruban d'expédition scelle la boîte et la protège de l'humidité ambiante lors des éventuels transits dans des zones à fort taux d'humidité.</li>
+    </ul>
+
+    <p>Pour les commandes de grande taille (au-delà de 20 kg), les colis peuvent être regroupés dans des cartons de transport double paroi ou expédiés en sac de jute alimentaire placé dans une caisse bois, selon les préférences du client et les contraintes logistiques de destination.</p>
+
+    <h2>Les étapes de votre commande</h2>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Validation de la commande</h3>
+          <p>Après réception de votre demande de devis et confirmation du paiement, nous démarrons la préparation de votre lot. Chaque lot est contrôlé qualité avant conditionnement.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Préparation et emballage</h3>
+          <p>Tri, mise en bottes, pesée et conditionnement sous atmosphère contrôlée. Cette étape prend 1 à 3 jours ouvrés selon le volume de la commande.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Expédition depuis Madagascar</h3>
+          <p>Le colis est remis au transporteur international avec les documents d'exportation et les certificats phytosanitaires requis pour votre pays de destination.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Réception et contrôle</h3>
+          <p>À la livraison, nous vous recommandons d'inspecter le colis en présence du livreur et de noter toute réserve sur le bon de livraison en cas de dommage visible.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Délais de livraison selon la destination</h2>
+    <p>Les délais de livraison varient en fonction du mode d'expédition choisi et de votre pays de destination. Voici les estimations habituelles à partir de la date d'expédition depuis Madagascar :</p>
+
+    <ul>
+      <li><strong>France et Europe (fret aérien express)</strong> — 5 à 10 jours ouvrés. C'est le mode recommandé pour les commandes urgentes ou les petits volumes.</li>
+      <li><strong>France et Europe (fret maritime)</strong> — 3 à 5 semaines. Utilisé pour les grands volumes (au-delà de 50 kg), avec un coût de transport significativement réduit.</li>
+      <li><strong>Amérique du Nord (aérien)</strong> — 7 à 14 jours ouvrés selon les formalités douanières locales.</li>
+      <li><strong>Asie et Océanie (aérien)</strong> — 8 à 15 jours ouvrés.</li>
+    </ul>
+
+    <p>Ces délais sont des estimations et peuvent être allongés en période de forte demande (saison des récoltes de juillet à octobre) ou en cas de contrôle douanier approfondi. Nous vous communiquons systématiquement un numéro de suivi dès la prise en charge par le transporteur.</p>
+
+    <h2>Formalités douanières et documents d'exportation</h2>
+    <p>La vanille de Madagascar est un produit agricole soumis à des réglementations phytosanitaires à l'import dans la plupart des pays. Madagascar Vanilla s'occupe de l'ensemble des démarches côté exportation :</p>
+
+    <ul>
+      <li><strong>Certificat phytosanitaire</strong> — Délivré par les autorités malgaches, il atteste que les gousses sont exemptes de parasites et de maladies réglementées.</li>
+      <li><strong>Certificat d'origine</strong> — Document qui certifie que le produit provient bien de Madagascar, indispensable pour bénéficier des accords commerciaux préférentiels avec l'Union européenne.</li>
+      <li><strong>Facture commerciale et liste de colisage</strong> — Nécessaires pour le passage en douane dans votre pays.</li>
+    </ul>
+
+    <p>Pour les importations dans l'Union européenne, la vanille de Madagascar bénéficie d'un accès facilité grâce aux accords de partenariat économique (APE) entre l'UE et Madagascar. Le taux de droits de douane applicable est en général de 0 % pour les gousses de vanille entières (code SH 0905).</p>
+
+    <p>Pour les États-Unis, le Canada ou d'autres destinations hors UE, nous vous conseillons de vous rapprocher d'un transitaire local pour gérer les formalités d'importation de votre côté. Nous vous fournissons tous les documents nécessaires pour faciliter ce processus.</p>
+
+    <h2>Suivi de votre colis</h2>
+    <p>Dès que votre colis est pris en charge par le transporteur, vous recevez par e-mail :</p>
+
+    <ul>
+      <li>Un numéro de suivi à reporter sur le site du transporteur</li>
+      <li>L'estimation de la date de livraison</li>
+      <li>Une copie des documents d'expédition (certificat phytosanitaire, facture, liste de colisage)</li>
+    </ul>
+
+    <p>En cas de retard ou de problème détecté lors du suivi, notre équipe vous contacte proactivement et coordonne avec le transporteur pour résoudre la situation dans les meilleurs délais.</p>
+
+    <h2>À réception du colis : les bons réflexes</h2>
+    <p>Pour garantir la qualité des gousses jusqu'à leur utilisation, voici les vérifications à effectuer dès la livraison :</p>
+
+    <ul>
+      <li><strong>Inspecter l'état extérieur du colis</strong> avant de signer le bon de livraison. Tout choc, déformation ou mouillure visible doit être signalé et noté sur le bon.</li>
+      <li><strong>Ouvrir et vérifier les gousses</strong> dans les 24 heures suivant la réception. Contrôler la souplesse, l'arôme et l'absence de moisissures.</li>
+      <li><strong>Stocker immédiatement dans de bonnes conditions</strong> : à l'abri de la lumière, à température ambiante (18 à 22 °C), dans le conditionnement d'origine ou dans un contenant hermétique. Pour plus de détails, consultez notre article sur la <a href="article-conservation.html">conservation des gousses de vanille</a>.</li>
+      <li><strong>Signaler tout problème sous 48 heures</strong> en nous envoyant des photos et en décrivant le défaut constaté. Nous traiterons votre réclamation en priorité.</li>
+    </ul>
+
+    <div class="highlight">
+      Une bonne conservation dès la réception prolonge la durée de vie aromatique des gousses de plusieurs mois. Une gousse bien stockée peut garder toute sa puissance pendant 18 à 24 mois.
+    </div>
+
+    <h2>Un exemple de commande type</h2>
+    <p>Pour vous donner une idée concrète, voici comment se déroule une commande standard de 10 kg de vanille noire Grade TK à destination d'un pâtissier en France :</p>
+
+    <ol>
+      <li>Demande de devis reçue et confirmée — <strong>Jour 0</strong></li>
+      <li>Paiement et validation de la commande — <strong>Jour 1 à 3</strong></li>
+      <li>Préparation, contrôle qualité et emballage — <strong>Jour 3 à 5</strong></li>
+      <li>Remise au transporteur aérien avec tous les documents — <strong>Jour 5 ou 6</strong></li>
+      <li>Transit aérien Antananarivo → Paris — <strong>2 à 4 jours</strong></li>
+      <li>Dédouanement à l'import et livraison — <strong>1 à 3 jours ouvrés</strong></li>
+      <li>Réception en France — <strong>10 à 14 jours après la commande</strong></li>
+    </ol>
+
+    <p>Ces délais sont compatibles avec les cycles d'approvisionnement de la plupart des ateliers de pâtisserie et de chocolaterie. Pour les besoins réguliers, nous recommandons de planifier les commandes à l'avance afin de bénéficier de conditions tarifaires optimales sur le transport.</p>
+  `,
+  en: `
+    <p>You have placed an order for Madagascar vanilla pods — or you are considering doing so — and you are wondering how your parcel will travel from the SAVA region to your warehouse or kitchen. It is a legitimate question: vanilla bean pods are living products, sensitive to humidity, shocks and temperature fluctuations. Their packaging for dispatch is as carefully considered as their curing process.</p>
+
+    <p>Here is everything you need to know about your order's logistics, from packaging to delivery, including tracking and customs formalities.</p>
+
+    <div class="highlight">
+      Every Madagascar Vanilla parcel is prepared to preserve the pods' moisture content between <strong>18 and 38%</strong> during transit — the optimal range for them to arrive in the same condition as when dispatched.
+    </div>
+
+    <h2>Packaging: protecting quality during transit</h2>
+    <p>Vanilla bean pods are agricultural products that continue to evolve after harvest. Inadequate packaging can cause drying out, excessive moisture uptake, or aromatic deterioration within days. That is why each order is packaged in multiple layers:</p>
+
+    <ul>
+      <li><strong>Bundling</strong> — Pods are grouped into tied bundles, limiting friction and maintaining their elongated shape without bending them.</li>
+      <li><strong>Controlled-atmosphere packaging</strong> — Bundles are placed in hermetically sealed food-grade pouches that maintain stable moisture levels without encouraging mould growth.</li>
+      <li><strong>Mechanical protection</strong> — Everything is inserted into a rigid cardboard box lined with foam or kraft paper, sized to the weight and volume of your order, to absorb the shocks of transit.</li>
+      <li><strong>Outer seal</strong> — A heat-shrink film or shipping tape seals the box and protects it from ambient humidity during any transits through high-humidity zones.</li>
+    </ul>
+
+    <p>For large orders (beyond 20 kg), parcels may be consolidated in double-wall transport cartons or shipped in food-grade jute bags placed inside a wooden crate, depending on client preferences and destination logistics constraints.</p>
+
+    <h2>The steps of your order</h2>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Order confirmation</h3>
+          <p>After receiving your quote request and confirming payment, we begin preparing your batch. Every batch undergoes quality control before packaging.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Preparation and packaging</h3>
+          <p>Sorting, bundling, weighing and controlled-atmosphere packaging. This step takes 1 to 3 business days depending on the order volume.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Dispatch from Madagascar</h3>
+          <p>The parcel is handed to the international carrier with the export documents and phytosanitary certificates required for your destination country.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Receipt and inspection</h3>
+          <p>On delivery, we recommend inspecting the parcel in the presence of the carrier and noting any reservation on the delivery note in case of visible damage.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Delivery timelines by destination</h2>
+    <p>Delivery times vary depending on the chosen shipping method and your destination country. Here are the usual estimates from the dispatch date from Madagascar:</p>
+
+    <ul>
+      <li><strong>France and Europe (express air freight)</strong> — 5 to 10 business days. This is the recommended method for urgent orders or small volumes.</li>
+      <li><strong>France and Europe (sea freight)</strong> — 3 to 5 weeks. Used for large volumes (over 50 kg), with significantly reduced transport costs.</li>
+      <li><strong>North America (air)</strong> — 7 to 14 business days depending on local customs formalities.</li>
+      <li><strong>Asia and Oceania (air)</strong> — 8 to 15 business days.</li>
+    </ul>
+
+    <p>These timelines are estimates and may be extended during peak demand periods (harvest season, July to October) or in the event of in-depth customs inspection. We systematically provide you with a tracking number as soon as the carrier takes charge of the shipment.</p>
+
+    <h2>Customs formalities and export documents</h2>
+    <p>Madagascar vanilla is an agricultural product subject to phytosanitary regulations upon import in most countries. Madagascar Vanilla handles all export-side procedures:</p>
+
+    <ul>
+      <li><strong>Phytosanitary certificate</strong> — Issued by the Malagasy authorities, it certifies that the pods are free from regulated pests and diseases.</li>
+      <li><strong>Certificate of origin</strong> — A document certifying that the product originates from Madagascar, essential for benefiting from preferential trade agreements with the European Union.</li>
+      <li><strong>Commercial invoice and packing list</strong> — Required for customs clearance in your country.</li>
+    </ul>
+
+    <p>For imports into the European Union, Madagascar vanilla benefits from facilitated access under the Economic Partnership Agreements (EPA) between the EU and Madagascar. The applicable customs duty rate is generally 0% for whole vanilla beans (HS code 0905).</p>
+
+    <p>For the United States, Canada or other non-EU destinations, we recommend working with a local freight forwarder to handle import formalities on your end. We provide all the necessary documentation to facilitate this process.</p>
+
+    <h2>Tracking your parcel</h2>
+    <p>As soon as your parcel is handed to the carrier, you receive by email:</p>
+
+    <ul>
+      <li>A tracking number to enter on the carrier's website</li>
+      <li>An estimated delivery date</li>
+      <li>A copy of the shipping documents (phytosanitary certificate, invoice, packing list)</li>
+    </ul>
+
+    <p>In the event of a delay or issue detected during tracking, our team contacts you proactively and coordinates with the carrier to resolve the situation as quickly as possible.</p>
+
+    <h2>On receipt: the right actions to take</h2>
+    <p>To guarantee pod quality through to use, here are the checks to perform immediately upon delivery:</p>
+
+    <ul>
+      <li><strong>Inspect the outer condition of the parcel</strong> before signing the delivery note. Any visible shock, deformation or dampness must be reported and noted on the document.</li>
+      <li><strong>Open and check the pods</strong> within 24 hours of receipt. Check suppleness, aroma and the absence of mould.</li>
+      <li><strong>Store immediately under proper conditions</strong>: away from light, at room temperature (18 to 22°C), in the original packaging or in an airtight container. For more details, see our article on <a href="article-conservation.html">storing vanilla pods</a>.</li>
+      <li><strong>Report any issue within 48 hours</strong> by sending us photos and describing the defect. We will handle your claim as a priority.</li>
+    </ul>
+
+    <div class="highlight">
+      Proper storage from the moment of receipt extends the aromatic shelf life of pods by several months. A well-stored pod can retain its full intensity for 18 to 24 months.
+    </div>
+
+    <h2>A typical order in practice</h2>
+    <p>To give you a concrete idea, here is how a standard order of 10 kg of Grade TK black vanilla for a pastry chef in France typically unfolds:</p>
+
+    <ol>
+      <li>Quote request received and confirmed — <strong>Day 0</strong></li>
+      <li>Payment and order validation — <strong>Day 1 to 3</strong></li>
+      <li>Preparation, quality control and packaging — <strong>Day 3 to 5</strong></li>
+      <li>Hand-off to air carrier with all documents — <strong>Day 5 or 6</strong></li>
+      <li>Air transit Antananarivo → Paris — <strong>2 to 4 days</strong></li>
+      <li>Import customs clearance and delivery — <strong>1 to 3 business days</strong></li>
+      <li>Receipt in France — <strong>10 to 14 days after the order</strong></li>
+    </ol>
+
+    <p>These timelines are compatible with the restocking cycles of most pastry and chocolate workshops. For regular needs, we recommend planning orders in advance to benefit from optimal transport pricing conditions.</p>
+  `
+};
+
+const storedLang = localStorage.getItem('mvLang');
+const browserLang = (navigator.language || 'fr').toLowerCase();
+let currentLang = storedLang || (browserLang.startsWith('fr') ? 'fr' : 'en');
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('mvLang', lang);
+  document.documentElement.lang = lang;
+  if (T[lang]['meta.title']) document.title = T[lang]['meta.title'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[lang][key] !== undefined) el.textContent = T[lang][key];
+  });
+  document.getElementById('article-body').innerHTML = CONTENT[lang];
+  ['btn-fr','btn-fr-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='fr'); });
+  ['btn-en','btn-en-m'].forEach(id => { const b = document.getElementById(id); if(b) b.classList.toggle('active', lang==='en'); });
+}
+
+function toggleMenu() {
+  const nav = document.getElementById('mobile-nav');
+  const btn = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+
+setLang(currentLang);
+</script>
+
+</body>
+</html>
